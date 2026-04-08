@@ -112,18 +112,10 @@
         }
 
         body.lang-en [data-lang="en"] {
-            display: block;
+            display: block !important;
         }
 
-        /* Special handling for inline elements like buttons */
-        a[data-lang="en"],
-        button[data-lang="en"],
-        span[data-lang="en"],
-        label[data-lang="en"],
-        option[data-lang="en"] {
-            display: none !important;
-        }
-
+        /* Inline elements in EN */
         body.lang-en a[data-lang="en"],
         body.lang-en button[data-lang="en"],
         body.lang-en span[data-lang="en"],
@@ -132,12 +124,36 @@
             display: inline-block !important;
         }
 
-        body.lang-en a[data-lang="fr"],
-        body.lang-en button[data-lang="fr"],
-        body.lang-en span[data-lang="fr"],
-        body.lang-en label[data-lang="fr"],
-        body.lang-en option[data-lang="fr"] {
-            display: none !important;
+        /* Block elements that need specific display values */
+        body.lang-en h1[data-lang="en"],
+        body.lang-en h2[data-lang="en"],
+        body.lang-en h3[data-lang="en"],
+        body.lang-en h4[data-lang="en"],
+        body.lang-en h5[data-lang="en"],
+        body.lang-en h6[data-lang="en"],
+        body.lang-en p[data-lang="en"],
+        body.lang-en div[data-lang="en"],
+        body.lang-en li[data-lang="en"] {
+            display: block !important;
+        }
+
+        /* Flex containers need to stay flex in EN */
+        body.lang-en .hero-buttons,
+        body.lang-en .about-badges,
+        body.lang-en .about-stats,
+        body.lang-en .zone-tags,
+        body.lang-en .step-card-actions,
+        body.lang-en .zip-field {
+            display: flex !important;
+        }
+
+        /* Grid containers need to stay grid in EN */
+        body.lang-en .services-grid,
+        body.lang-en .gallery-grid,
+        body.lang-en .reviews-grid,
+        body.lang-en .about-content,
+        body.lang-en .contact-wrapper {
+            display: grid !important;
         }
 
         /* ============================
@@ -1582,7 +1598,7 @@
                         <div class="contact-detail-icon">✉️</div>
                         <div>
                             <div class="contact-detail-label">Email</div>
-                            <a href="/cdn-cgi/l/email-protection#f7878598d99a968fd9929b9b9e84b7909a969e9bd994989a" class="contact-detail-text"><span class="__cf_email__" data-cfemail="dbaba9b4f5b6baa3f5beb7b7b2a89bbcb6bab2b7f5b8b4b6">[email&#160;protected]</span></a>
+                            <a href="/cdn-cgi/l/email-protection#6b1b190445060a13450e070702182b0c060a020745080406" class="contact-detail-text"><span class="__cf_email__" data-cfemail="0373716c2d6e627b2d666f6f6a7043646e626a6f2d606c6e">[email&#160;protected]</span></a>
                         </div>
                     </div>
                     <div class="contact-detail">
