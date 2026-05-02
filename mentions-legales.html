@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions Légales — Max Ellis Élagage</title>
+    <meta name="description" content="Mentions légales du site espacesverts-vendee.fr — Max Ellis, élagage et entretien d'espaces verts en Vendée.">
+    <meta name="robots" content="noindex">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBHES5CSRL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZBHES5CSRL');
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --vert-chasseur: #3A5A40;
+            --mousse-forestiere: #6E8A22;
+            --olive-pale: #B3C973;
+            --gris-marbre: #647572;
+            --evergreen: #213324;
+            --gris-fer: #485453;
+            --vert-clair-bg: #EEF2E2;
+            --beige: #F7F6F1;
+            --blanc: #FFFFFF;
+            --noir: #1A1A1A;
+            --gris-clair: #DDE0DC;
+            --ombre: 0 4px 20px rgba(33,51,36,0.10);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; color: var(--noir); line-height: 1.7; background: var(--blanc); }
+        img { max-width: 100%; display: block; }
+
+        /* Navigation */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--gris-clair); padding: 0 2rem;
+            transition: var(--transition);
+        }
+        .nav-container {
+            max-width: 1200px; margin: 0 auto; display: flex;
+            justify-content: space-between; align-items: center; height: 70px;
+        }
+        .logo { font-family: 'Comfortaa', cursive; font-size: 1.5rem; color: var(--vert-chasseur); text-decoration: none; font-weight: 700; }
+        .logo span { color: var(--mousse-forestiere); }
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--gris-fer); font-size: 0.9rem; font-weight: 500; transition: var(--transition); }
+        .nav-links a:hover { color: var(--mousse-forestiere); }
+        .burger { display: none; flex-direction: column; cursor: pointer; gap: 5px; background: none; border: none; padding: 5px; }
+        .burger span { width: 25px; height: 2px; background: var(--vert-chasseur); transition: var(--transition); border-radius: 2px; }
+        .burger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .burger.active span:nth-child(2) { opacity: 0; }
+        .burger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* Page hero */
+        .page-hero {
+            padding: 140px 2rem 60px;
+            background: var(--evergreen);
+            color: var(--blanc);
+            text-align: center;
+        }
+        .page-hero h1 {
+            font-family: 'Comfortaa', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .breadcrumb {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+        .breadcrumb a {
+            color: var(--olive-pale);
+            text-decoration: none;
+        }
+        .breadcrumb a:hover { color: var(--blanc); }
+
+        /* Content */
+        .legal-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 2rem 100px;
+        }
+        .legal-content h2 {
+            font-family: 'Comfortaa', cursive;
+            font-size: 1.4rem;
+            color: var(--vert-chasseur);
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--vert-clair-bg);
+        }
+        .legal-content h2:first-child {
+            margin-top: 0;
+        }
+        .legal-content p {
+            color: var(--gris-fer);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+        .legal-content strong {
+            color: var(--noir);
+        }
+        .legal-content a {
+            color: var(--mousse-forestiere);
+            text-decoration: none;
+        }
+        .legal-content a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer { background: var(--evergreen); color: rgba(255,255,255,0.8); text-align: center; padding: 2.5rem 2rem; }
+        footer a { color: var(--olive-pale); text-decoration: none; }
+        footer a:hover { color: var(--blanc); }
+        .footer-content { max-width: 1100px; margin: 0 auto; font-size: 0.85rem; }
+        .footer-content p { margin-bottom: 0.5rem; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .burger { display: flex; }
+            .nav-links {
+                display: none; position: absolute; top: 70px; left: 0; right: 0;
+                background: var(--blanc); flex-direction: column; padding: 2rem; gap: 1.5rem;
+                border-bottom: 1px solid var(--gris-clair); box-shadow: 0 10px 30px rgba(33,51,36,0.1);
+            }
+            .nav-links.active { display: flex; }
+            .page-hero h1 { font-size: 1.8rem; }
+            .legal-content { padding: 40px 1.25rem 60px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">Max<span>Ellis</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="/#services">Services</a></li>
+                <li><a href="/#about">À propos</a></li>
+                <li><a href="/#gallery">Réalisations</a></li>
+                <li><a href="/#reviews">Avis</a></li>
+                <li><a href="/#booking">Rendez-vous</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+            <button class="burger" id="burger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-hero">
+        <h1>Mentions Légales</h1>
+        <div class="breadcrumb">
+            <a href="/">Accueil</a> / Mentions légales
+        </div>
+    </section>
+
+    <!-- Contenu -->
+    <div class="legal-content">
+
+        <h2>1. Éditeur du site</h2>
+        <p>
+            <strong>Nom :</strong> Max Ellis<br>
+            <strong>Statut :</strong> Auto-Entrepreneur<br>
+            <strong>SIRET :</strong> 911 829 505 00021<br>
+            <strong>Activité :</strong> Élagage & Entretien d'Espaces Verts<br>
+            <strong>Adresse :</strong> Château-Guibert, Vendée (85), France<br>
+            <strong>Téléphone :</strong> <a href="tel:+33604023613">06 04 02 36 13</a><br>
+            <strong>Email :</strong> <a href="mailto:pro.max.ellis@gmail.com">pro.max.ellis@gmail.com</a><br>
+            <strong>Directeur de la publication :</strong> Max Ellis
+        </p>
+
+        <h2>2. Hébergeur</h2>
+        <p>
+            <strong>Nom :</strong> Vercel Inc.<br>
+            <strong>Adresse :</strong> 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis<br>
+            <strong>Site web :</strong> <a href="https://vercel.com" target="_blank" rel="noopener">https://vercel.com</a>
+        </p>
+
+        <h2>3. Propriété intellectuelle</h2>
+        <p>L'ensemble du contenu de ce site (textes, images, graphismes, logo, icônes, mise en page) est la propriété exclusive de Max Ellis, sauf mention contraire. Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site est interdite sans autorisation écrite préalable.</p>
+
+        <h2>4. Données personnelles & RGPD</h2>
+        <p>Les données personnelles collectées via le formulaire de contact (nom, email, téléphone, message) sont utilisées uniquement pour répondre à vos demandes de devis ou de renseignements. Elles ne sont ni vendues, ni cédées à des tiers.</p>
+        <p>Le formulaire est traité par le service <strong>Formspree</strong> (<a href="https://formspree.io" target="_blank" rel="noopener">formspree.io</a>), qui agit en qualité de sous-traitant. Les données sont conservées le temps nécessaire au traitement de votre demande.</p>
+        <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données. Pour exercer ces droits, contactez : <a href="mailto:pro.max.ellis@gmail.com">pro.max.ellis@gmail.com</a>.</p>
+
+        <h2>5. Cookies & Google Analytics</h2>
+        <p>Ce site utilise <strong>Google Analytics 4</strong> (identifiant : G-ZBHES5CSRL) pour mesurer la fréquentation et améliorer l'expérience utilisateur. Google Analytics dépose des cookies sur votre navigateur pour collecter des informations anonymes sur votre visite (pages consultées, durée, provenance géographique approximative).</p>
+        <p>Ces données sont traitées par <strong>Google LLC</strong> conformément à sa <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique de confidentialité</a>. Aucune donnée personnelle identifiable n'est collectée via ces cookies.</p>
+        <p>Vous pouvez refuser les cookies en modifiant les paramètres de votre navigateur ou en installant le <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">module de désactivation Google Analytics</a>.</p>
+
+        <h2>6. Widget Calendly</h2>
+        <p>Ce site intègre le widget de prise de rendez-vous <strong>Calendly</strong> (<a href="https://calendly.com" target="_blank" rel="noopener">calendly.com</a>). Lorsque vous prenez rendez-vous, les données que vous saisissez (nom, email, créneau choisi) sont traitées directement par Calendly selon sa <a href="https://calendly.com/privacy" target="_blank" rel="noopener">politique de confidentialité</a>.</p>
+
+        <h2>7. Responsabilité</h2>
+        <p>Max Ellis s'efforce de fournir des informations aussi exactes que possible sur ce site. Toutefois, il ne pourra être tenu responsable des omissions, des inexactitudes ou des carences dans la mise à jour des informations.</p>
+        <p>Les photos de réalisations présentées sur le site sont des exemples d'interventions réalisées et ne constituent pas une garantie de résultat identique.</p>
+
+        <h2>8. Liens externes</h2>
+        <p>Ce site peut contenir des liens vers des sites tiers (Jardiniers SAP, Calendly, Google, etc.). Max Ellis ne peut être tenu responsable du contenu de ces sites externes.</p>
+
+        <h2>9. Droit applicable</h2>
+        <p>Les présentes mentions légales sont régies par le droit français. En cas de litige, les tribunaux français seront seuls compétents.</p>
+
+        <p style="margin-top: 3rem; font-size: 0.85rem; color: var(--gris-marbre);">Dernière mise à jour : mai 2026</p>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p><strong>Max Ellis</strong> — Élagage & Entretien d'Espaces Verts</p>
+            <p>Auto-Entrepreneur — SIRET : 911 829 505 00021</p>
+            <p>Membre de la coopérative <a href="https://jardiniers-sap.fr" target="_blank" rel="noopener">Jardiniers SAP</a> — Agréé Service à la Personne</p>
+            <p>&copy; 2026 Max Ellis — Tous droits réservés — <a href="/mentions-legales.html">Mentions légales</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('navLinks');
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                burger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
