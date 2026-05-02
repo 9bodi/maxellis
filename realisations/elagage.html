@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Élagage & Abattage — Réalisations | Max Ellis Vendée</title>
+    <meta name="description" content="Découvrez nos réalisations en élagage et abattage d'arbres en Vendée. Chantiers à La Roche-sur-Yon et alentours. Max Ellis, professionnel assuré.">
+    <meta property="og:title" content="Élagage & Abattage — Réalisations | Max Ellis">
+    <meta property="og:description" content="Nos chantiers d'élagage et d'abattage en Vendée. Photos avant/après.">
+    <meta property="og:url" content="https://espacesverts-vendee.fr/realisations/elagage.html">
+    <meta property="og:image" content="https://espacesverts-vendee.fr/img/elagage.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBHES5CSRL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZBHES5CSRL');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --vert-chasseur: #3A5A40; --mousse-forestiere: #6E8A22; --olive-pale: #B3C973;
+            --gris-marbre: #647572; --evergreen: #213324; --gris-fer: #485453;
+            --vert-clair-bg: #EEF2E2; --beige: #F7F6F1; --blanc: #FFFFFF; --noir: #1A1A1A;
+            --gris-clair: #DDE0DC; --ombre: 0 4px 20px rgba(33,51,36,0.10);
+            --radius: 12px; --transition: all 0.3s ease;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; color: var(--noir); line-height: 1.7; background: var(--blanc); }
+        img { max-width: 100%; display: block; }
+
+        /* Lang */
+        [data-lang="en"] { display: none !important; }
+        body.lang-en [data-lang="fr"] { display: none !important; }
+        body.lang-en [data-lang="en"] { display: block !important; }
+        body.lang-en a[data-lang="en"],
+        body.lang-en span[data-lang="en"],
+        body.lang-en button[data-lang="en"] { display: inline-block !important; }
+
+        /* Nav */
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gris-clair); padding: 0 2rem; transition: var(--transition); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 70px; }
+        .logo { font-family: 'Comfortaa', cursive; font-size: 1.5rem; color: var(--vert-chasseur); text-decoration: none; font-weight: 700; }
+        .logo span { color: var(--mousse-forestiere); }
+        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--gris-fer); font-size: 0.9rem; font-weight: 500; transition: var(--transition); position: relative; }
+        .nav-links a:hover { color: var(--mousse-forestiere); }
+        .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: var(--mousse-forestiere); transition: var(--transition); }
+        .nav-links a:hover::after { width: 100%; }
+        .burger { display: none; flex-direction: column; cursor: pointer; gap: 5px; background: none; border: none; padding: 5px; }
+        .burger span { width: 25px; height: 2px; background: var(--vert-chasseur); transition: var(--transition); border-radius: 2px; }
+        .burger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .burger.active span:nth-child(2) { opacity: 0; }
+        .burger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+        /* Dropdown */
+        .dropdown { position: relative; }
+        .dropdown-toggle { display: flex; align-items: center; gap: 4px; }
+        .dropdown-toggle .arrow { font-size: 0.7rem; transition: var(--transition); }
+        .dropdown:hover .dropdown-toggle .arrow { transform: rotate(180deg); }
+        .dropdown-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: var(--blanc); border-radius: var(--radius); box-shadow: 0 8px 30px rgba(33,51,36,0.12); border: 1px solid var(--gris-clair); padding: 0.75rem 0; min-width: 220px; z-index: 1001; list-style: none; }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu li { list-style: none; }
+        .dropdown-menu a { display: block; padding: 0.6rem 1.25rem; font-size: 0.85rem; color: var(--gris-fer); text-decoration: none; transition: var(--transition); white-space: nowrap; }
+        .dropdown-menu a:hover { background: var(--vert-clair-bg); color: var(--mousse-forestiere); }
+        .dropdown-menu a::after { display: none; }
+
+        /* Lang switcher */
+        .lang-switcher { display: flex; align-items: center; gap: 6px; }
+        .lang-btn { background: none; border: 2px solid transparent; border-radius: 4px; cursor: pointer; padding: 2px; line-height: 0; transition: var(--transition); opacity: 0.6; }
+        .lang-btn:hover { opacity: 1; }
+        .lang-btn.active { border-color: var(--mousse-forestiere); opacity: 1; }
+        .lang-btn img { width: 24px; height: 16px; object-fit: cover; border-radius: 2px; }
+
+        /* Buttons */
+        .btn { display: inline-block; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; font-family: 'Poppins', sans-serif; transition: var(--transition); cursor: pointer; border: none; text-align: center; }
+        .btn-primary { background: var(--mousse-forestiere); color: var(--blanc); }
+        .btn-primary:hover { background: var(--vert-chasseur); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(58,90,64,0.3); }
+        .btn-outline-white { border: 2px solid var(--blanc); color: var(--blanc); background: transparent; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: var(--transition); }
+        .btn-outline-white:hover { background: var(--blanc); color: var(--vert-chasseur); }
+
+        /* Page hero */
+        .page-hero { padding: 140px 2rem 60px; background: linear-gradient(rgba(33,51,36,0.6), rgba(33,51,36,0.6)), url('/img/elagage.png') center/cover no-repeat; color: var(--blanc); text-align: center; }
+        .page-hero h1 { font-family: 'Comfortaa', cursive; font-size: 2.8rem; margin-bottom: 0.75rem; }
+        .page-hero p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+        .breadcrumb { margin-top: 1rem; font-size: 0.85rem; opacity: 0.8; }
+        .breadcrumb a { color: var(--olive-pale); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--blanc); }
+
+        /* Chantiers */
+        .chantiers { padding: 80px 2rem; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .chantier { background: var(--beige); border-radius: var(--radius); overflow: hidden; margin-bottom: 3rem; box-shadow: var(--ombre); }
+        .chantier-photos { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px; height: 400px; }
+        .chantier-photos img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .chantier-photos img:hover { transform: scale(1.02); }
+        .chantier-photos img:first-child { grid-row: 1 / -1; }
+        .chantier-body { padding: 2rem 2.5rem; }
+        .chantier-meta { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem; }
+        .chantier-meta-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--gris-marbre); }
+        .chantier-meta-item strong { color: var(--vert-chasseur); }
+        .chantier-body h2 { font-family: 'Comfortaa', cursive; font-size: 1.5rem; color: var(--vert-chasseur); margin-bottom: 1rem; }
+        .chantier-body p { color: var(--gris-fer); font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.75rem; }
+        .chantier-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+        .chantier-tag { background: var(--vert-clair-bg); color: var(--vert-chasseur); padding: 6px 14px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; }
+
+        /* Empty state */
+        .empty-state { text-align: center; padding: 60px 2rem; color: var(--gris-marbre); }
+        .empty-state p { font-size: 1.1rem; margin-bottom: 1.5rem; }
+
+        /* CTA */
+        .cta-section { background: var(--evergreen); color: var(--blanc); text-align: center; padding: 60px 2rem; }
+        .cta-section h2 { font-family: 'Comfortaa', cursive; font-size: 2rem; margin-bottom: 1rem; }
+        .cta-section p { max-width: 600px; margin: 0 auto 2rem; font-size: 1.05rem; opacity: 0.9; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+        /* Footer */
+        footer { background: var(--evergreen); color: rgba(255,255,255,0.8); text-align: center; padding: 2.5rem 2rem; }
+        footer a { color: var(--olive-pale); text-decoration: none; }
+        footer a:hover { color: var(--blanc); }
+        .footer-content { max-width: 1100px; margin: 0 auto; font-size: 0.85rem; }
+        .footer-content p { margin-bottom: 0.5rem; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .burger { display: flex; }
+            .nav-links { display: none; position: absolute; top: 70px; left: 0; right: 0; background: var(--blanc); flex-direction: column; padding: 2rem; gap: 1.5rem; border-bottom: 1px solid var(--gris-clair); box-shadow: 0 10px 30px rgba(33,51,36,0.1); }
+            .nav-links.active { display: flex; }
+            .dropdown-menu { position: static; transform: none; box-shadow: none; border: none; padding: 0 0 0 1rem; background: transparent; }
+            .dropdown:hover .dropdown-menu, .dropdown .dropdown-menu { display: block; }
+            .dropdown-menu a { padding: 0.4rem 0; font-size: 0.85rem; }
+            .page-hero h1 { font-size: 2rem; }
+            .chantier-photos { grid-template-columns: 1fr; grid-template-rows: auto; height: auto; }
+            .chantier-photos img { height: 200px; }
+            .chantier-photos img:first-child { grid-row: auto; }
+            .chantier-body { padding: 1.5rem; }
+        }
+        @media (max-width: 480px) {
+            .page-hero h1 { font-size: 1.6rem; }
+            .cta-buttons { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">Max<span>Ellis</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li data-lang="fr"><a href="/#services">Services</a></li>
+                <li data-lang="fr" class="dropdown">
+                    <a href="#" class="dropdown-toggle">Réalisations <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/realisations/elagage.html">Élagage & Abattage</a></li>
+                        <li><a href="/realisations/taille-de-haie.html">Taille de Haies</a></li>
+                        <li><a href="/realisations/entretien.html">Entretien de Jardins</a></li>
+                        <li><a href="/realisations/debroussaillage.html">Débroussaillage</a></li>
+                        <li><a href="/realisations/abattage.html">Abattage</a></li>
+                        <li><a href="/realisations/evacuation.html">Évacuation</a></li>
+                    </ul>
+                </li>
+                <li data-lang="fr"><a href="/#about">À propos</a></li>
+                <li data-lang="fr"><a href="/#reviews">Avis</a></li>
+                <li data-lang="fr"><a href="/#booking">Rendez-vous</a></li>
+                <li data-lang="fr"><a href="/#contact">Contact</a></li>
+                <li data-lang="en"><a href="/#services">Services</a></li>
+                <li data-lang="en" class="dropdown">
+                    <a href="#" class="dropdown-toggle">Our Work <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/realisations/elagage.html">Tree Pruning</a></li>
+                        <li><a href="/realisations/taille-de-haie.html">Hedge Trimming</a></li>
+                        <li><a href="/realisations/entretien.html">Garden Maintenance</a></li>
+                        <li><a href="/realisations/debroussaillage.html">Brush Clearing</a></li>
+                        <li><a href="/realisations/abattage.html">Tree Felling</a></li>
+                        <li><a href="/realisations/evacuation.html">Waste Removal</a></li>
+                    </ul>
+                </li>
+                <li data-lang="en"><a href="/#about">About</a></li>
+                <li data-lang="en"><a href="/#reviews">Reviews</a></li>
+                <li data-lang="en"><a href="/#booking">Book Now</a></li>
+                <li data-lang="en"><a href="/#contact">Contact</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <button class="lang-btn active" id="btnFR" onclick="setLang('fr')" title="Français"><img src="https://flagcdn.com/w40/fr.png" alt="FR"></button>
+                <button class="lang-btn" id="btnEN" onclick="setLang('en')" title="English"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></button>
+            </div>
+            <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <h1 data-lang="fr">Élagage & Abattage</h1>
+        <h1 data-lang="en">Tree Pruning & Felling</h1>
+        <p data-lang="fr">Découvrez mes interventions d'élagage et d'abattage réalisées en Vendée.</p>
+        <p data-lang="en">Discover my tree pruning and felling projects across Vendée.</p>
+        <div class="breadcrumb">
+            <a href="/" data-lang="fr">Accueil</a><a href="/" data-lang="en">Home</a>
+            <span> / </span>
+            <span data-lang="fr">Élagage & Abattage</span><span data-lang="en">Tree Pruning & Felling</span>
+        </div>
+    </section>
+
+    <!-- Chantiers -->
+    <section class="chantiers">
+        <div class="container">
+
+            <!-- État vide — à supprimer quand tu ajoutes des chantiers -->
+            <div class="empty-state">
+                <p data-lang="fr">Les réalisations arrivent bientôt. Revenez nous voir !</p>
+                <p data-lang="en">Projects coming soon. Check back later!</p>
+                <a href="/#contact" class="btn btn-primary" data-lang="fr">Demander un devis</a>
+                <a href="/#contact" class="btn btn-primary" data-lang="en">Request a Quote</a>
+            </div>
+
+            <!--
+            ========== MODÈLE DE CHANTIER ==========
+            Copiez ce bloc et collez-le au-dessus pour chaque nouveau chantier.
+            Supprimez le div "empty-state" quand vous ajoutez le premier chantier.
+
+            <div class="chantier">
+                <div class="chantier-photos">
+                    <img src="/img/realisations/elagage/chantier-1-01.jpg" alt="Description photo 1" loading="lazy">
+                    <img src="/img/realisations/elagage/chantier-1-02.jpg" alt="Description photo 2" loading="lazy">
+                    <img src="/img/realisations/elagage/chantier-1-03.jpg" alt="Description photo 3" loading="lazy">
+                </div>
+                <div class="chantier-body">
+                    <div class="chantier-meta">
+                        <div class="chantier-meta-item">📍 <strong>Commune</strong></div>
+                        <div class="chantier-meta-item">📅 <strong>Mois 2026</strong></div>
+                        <div class="chantier-meta-item">⏱️ <strong>Durée</strong></div>
+                    </div>
+                    <div data-lang="fr">
+                        <h2>Titre du chantier</h2>
+                        <p>Description détaillée du chantier en français.</p>
+                    </div>
+                    <div data-lang="en">
+                        <h2>Project Title</h2>
+                        <p>Detailed project description in English.</p>
+                    </div>
+                    <div class="chantier-tags">
+                        <span class="chantier-tag">Tag 1</span>
+                        <span class="chantier-tag">Tag 2</span>
+                        <span class="chantier-tag">Commune</span>
+                    </div>
+                </div>
+            </div>
+            -->
+
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2 data-lang="fr">Un projet d'élagage ?</h2>
+        <h2 data-lang="en">Have a tree care project?</h2>
+        <p data-lang="fr">Devis gratuit et sans engagement. Je me déplace chez vous pour évaluer vos besoins.</p>
+        <p data-lang="en">Free quote, no obligation. I'll come to your property to assess your needs.</p>
+        <div class="cta-buttons">
+            <a href="/#booking" class="btn btn-primary" data-lang="fr">Prendre rendez-vous</a>
+            <a href="/#booking" class="btn btn-primary" data-lang="en">Book an Appointment</a>
+            <a href="/#contact" class="btn-outline-white" data-lang="fr">Demander un devis</a>
+            <a href="/#contact" class="btn-outline-white" data-lang="en">Request a Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p data-lang="fr"><strong>Max Ellis</strong> — Élagage & Entretien d'Espaces Verts</p>
+            <p data-lang="en"><strong>Max Ellis</strong> — Tree Care & Landscaping</p>
+            <p data-lang="fr">Auto-Entrepreneur — SIRET : 911 829 505 00021</p>
+            <p data-lang="en">Sole Trader — SIRET: 911 829 505 00021</p>
+            <p data-lang="fr">Membre de la coopérative <a href="https://jardiniers-sap.fr" target="_blank" rel="noopener">Jardiniers SAP</a> — Agréé Service à la Personne</p>
+            <p data-lang="en">Member of the <a href="https://jardiniers-sap.fr" target="_blank" rel="noopener">Jardiniers SAP</a> cooperative — Certified Personal Service Provider</p>
+            <p data-lang="fr">&copy; 2026 Max Ellis — Tous droits réservés — <a href="/mentions-legales.html">Mentions légales</a></p>
+            <p data-lang="en">&copy; 2026 Max Ellis — All rights reserved — <a href="/mentions-legales.html">Legal Notice</a></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        let currentLang = 'fr';
+        function setLang(lang) {
+            currentLang = lang;
+            document.documentElement.lang = lang;
+            if (lang === 'en') { document.body.classList.add('lang-en'); }
+            else { document.body.classList.remove('lang-en'); }
+            document.getElementById('btnFR').classList.toggle('active', lang === 'fr');
+            document.getElementById('btnEN').classList.toggle('active', lang === 'en');
+        }
+
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('navLinks');
+        burger.addEventListener('click', () => {
+            burger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                burger.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+        window.addEventListener('scroll', () => {
+            document.querySelector('nav').style.boxShadow = window.scrollY > 50
+                ? '0 2px 20px rgba(33,51,36,0.1)' : 'none';
+        });
+    </script>
+
+</body>
+</html>

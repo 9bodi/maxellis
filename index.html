@@ -305,6 +305,81 @@
             width: 100%;
         }
 
+/* ============================
+   DROPDOWN MENU
+============================ */
+.dropdown {
+    position: relative;
+}
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.dropdown-toggle .arrow {
+    font-size: 0.7rem;
+    transition: var(--transition);
+}
+.dropdown:hover .dropdown-toggle .arrow {
+    transform: rotate(180deg);
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--blanc);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 30px rgba(33,51,36,0.12);
+    border: 1px solid var(--gris-clair);
+    padding: 0.75rem 0;
+    min-width: 220px;
+    z-index: 1001;
+    list-style: none;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu li {
+    list-style: none;
+}
+.dropdown-menu a {
+    display: block;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.85rem;
+    color: var(--gris-fer);
+    text-decoration: none;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+.dropdown-menu a:hover {
+    background: var(--vert-clair-bg);
+    color: var(--mousse-forestiere);
+}
+.dropdown-menu a::after {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        padding: 0 0 0 1rem;
+        background: transparent;
+    }
+    .dropdown:hover .dropdown-menu,
+    .dropdown .dropdown-menu {
+        display: block;
+    }
+    .dropdown-menu a {
+        padding: 0.4rem 0;
+        font-size: 0.85rem;
+    }
+}
+
         .burger {
             display: none;
             flex-direction: column;
@@ -1219,38 +1294,62 @@
 
     <!-- ======================== NAVIGATION ======================== -->
     <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">Max<span>Ellis</span></a>
-            <ul class="nav-links" id="navLinks">
-                <li data-lang="fr"><a href="#services">Services</a></li>
-                <li data-lang="fr"><a href="#about">À propos</a></li>
-                <li data-lang="fr"><a href="#gallery">Réalisations</a></li>
-                <li data-lang="fr"><a href="#reviews">Avis</a></li>
-                <li data-lang="fr"><a href="#booking">Rendez-vous</a></li>
-                <li data-lang="fr"><a href="#contact">Contact</a></li>
+    <div class="nav-container">
+        <a href="#" class="logo">Max<span>Ellis</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li data-lang="fr"><a href="#services">Services</a></li>
+            <li data-lang="fr"><a href="#about">À propos</a></li>
+            <li data-lang="fr" class="dropdown">
+                <a href="#gallery" class="dropdown-toggle">Réalisations <span class="arrow">▾</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/realisations/elagage.html">Élagage & Abattage</a></li>
+                    <li><a href="/realisations/taille-de-haie.html">Taille de Haies</a></li>
+                    <li><a href="/realisations/entretien.html">Entretien de Jardins</a></li>
+                    <li><a href="/realisations/debroussaillage.html">Débroussaillage</a></li>
+                    <li><a href="/realisations/abattage.html">Abattage</a></li>
+                    <li><a href="/realisations/evacuation.html">Évacuation</a></li>
+                </ul>
+            </li>
+            <li data-lang="fr"><a href="/blog/">Blog</a></li>
+            <li data-lang="fr"><a href="#reviews">Avis</a></li>
+            <li data-lang="fr"><a href="#booking">Rendez-vous</a></li>
+            <li data-lang="fr"><a href="#contact">Contact</a></li>
 
-                <li data-lang="en"><a href="#services">Services</a></li>
-                <li data-lang="en"><a href="#about">About</a></li>
-                <li data-lang="en"><a href="#gallery">Gallery</a></li>
-                <li data-lang="en"><a href="#reviews">Reviews</a></li>
-                <li data-lang="en"><a href="#booking">Book Now</a></li>
-                <li data-lang="en"><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="lang-switcher">
-                <button class="lang-btn active" id="btnFR" onclick="setLanguage('fr')" title="Français">
-                    <img src="https://flagcdn.com/w40/fr.png" alt="FR">
-                </button>
-                <button class="lang-btn" id="btnEN" onclick="setLanguage('en')" title="English">
-                    <img src="https://flagcdn.com/w40/gb.png" alt="EN">
-                </button>
-            </div>
-            <button class="burger" id="burger" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
+            <li data-lang="en"><a href="#services">Services</a></li>
+            <li data-lang="en"><a href="#about">About</a></li>
+            <li data-lang="en" class="dropdown">
+                <a href="#gallery" class="dropdown-toggle">Our Work <span class="arrow">▾</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/realisations/elagage.html">Tree Pruning & Felling</a></li>
+                    <li><a href="/realisations/taille-de-haie.html">Hedge Trimming</a></li>
+                    <li><a href="/realisations/entretien.html">Garden Maintenance</a></li>
+                    <li><a href="/realisations/debroussaillage.html">Brush Clearing</a></li>
+                    <li><a href="/realisations/abattage.html">Tree Felling</a></li>
+                    <li><a href="/realisations/evacuation.html">Waste Removal</a></li>
+                </ul>
+            </li>
+            <li data-lang="en"><a href="/blog/">Blog</a></li>
+            <li data-lang="en"><a href="#reviews">Reviews</a></li>
+            <li data-lang="en"><a href="#booking">Book Now</a></li>
+            <li data-lang="en"><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="lang-switcher">
+            <button class="lang-btn active" id="btnFR" onclick="setLanguage('fr')" title="Français">
+                <img src="https://flagcdn.com/w40/fr.png" alt="FR">
+            </button>
+            <button class="lang-btn" id="btnEN" onclick="setLanguage('en')" title="English">
+                <img src="https://flagcdn.com/w40/gb.png" alt="EN">
             </button>
         </div>
-    </nav>
+        <button class="burger" id="burger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+
 
     <!-- ======================== HERO ======================== -->
     <section class="hero" id="hero">
