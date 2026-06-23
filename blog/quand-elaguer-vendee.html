@@ -98,14 +98,15 @@
         .lang-btn.active { border-color: var(--mousse-forestiere); opacity: 1; }
         .lang-btn img { width: 24px; height: 16px; object-fit: cover; border-radius: 2px; }
 
-        /* Buttons */
+       /* Buttons */
 .btn { display: inline-block; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; font-family: 'Poppins', sans-serif; transition: var(--transition); cursor: pointer; border: none; text-align: center; }
-.btn-primary { background: var(--mousse-forestiere); color: var(--blanc); }
-.btn-primary:hover { background: var(--vert-chasseur); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(58,90,64,0.3); }
-.btn-outline-white { border: 2px solid var(--blanc); color: var(--blanc); background: transparent; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: var(--transition); }
+.btn-primary { background: var(--vert-chasseur); color: #FFFFFF; }
+.btn-primary:hover { background: var(--evergreen); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(58,90,64,0.3); }
+a.btn-primary { color: #FFFFFF; }
+.btn-outline-white { border: 2px solid var(--blanc); color: #FFFFFF; background: transparent; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: var(--transition); }
 .btn-outline-white:hover { background: var(--blanc); color: var(--vert-chasseur); }
-a.btn-primary { color: var(--blanc); }
-a.btn-outline-white { color: var(--blanc); }
+a.btn-outline-white { color: #FFFFFF; }
+
 
         /* Article hero */
         .article-hero { padding: 140px 2rem 60px; background: var(--evergreen); color: var(--blanc); text-align: center; }
@@ -132,7 +133,8 @@ a.btn-outline-white { color: var(--blanc); }
         .tip-box strong { color: var(--vert-chasseur); }
 
         /* Share / back */
-        .article-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--gris-clair); flex-wrap: wrap; gap: 1rem; }
+.article-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 3rem; padding: 2rem 0; border-top: 1px solid var(--gris-clair); flex-wrap: wrap; gap: 1.5rem; }
+
         .back-link { color: var(--mousse-forestiere); text-decoration: none; font-weight: 600; font-size: 0.9rem; }
         .back-link:hover { text-decoration: underline; }
 
@@ -141,6 +143,8 @@ a.btn-outline-white { color: var(--blanc); }
         .cta-section h2 { font-family: 'Comfortaa', cursive; font-size: 2rem; margin-bottom: 1rem; }
         .cta-section p { max-width: 600px; margin: 0 auto 2rem; font-size: 1.05rem; opacity: 0.9; }
         .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .cta-section { background: var(--evergreen); color: var(--blanc); text-align: center; padding: 60px 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+
 
         /* Footer */
         footer { background: var(--evergreen); color: rgba(255,255,255,0.8); text-align: center; padding: 2.5rem 2rem; }
@@ -261,12 +265,10 @@ a.btn-outline-white { color: var(--blanc); }
             <p>En zone urbaine, certaines communes de Vendée imposent des restrictions sur l'élagage, notamment pour les arbres classés ou en zone protégée. Renseignez-vous auprès de votre mairie avant d'intervenir sur des arbres de grande taille. Pour les haies en limite de propriété, le Code civil impose que les arbres de plus de 2 mètres soient plantés à au moins 2 mètres de la clôture.</p>
 
             <h2>Pourquoi faire appel à un professionnel ?</h2>
-            <p>L'élagage, surtout en hauteur, est une opération dangereuse qui nécessite du matériel adapté et un savoir-faire technique. Un élagueur professionnel assure une coupe propre qui favorise la cicatrisation, intervient en sécurité avec un équipement de grimpe ou une nacelle, et connaît les spécificités de chaque espèce.</p>
-
-            <div class="tip-box">
-               
+                        <p>L'élagage, surtout en hauteur, est une opération dangereuse qui nécessite du matériel adapté et un savoir-faire technique. Un élagueur professionnel assure une coupe propre qui favorise la cicatrisation, intervient en sécurité avec un équipement de grimpe ou une nacelle, et connaît les spécificités de chaque espèce.</p>
 
             <h2>En résumé</h2>
+
             <p>En Vendée, la meilleure période pour élaguer est l'hiver (novembre à mars) pour la majorité des arbres. Adaptez selon l'espèce et n'hésitez pas à faire appel à un professionnel pour un travail sûr et de qualité.</p>
         </div>
 
@@ -282,15 +284,18 @@ a.btn-outline-white { color: var(--blanc); }
 
           
 
+                        <div class="tip-box">
+                <p><strong>💡 Pro tip:</strong> Avoid pruning during sap rise (April-May) and during intense summer heat. The tree heals poorly and disease risk increases.</p>
+            </div>
+
             <h2>Regulations in Vendée</h2>
+
             <p>In urban areas, some Vendée municipalities impose restrictions on pruning, especially for classified trees or those in protected zones. Check with your town hall before working on large trees. For boundary hedges, French civil law requires trees over 2 metres tall to be planted at least 2 metres from the fence.</p>
 
             <h2>Why Hire a Professional?</h2>
             <p>Pruning, especially at height, is a dangerous operation requiring proper equipment and technical expertise. A professional arborist ensures clean cuts that promote healing, works safely with climbing gear or a cherry picker, and knows the specifics of each species.</p>
 
-            <div class="tip-box">
-                <p><strong>💡 Good to know:</strong> As a member of the Jardiniers SAP cooperative, my garden maintenance services qualify for a <strong>50% tax credit</strong>. A €400 pruning job only costs you €200!</p>
-            </div>
+           
 
             <h2>In Summary</h2>
             <p>In Vendée, the best time to prune is winter (November to March) for most trees. Adapt based on species and don't hesitate to call a professional for safe, quality work.</p>
