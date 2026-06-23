@@ -76,10 +76,12 @@
 
         /* Buttons */
         .btn { display: inline-block; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; font-family: 'Poppins', sans-serif; transition: var(--transition); cursor: pointer; border: none; text-align: center; }
-        .btn-primary { background: var(--mousse-forestiere); color: var(--blanc); }
-        .btn-primary:hover { background: var(--vert-chasseur); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(58,90,64,0.3); }
+        .btn-primary { background: var(--vert-chasseur); color: #FFFFFF; }
+        .btn-primary:hover { background: var(--evergreen); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(58,90,64,0.3); }
+        a.btn-primary { color: #FFFFFF; }
         .btn-outline-white { border: 2px solid var(--blanc); color: var(--blanc); background: transparent; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: var(--transition); }
         .btn-outline-white:hover { background: var(--blanc); color: var(--vert-chasseur); }
+        a.btn-outline-white { color: var(--blanc); }
 
         /* Page hero */
         .page-hero { padding: 140px 2rem 60px; background: linear-gradient(rgba(33,51,36,0.6), rgba(33,51,36,0.6)), url('/img/elagage.png') center/cover no-repeat; color: var(--blanc); text-align: center; }
@@ -92,23 +94,29 @@
         /* Chantiers */
         .chantiers { padding: 80px 2rem; }
         .container { max-width: 1100px; margin: 0 auto; }
-        .chantier { background: var(--beige); border-radius: var(--radius); overflow: hidden; margin-bottom: 3rem; box-shadow: var(--ombre); }
-        .chantier-photos { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px; height: 400px; }
-        .chantier-photos img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
-        .chantier-photos img:hover { transform: scale(1.02); }
-        .chantier-photos img:first-child { grid-row: 1 / -1; }
-        .chantier-body { padding: 2rem 2.5rem; }
-        .chantier-meta { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem; }
-        .chantier-meta-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--gris-marbre); }
-        .chantier-meta-item strong { color: var(--vert-chasseur); }
-        .chantier-body h2 { font-family: 'Comfortaa', cursive; font-size: 1.5rem; color: var(--vert-chasseur); margin-bottom: 1rem; }
-        .chantier-body p { color: var(--gris-fer); font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.75rem; }
-        .chantier-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-        .chantier-tag { background: var(--vert-clair-bg); color: var(--vert-chasseur); padding: 6px 14px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; }
 
-        /* Empty state */
-        .empty-state { text-align: center; padding: 60px 2rem; color: var(--gris-marbre); }
-        .empty-state p { font-size: 1.1rem; margin-bottom: 1.5rem; }
+        .chantier { background: var(--blanc); border-radius: var(--radius); overflow: hidden; margin-bottom: 3rem; box-shadow: var(--ombre); }
+
+        /* Photos : grande à gauche, 2 petites à droite */
+        .chantier-photos { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px; height: 450px; }
+        .chantier-photos img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: var(--transition); }
+        .chantier-photos img:hover { opacity: 0.9; }
+        .chantier-photos img:first-child { grid-row: 1 / -1; }
+
+        /* Corps du chantier */
+        .chantier-body { padding: 2rem 2.5rem; }
+
+        .chantier-body h2 { font-family: 'Comfortaa', cursive; font-size: 1.5rem; color: var(--vert-chasseur); margin-bottom: 1rem; }
+
+        .chantier-meta { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--gris-clair); }
+        .chantier-meta-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--gris-fer); }
+        .chantier-meta-item .meta-icon { font-size: 1.1rem; }
+        .chantier-meta-item strong { color: var(--vert-chasseur); font-weight: 600; }
+
+        .chantier-body .chantier-desc { color: var(--gris-fer); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.25rem; }
+
+        .chantier-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--gris-clair); }
+        .chantier-tag { background: var(--vert-clair-bg); color: var(--vert-chasseur); padding: 6px 14px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; }
 
         /* CTA */
         .cta-section { background: var(--evergreen); color: var(--blanc); text-align: center; padding: 60px 2rem; }
@@ -133,13 +141,17 @@
             .dropdown-menu a { padding: 0.4rem 0; font-size: 0.85rem; }
             .page-hero h1 { font-size: 2rem; }
             .chantier-photos { grid-template-columns: 1fr; grid-template-rows: auto; height: auto; }
-            .chantier-photos img { height: 200px; }
-            .chantier-photos img:first-child { grid-row: auto; }
+            .chantier-photos img { height: 250px; }
+            .chantier-photos img:first-child { grid-row: auto; height: 300px; }
             .chantier-body { padding: 1.5rem; }
+            .chantier-body h2 { font-size: 1.3rem; }
+            .chantier-meta { gap: 1rem; }
         }
         @media (max-width: 480px) {
             .page-hero h1 { font-size: 1.6rem; }
             .cta-buttons { flex-direction: column; align-items: center; }
+            .chantier-photos img { height: 200px; }
+            .chantier-photos img:first-child { height: 250px; }
         }
     </style>
 </head>
@@ -152,34 +164,34 @@
             <ul class="nav-links" id="navLinks">
                 <li data-lang="fr"><a href="/#services">Services</a></li>
                 <li data-lang="fr" class="dropdown">
-                    <a href="#" class="dropdown-toggle">Réalisations <span class="arrow">▾</span></a>
+                    <a href="/realisations/elagage.html" class="dropdown-toggle">Réalisations <span class="arrow">▾</span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/realisations/elagage.html">Élagage & Abattage</a></li>
-                        <li><a href="/realisations/taille-de-haie.html">Taille de Haies</a></li>
-                        <li><a href="/realisations/entretien.html">Entretien de Jardins</a></li>
-                        <li><a href="/realisations/debroussaillage.html">Débroussaillage</a></li>
-                        <li><a href="/realisations/abattage.html">Abattage</a></li>
-                        <li><a href="/realisations/evacuation.html">Évacuation</a></li>
+                        <li><a href="/realisations/elagage.html">Élagage</a></li>
+                        <li><a href="/#gallery">Taille de Haies</a></li>
+                        <li><a href="/#gallery">Entretien de Jardins</a></li>
+                        <li><a href="/#gallery">Débroussaillage</a></li>
+                        <li><a href="/#gallery">Aménagement Paysager</a></li>
+                        <li><a href="/#gallery">Évacuation</a></li>
                     </ul>
                 </li>
                 <li data-lang="fr"><a href="/#about">À propos</a></li>
-                <li data-lang="fr"><a href="/#reviews">Avis</a></li>
+                <li data-lang="fr"><a href="/blog/">Blog</a></li>
                 <li data-lang="fr"><a href="/#booking">Rendez-vous</a></li>
                 <li data-lang="fr"><a href="/#contact">Contact</a></li>
                 <li data-lang="en"><a href="/#services">Services</a></li>
                 <li data-lang="en" class="dropdown">
-                    <a href="#" class="dropdown-toggle">Our Work <span class="arrow">▾</span></a>
+                    <a href="/realisations/elagage.html" class="dropdown-toggle">Our Work <span class="arrow">▾</span></a>
                     <ul class="dropdown-menu">
                         <li><a href="/realisations/elagage.html">Tree Pruning</a></li>
-                        <li><a href="/realisations/taille-de-haie.html">Hedge Trimming</a></li>
-                        <li><a href="/realisations/entretien.html">Garden Maintenance</a></li>
-                        <li><a href="/realisations/debroussaillage.html">Brush Clearing</a></li>
-                        <li><a href="/realisations/abattage.html">Tree Felling</a></li>
-                        <li><a href="/realisations/evacuation.html">Waste Removal</a></li>
+                        <li><a href="/#gallery">Hedge Trimming</a></li>
+                        <li><a href="/#gallery">Garden Maintenance</a></li>
+                        <li><a href="/#gallery">Brush Clearing</a></li>
+                        <li><a href="/#gallery">Landscaping</a></li>
+                        <li><a href="/#gallery">Waste Removal</a></li>
                     </ul>
                 </li>
                 <li data-lang="en"><a href="/#about">About</a></li>
-                <li data-lang="en"><a href="/#reviews">Reviews</a></li>
+                <li data-lang="en"><a href="/blog/">Blog</a></li>
                 <li data-lang="en"><a href="/#booking">Book Now</a></li>
                 <li data-lang="en"><a href="/#contact">Contact</a></li>
             </ul>
@@ -208,70 +220,76 @@
     <section class="chantiers">
         <div class="container">
 
-            <!-- État vide — à supprimer quand tu ajoutes des chantiers -->
-    
-
-            <div class="chantier">
-    <div class="chantier-photos">
-        <img src="/img/realisations/elagage/nddr-01.jpg" alt="Abattage d'arbres en urgence à Notre-Dame-de-Riez" loading="lazy">
-        <img src="/img/realisations/elagage/nddr-02.jpg" alt="Élagage de cyprès à Notre-Dame-de-Riez" loading="lazy">
-        <img src="/img/realisations/elagage/nddr-03.jpg" alt="Abattage directionnel de cupressus à Notre-Dame-de-Riez" loading="lazy">
-    </div>
-    <div class="chantier-info">
-        <h3 data-lang="fr">Intervention d'urgence — Notre-Dame-de-Riez</h3>
-        <h3 data-lang="en">Emergency Intervention — Notre-Dame-de-Riez</h3>
-        <div class="chantier-meta">
-            <span data-lang="fr"> Notre-Dame-de-Riez</span>
-            <span data-lang="en"> Notre-Dame-de-Riez</span>
-            <span data-lang="fr"> Mai 2026</span>
-            <span data-lang="en"> May 2026</span>
-            <span data-lang="fr">⏱ 2 jours</span>
-            <span data-lang="en">⏱ 2 days</span>
-        </div>
-        <p data-lang="fr">Intervention d'urgence pour sécuriser plusieurs arbres dangereux. Mise au sol et abattage de deux arbres partiellement déracinés restés en suspension. Abattage directionnel de trois cupressus dépérissants en limite de propriété. Élagage de bois mort sur douze cyprès d'environ 10 mètres de hauteur. Travaux réalisés en techniques de grimpe et déplacement sur cordes.</p>
-        <p data-lang="en">Emergency intervention to secure several dangerous trees. Felling of two partially uprooted trees left in a suspended, unstable position. Directional felling of three declining cypress trees on the property boundary. Deadwood pruning on twelve cypress trees approximately 10 metres tall. Work carried out using rope climbing and access techniques.</p>
-        <div class="chantier-tags">
-            <span class="tag" data-lang="fr">Abattage</span>
-            <span class="tag" data-lang="fr">Élagage</span>
-            <span class="tag" data-lang="fr">Urgence</span>
-            <span class="tag" data-lang="fr">Cyprès</span>
-            <span class="tag" data-lang="en">Tree Felling</span>
-            <span class="tag" data-lang="en">Pruning</span>
-            <span class="tag" data-lang="en">Emergency</span>
-            <span class="tag" data-lang="en">Cypress</span>
-        </div>
-    </div>
-</div>
-
-            <!--
-            ========== MODÈLE DE CHANTIER ==========
-            Copiez ce bloc et collez-le au-dessus pour chaque nouveau chantier.
-            Supprimez le div "empty-state" quand vous ajoutez le premier chantier.
-
+            <!-- Chantier 1 : Notre-Dame-de-Riez -->
             <div class="chantier">
                 <div class="chantier-photos">
-                    <img src="/img/realisations/elagage/chantier-1-01.jpg" alt="Description photo 1" loading="lazy">
-                    <img src="/img/realisations/elagage/chantier-1-02.jpg" alt="Description photo 2" loading="lazy">
-                    <img src="/img/realisations/elagage/chantier-1-03.jpg" alt="Description photo 3" loading="lazy">
+                    <img src="/img/realisations/elagage/nddr-01.jpg" alt="Abattage d'arbres en urgence à Notre-Dame-de-Riez" loading="lazy">
+                    <img src="/img/realisations/elagage/nddr-02.jpg" alt="Élagage de cyprès à Notre-Dame-de-Riez" loading="lazy">
+                    <img src="/img/realisations/elagage/nddr-03.jpg" alt="Abattage directionnel de cupressus à Notre-Dame-de-Riez" loading="lazy">
                 </div>
                 <div class="chantier-body">
+                    <h2 data-lang="fr">Intervention d'urgence — Notre-Dame-de-Riez</h2>
+                    <h2 data-lang="en">Emergency Intervention — Notre-Dame-de-Riez</h2>
+
                     <div class="chantier-meta">
-                        <div class="chantier-meta-item">📍 <strong>Commune</strong></div>
-                        <div class="chantier-meta-item">📅 <strong>Mois 2026</strong></div>
-                        <div class="chantier-meta-item">⏱️ <strong>Durée</strong></div>
+                        <div class="chantier-meta-item">
+                           
+                            <strong>Notre-Dame-de-Riez</strong>
+                        </div>
+                        <div class="chantier-meta-item">
+                            
+                            <strong data-lang="fr">Mai 2026</strong>
+                            <strong data-lang="en">May 2026</strong>
+                        </div>
+                        <div class="chantier-meta-item">
+                            
+                            <strong data-lang="fr">2 jours</strong>
+                            <strong data-lang="en">2 days</strong>
+                        </div>
                     </div>
-                    <div data-lang="fr">
-                        <h2>Titre du chantier</h2>
-                        <p>Description détaillée du chantier en français.</p>
-                    </div>
-                    <div data-lang="en">
-                        <h2>Project Title</h2>
-                        <p>Detailed project description in English.</p>
-                    </div>
+
+                    <p class="chantier-desc" data-lang="fr">Intervention d'urgence pour sécuriser plusieurs arbres dangereux. Mise au sol et abattage de deux arbres partiellement déracinés restés en suspension dans une position particulièrement instable. Abattage directionnel de trois cupressus dépérissants situés en limite de propriété. Élagage de bois mort sur douze cyprès d'environ 10 mètres de hauteur.</p>
+                    <p class="chantier-desc" data-lang="en">Emergency intervention to secure several dangerous trees. Felling of two partially uprooted trees left in a suspended, unstable position. Directional felling of three declining cypress trees on the property boundary. Deadwood pruning on twelve cypress trees approximately 10 metres tall.</p>
+
+                    <p class="chantier-desc" data-lang="fr">L'ensemble des travaux a été réalisé dans le respect des règles de sécurité et des contraintes du site. Les arbres étant difficilement accessibles, certaines interventions ont nécessité des techniques spécifiques de grimpe et de déplacement sur cordes.</p>
+                    <p class="chantier-desc" data-lang="en">All work was carried out in compliance with safety regulations and site constraints. As the trees were difficult to access, some operations required specific rope climbing and access techniques.</p>
+
                     <div class="chantier-tags">
-                        <span class="chantier-tag">Tag 1</span>
-                        <span class="chantier-tag">Tag 2</span>
-                        <span class="chantier-tag">Commune</span>
+                        <span class="chantier-tag" data-lang="fr">Abattage</span>
+                        <span class="chantier-tag" data-lang="fr">Élagage</span>
+                        <span class="chantier-tag" data-lang="fr">Urgence</span>
+                        <span class="chantier-tag" data-lang="fr">Cyprès</span>
+                        <span class="chantier-tag" data-lang="fr">Notre-Dame-de-Riez</span>
+                        <span class="chantier-tag" data-lang="en">Tree Felling</span>
+                        <span class="chantier-tag" data-lang="en">Pruning</span>
+                        <span class="chantier-tag" data-lang="en">Emergency</span>
+                        <span class="chantier-tag" data-lang="en">Cypress</span>
+                        <span class="chantier-tag" data-lang="en">Notre-Dame-de-Riez</span>
+                    </div>
+                </div>
+            </div>
+
+            <!--
+            ========== MODÈLE — copier ce bloc pour chaque nouveau chantier ==========
+            <div class="chantier">
+                <div class="chantier-photos">
+                    <img src="/img/realisations/elagage/xxx-01.jpg" alt="Description" loading="lazy">
+                    <img src="/img/realisations/elagage/xxx-02.jpg" alt="Description" loading="lazy">
+                    <img src="/img/realisations/elagage/xxx-03.jpg" alt="Description" loading="lazy">
+                </div>
+                <div class="chantier-body">
+                    <h2 data-lang="fr">Titre du chantier</h2>
+                    <h2 data-lang="en">Project Title</h2>
+                    <div class="chantier-meta">
+                        <div class="chantier-meta-item"><span class="meta-icon">📍</span><strong>Commune</strong></div>
+                        <div class="chantier-meta-item"><span class="meta-icon">📅</span><strong data-lang="fr">Mois 2026</strong><strong data-lang="en">Month 2026</strong></div>
+                        <div class="chantier-meta-item"><span class="meta-icon">⏱</span><strong data-lang="fr">X jours</strong><strong data-lang="en">X days</strong></div>
+                    </div>
+                    <p class="chantier-desc" data-lang="fr">Description en français.</p>
+                    <p class="chantier-desc" data-lang="en">Description in English.</p>
+                    <div class="chantier-tags">
+                        <span class="chantier-tag" data-lang="fr">Tag 1</span>
+                        <span class="chantier-tag" data-lang="en">Tag 1</span>
                     </div>
                 </div>
             </div>
