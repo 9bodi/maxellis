@@ -98,13 +98,14 @@
         .chantier { background: var(--blanc); border-radius: var(--radius); overflow: hidden; margin-bottom: 3rem; box-shadow: var(--ombre); }
 
         /* Photos : grande à gauche, 2 petites à droite */
-        .chantier-photos { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px; height: 450px; }
+        .chantier-photos { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px; height: 450px; overflow: hidden; }
         .chantier-photos img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: var(--transition); }
         .chantier-photos img:hover { opacity: 0.9; }
         .chantier-photos img:first-child { grid-row: 1 / -1; }
 
         /* Corps du chantier */
-        .chantier-body { padding: 2rem 2.5rem; }
+        .chantier-body { padding: 2.5rem 2.5rem 2rem; }
+
 
         .chantier-body h2 { font-family: 'Comfortaa', cursive; font-size: 1.5rem; color: var(--vert-chasseur); margin-bottom: 1rem; }
 
