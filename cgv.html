@@ -41,12 +41,16 @@
             --transition: all 0.3s ease;
         }
 
-        /* ── Language toggle ── */
-        [data-lang="en"] { display: none; }
-        body.lang-en [data-lang="fr"] { display: none; }
-        body.lang-en [data-lang="en"] { display: block; }
-        body.lang-en span[data-lang="en"],
-        body.lang-en a[data-lang="en"] { display: inline; }
+/* ── Language toggle ── */
+[data-lang="en"] { display: none; }
+body.lang-en [data-lang="fr"] { display: none; }
+body.lang-en [data-lang="en"] { display: block; }
+body.lang-en span[data-lang="en"],
+body.lang-en a[data-lang="en"] { display: inline; }
+body.lang-en a.btn[data-lang="en"] { display: inline-block; }
+a.btn[data-lang="en"] { display: none; }
+body.lang-en a.btn[data-lang="fr"] { display: none; }
+
 
         /* ── Reset ── */
         * { margin: 0; padding: 0; box-sizing: border-box; }
