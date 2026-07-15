@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditions Générales de Vente | Max Ellis Élagage & Espaces Verts</title>
+    <meta name="description" content="Conditions Générales de Vente (CGV) de Max Ellis Élagage & Espaces Verts — Entrepreneur individuel, élagage, abattage, entretien d'espaces verts en Vendée.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://espacesverts-vendee.fr/cgv.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="CGV — Max Ellis Élagage & Espaces Verts">
+    <meta property="og:description" content="Conditions Générales de Vente de Max Ellis, élagueur professionnel en Vendée.">
+    <meta property="og:url" content="https://espacesverts-vendee.fr/cgv.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://espacesverts-vendee.fr/img/elagage.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBHES5CSRL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ZBHES5CSRL');
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ── Variables ── */
+        :root {
+            --evergreen: #2C4A2E;
+            --vert-chasseur: #3A5A40;
+            --mousse-forestiere: #6E8A22;
+            --vert-tilleul: #A3B865;
+            --blanc: #FFFFFF;
+            --gris-clair: #F5F5F0;
+            --gris-texte: #4A4A4A;
+            --transition: all 0.3s ease;
+        }
+
+        /* ── Language toggle ── */
+        [data-lang="en"] { display: none; }
+        body.lang-en [data-lang="fr"] { display: none; }
+        body.lang-en [data-lang="en"] { display: block; }
+        body.lang-en span[data-lang="en"],
+        body.lang-en a[data-lang="en"] { display: inline; }
+
+        /* ── Reset ── */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; color: var(--gris-texte); background: var(--blanc); line-height: 1.7; }
+
+        /* ── Nav ── */
+        .navbar { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.97); backdrop-filter: blur(10px); z-index: 1000; padding: 15px 5%; display: flex; align-items: center; justify-content: space-between; transition: var(--transition); }
+        .navbar.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+        .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--vert-chasseur); text-decoration: none; font-weight: 700; }
+        .nav-links { list-style: none; display: flex; align-items: center; gap: 30px; }
+        .nav-links a { text-decoration: none; color: var(--gris-texte); font-weight: 500; font-size: 0.9rem; transition: var(--transition); }
+        .nav-links a:hover { color: var(--mousse-forestiere); }
+
+        /* Dropdown */
+        .dropdown { position: relative; }
+        .dropdown-toggle { display: inline; cursor: pointer; }
+        .dropdown-toggle .arrow { font-size: 0.7rem; }
+        .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--blanc); box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-radius: 8px; min-width: 220px; padding: 8px 0; z-index: 100; }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu li { list-style: none; }
+        .dropdown-menu a { display: block; padding: 8px 20px; font-size: 0.85rem; }
+        .dropdown-menu a:hover { background: var(--gris-clair); color: var(--mousse-forestiere); }
+
+        /* Language switcher */
+        .lang-switcher { display: flex; gap: 8px; margin-left: 15px; }
+        .lang-btn { background: none; border: 2px solid transparent; border-radius: 4px; cursor: pointer; padding: 2px; transition: var(--transition); opacity: 0.5; }
+        .lang-btn.active { opacity: 1; border-color: var(--mousse-forestiere); }
+        .lang-btn img { width: 24px; height: 18px; display: block; }
+
+        /* Burger */
+        .burger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+        .burger span { width: 25px; height: 3px; background: var(--vert-chasseur); border-radius: 3px; transition: var(--transition); }
+
+        /* ── Hero ── */
+        .page-hero { background: linear-gradient(135deg, var(--evergreen), var(--vert-chasseur)); color: var(--blanc); padding: 140px 5% 80px; text-align: center; }
+        .page-hero h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1rem; }
+        .page-hero p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+
+        /* ── CGV Content ── */
+        .cgv-section { max-width: 860px; margin: 0 auto; padding: 60px 5%; }
+        .cgv-section h2 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--vert-chasseur); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--vert-tilleul); }
+        .cgv-section h2:first-of-type { margin-top: 0; }
+        .cgv-section p { margin-bottom: 1rem; text-align: justify; }
+        .cgv-section ul { margin: 0.5rem 0 1.5rem 1.5rem; }
+        .cgv-section ul li { margin-bottom: 0.5rem; line-height: 1.7; }
+        .cgv-note { background: var(--gris-clair); border-left: 4px solid var(--mousse-forestiere); padding: 1rem 1.5rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; font-size: 0.95rem; }
+        .cgv-header-info { text-align: center; margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--gris-clair); }
+        .cgv-header-info p { text-align: center; color: var(--gris-texte); font-size: 0.95rem; }
+
+        /* ── CTA ── */
+        .cta-section { background: var(--evergreen); color: var(--blanc); text-align: center; padding: 60px 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .cta-section h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem; }
+        .cta-section p { margin-bottom: 2rem; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+
+        /* Buttons */
+        .btn { display: inline-block; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; font-family: 'Poppins', sans-serif; transition: var(--transition); cursor: pointer; border: none; text-align: center; }
+        .btn-primary { background: var(--vert-chasseur); color: #FFFFFF; }
+        .btn-primary:hover { background: var(--evergreen); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(58,90,64,0.3); }
+        a.btn-primary { color: #FFFFFF; }
+        .btn-outline-white { border: 2px solid var(--blanc); color: #FFFFFF; background: transparent; }
+        .btn-outline-white:hover { background: var(--blanc); color: var(--vert-chasseur); }
+        a.btn-outline-white { color: #FFFFFF; }
+
+        /* ── Footer ── */
+        footer { background: var(--evergreen); color: rgba(255,255,255,0.7); text-align: center; padding: 30px 5%; font-size: 0.85rem; }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+        footer a:hover { color: var(--blanc); }
+        .footer-links { margin-top: 8px; }
+        .footer-links a { margin: 0 10px; }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: fixed; top: 0; right: -100%; width: 70%; height: 100vh; background: var(--blanc); flex-direction: column; padding: 80px 30px 30px; gap: 20px; box-shadow: -5px 0 20px rgba(0,0,0,0.1); transition: right 0.3s ease; }
+            .nav-links.active { display: flex; right: 0; }
+            .burger { display: flex; }
+            .dropdown-menu { position: static; box-shadow: none; padding-left: 15px; }
+            .dropdown:hover .dropdown-menu { display: block; }
+            .page-hero h1 { font-size: 1.8rem; }
+            .cgv-section { padding: 40px 5%; }
+            .cgv-section h2 { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ════ NAV ════ -->
+    <nav class="navbar">
+        <a href="/" class="nav-logo">MaxEllis</a>
+        <ul class="nav-links">
+            <li data-lang="fr"><a href="/#services">Services</a></li>
+            <li data-lang="en"><a href="/#services">Services</a></li>
+
+            <li data-lang="fr" class="dropdown">
+                <a href="/realisations/elagage.html" class="dropdown-toggle">Réalisations <span class="arrow">▾</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/realisations/elagage.html">Élagage</a></li>
+                    <li><a href="#gallery">Taille de Haies</a></li>
+                    <li><a href="#gallery">Entretien de Jardins</a></li>
+                    <li><a href="#gallery">Débroussaillage</a></li>
+                    <li><a href="#gallery">Aménagement Paysager</a></li>
+                    <li><a href="#gallery">Évacuation</a></li>
+                </ul>
+            </li>
+            <li data-lang="en" class="dropdown">
+                <a href="/realisations/elagage.html" class="dropdown-toggle">Our Work <span class="arrow">▾</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/realisations/elagage.html">Tree Pruning</a></li>
+                    <li><a href="#gallery">Hedge Trimming</a></li>
+                    <li><a href="#gallery">Garden Maintenance</a></li>
+                    <li><a href="#gallery">Brush Clearing</a></li>
+                    <li><a href="#gallery">Landscaping</a></li>
+                    <li><a href="#gallery">Waste Removal</a></li>
+                </ul>
+            </li>
+
+            <li data-lang="fr"><a href="/blog/">Blog</a></li>
+            <li data-lang="en"><a href="/blog/">Blog</a></li>
+            <li data-lang="fr"><a href="/#contact">Contact</a></li>
+            <li data-lang="en"><a href="/#contact">Contact</a></li>
+
+            <li class="lang-switcher">
+                <button class="lang-btn active" onclick="setLang('fr')" title="Français">
+                    <img src="https://flagcdn.com/w40/fr.png" alt="FR">
+                </button>
+                <button class="lang-btn" onclick="setLang('en')" title="English">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="EN">
+                </button>
+            </li>
+        </ul>
+        <div class="burger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- ════ HERO ════ -->
+    <section class="page-hero">
+        <h1 data-lang="fr">Conditions Générales de Vente</h1>
+        <h1 data-lang="en">Terms and Conditions</h1>
+        <p data-lang="fr">Max Ellis — Entrepreneur Individuel · Élagage & Espaces Verts en Vendée</p>
+        <p data-lang="en">Max Ellis — Sole Trader · Tree Care & Landscaping in Vendée</p>
+    </section>
+
+    <!-- ════ CGV FR ════ -->
+    <div class="cgv-section" data-lang="fr">
+
+        <div class="cgv-header-info">
+            <p><strong>MAX ELLIS — Entrepreneur Individuel</strong></p>
+            <p>Nom commercial : Max Ellis Élagage & Espaces Verts</p>
+        </div>
+
+        <h2>1. Objet</h2>
+        <p>Les présentes Conditions Générales de Vente (CGV) régissent l'ensemble des prestations réalisées par Max Ellis (Nom commercial : Max Ellis Élagage & Espaces Verts), notamment les travaux d'élagage, d'abattage, de démontage, de taille, de débroussaillage, d'entretien des espaces verts, de broyage, de dessouchage ainsi que toutes prestations annexes.</p>
+        <div class="cgv-note">La signature du devis vaut acceptation pleine et entière des présentes CGV.</div>
+
+        <h2>2. Devis</h2>
+        <p>Les devis sont valables pendant une durée de 30 jours à compter de leur date d'émission.</p>
+        <p>Toute prestation non prévue au devis initial fera l'objet d'un devis complémentaire ou d'une facturation supplémentaire après accord du client.</p>
+
+        <h2>3. Commande</h2>
+        <p>La commande est réputée ferme et définitive dès réception du devis signé ou de toute acceptation écrite du client.</p>
+
+        <h2>4. Prix</h2>
+        <p>Les prix sont exprimés en euros. Le taux de TVA appliqué est celui en vigueur le jour de la facturation.</p>
+
+        <h2>5. Conditions de paiement</h2>
+        <p>Sauf mention contraire figurant sur le devis :</p>
+        <ul>
+            <li>Les factures sont payables comptant à réception.</li>
+            <li>Tout retard de paiement entraîne, de plein droit et sans mise en demeure préalable, l'application des pénalités prévues par le Code de commerce ainsi que l'indemnité forfaitaire légale pour frais de recouvrement.</li>
+        </ul>
+        <p>L'entreprise se réserve le droit de demander un acompte avant le début des travaux.</p>
+
+        <h2>6. Autorisations administratives</h2>
+        <p>Toutes les démarches administratives préalables aux travaux demeurent à la charge exclusive du client. Le client déclare notamment :</p>
+        <ul>
+            <li>Être propriétaire du terrain ou dûment autorisé à faire réaliser les travaux.</li>
+            <li>Avoir obtenu l'ensemble des autorisations éventuellement requises.</li>
+            <li>Avoir vérifié la conformité des travaux au Plan Local d'Urbanisme (PLU) et à toute réglementation applicable.</li>
+            <li>Avoir vérifié que les arbres concernés ne sont pas soumis à une protection particulière (Espace Boisé Classé, arbre remarquable, site classé, monument historique, servitude, règlement de lotissement ou toute autre protection).</li>
+        </ul>
+        <div class="cgv-note">En acceptant le devis, le client déclare que toutes les autorisations nécessaires ont été obtenues.</div>
+        <p>L'entreprise intervient de bonne foi sur la base des déclarations du client et ne pourra être tenue responsable des conséquences résultant d'une absence ou d'une irrégularité d'autorisation administrative.</p>
+
+        <h2>7. Nature des arbres et limites de responsabilité</h2>
+        <p>Les arbres étant des organismes vivants, leur évolution ne peut être totalement maîtrisée. Malgré le respect des règles professionnelles de l'arboriculture et des bonnes pratiques de taille, l'entreprise ne peut garantir :</p>
+        <ul>
+            <li>La reprise physiologique d'un arbre.</li>
+            <li>L'absence de dépérissement ultérieur.</li>
+            <li>L'évolution future de son état sanitaire.</li>
+            <li>Sa stabilité mécanique dans le temps.</li>
+            <li>Sa réaction à la taille, à l'élagage ou à l'abattage.</li>
+        </ul>
+        <p>L'état interne d'un arbre ne pouvant être totalement apprécié lors de la visite préalable, la découverte de cavités, pourritures, fissures, défauts racinaires ou de tout autre vice non apparent pourra conduire l'entreprise à adapter sa méthode d'intervention, interrompre temporairement le chantier ou proposer un devis complémentaire.</p>
+        <p>Les travaux sont réalisés conformément aux règles de l'art.</p>
+
+        <h2>8. Conditions d'intervention</h2>
+        <p>Le client garantit notamment :</p>
+        <ul>
+            <li>Un accès libre et sécurisé au chantier.</li>
+            <li>L'absence d'obstacles non signalés.</li>
+            <li>La localisation exacte des réseaux enterrés ou aériens.</li>
+            <li>La présence d'un stationnement permettant l'accès du matériel.</li>
+            <li>L'absence de personnes ou d'animaux dans la zone de travail.</li>
+        </ul>
+        <p>Les dommages causés à des réseaux ou installations non signalés ne pourront engager la responsabilité de l'entreprise.</p>
+        <p>Tout déplacement inutile pourra être facturé.</p>
+
+        <h2>9. Conditions météorologiques et Force Majeure</h2>
+        <p>Les travaux pourront être reportés, interrompus ou suspendus notamment en cas de : vent fort, orage, fortes chaleurs, fortes précipitations, gel, incendie, catastrophe naturelle, panne importante de matériel, accident, décision administrative, ou tout cas de force majeure au sens de l'article 1218 du Code civil.</p>
+        <p>Aucune indemnité ne pourra être réclamée.</p>
+
+        <h2>10. Déchets végétaux</h2>
+        <p>Sauf mention contraire au devis :</p>
+        <ul>
+            <li>Le bois est débité et laissé sur place.</li>
+            <li>Les branches sont laissées sur place.</li>
+        </ul>
+        <p>À compter de la fin du chantier, ces matériaux sont réputés remis au client, qui en assume la garde, le stockage, l'utilisation et l'élimination.</p>
+        <p>Lorsque le devis prévoit une prestation de broyage, d'évacuation ou de valorisation des déchets végétaux, celle-ci est réalisée conformément aux modalités prévues au devis et fait l'objet d'une ligne de facturation spécifique.</p>
+
+        <h2>11. Travaux supplémentaires</h2>
+        <p>Toute prestation rendue nécessaire en cours de chantier en raison de circonstances imprévues (bois creux, cavités, risques supplémentaires, difficultés d'accès, réseaux non signalés, démontage plus complexe, arbres instables, etc.) fera l'objet d'un accord préalable du client avant toute facturation complémentaire, sauf en cas d'urgence mettant en jeu la sécurité des personnes ou des biens.</p>
+
+        <h2>12. Délais d'exécution</h2>
+        <p>Les délais sont communiqués à titre indicatif. Ils peuvent être modifiés en raison des conditions météorologiques, d'impératifs de sécurité, d'une panne, d'un accident, d'un cas de force majeure ou de tout événement indépendant de la volonté de l'entreprise.</p>
+
+        <h2>13. Responsabilité et Protection des biens</h2>
+        <p>L'entreprise est couverte par une assurance Responsabilité Civile Professionnelle. Sa responsabilité est limitée aux dommages directs résultant d'une faute démontrée.</p>
+        <p>Elle ne pourra être tenue responsable :</p>
+        <ul>
+            <li>Des défauts cachés des arbres.</li>
+            <li>Des informations erronées fournies par le client.</li>
+            <li>Des réseaux non signalés.</li>
+            <li>Des phénomènes naturels postérieurs aux travaux.</li>
+        </ul>
+        <p>Malgré toutes les précautions prises, certaines interventions peuvent entraîner des marques temporaires sur les pelouses, massifs, allées, revêtements ou plantations. Ces conséquences normales liées aux contraintes techniques des travaux ne pourront donner lieu à indemnisation sauf faute démontrée par l'entreprise.</p>
+
+        <h2>14. Réserve de propriété</h2>
+        <p>Les prestations demeurent dues jusqu'au paiement intégral des sommes facturées.</p>
+
+        <h2>15. Réclamations</h2>
+        <p>Toute contestation relative aux travaux réalisés devra être formulée par écrit dans un délai de huit (8) jours suivant la fin du chantier.</p>
+        <p>Passé ce délai, les prestations seront réputées acceptées, sans préjudice des garanties légales applicables.</p>
+
+        <h2>16. Médiation de la consommation</h2>
+        <p>Conformément aux articles L.612-1 et suivants du Code de la consommation, tout consommateur a le droit de recourir gratuitement à un médiateur de la consommation en vue de la résolution amiable d'un litige.</p>
+        <p>Les coordonnées du médiateur compétent sont communiquées sur simple demande ou figurent sur les documents obligatoires de l'entreprise.</p>
+
+        <h2>17. Tribunal compétent</h2>
+        <p>Les présentes CGV sont soumises au droit français. Pour les litiges entre professionnels, compétence est attribuée au tribunal du ressort du siège de l'entreprise, sauf disposition légale impérative contraire.</p>
+
+        <h2>18. Photographies du chantier</h2>
+        <p>L'entreprise est autorisée à réaliser des photographies avant, pendant et après les travaux afin d'assurer le suivi technique des interventions, de constituer un dossier en cas de sinistre ou de réclamation et d'illustrer son savoir-faire.</p>
+        <p>Sauf opposition écrite du client avant le début des travaux, ces photographies pourront être utilisées sur les supports de communication de l'entreprise (site internet, réseaux sociaux, portfolio, documentation commerciale), sous réserve qu'elles ne permettent pas d'identifier les occupants des lieux ni de porter atteinte à leur vie privée.</p>
+
+        <h2>19. Présence du client et sécurité</h2>
+        <p>La présence du client pendant les travaux n'est pas obligatoire.</p>
+        <p>Pendant toute la durée du chantier, le client s'engage à maintenir hors du périmètre de sécurité toute personne, tout animal et tout véhicule non indispensable aux travaux.</p>
+        <p>L'entreprise se réserve le droit de suspendre temporairement les travaux si les conditions de sécurité ne sont plus réunies.</p>
+
+        <h2>20. Droit de suspendre les travaux</h2>
+        <p>L'entreprise se réserve le droit d'interrompre ou de suspendre immédiatement toute intervention lorsque les conditions de sécurité ne sont plus réunies, ou en raison de :</p>
+        <ul>
+            <li>Conditions météorologiques.</li>
+            <li>Danger imprévu.</li>
+            <li>Accès non conforme.</li>
+            <li>Présence de tiers dans la zone de travail.</li>
+            <li>Découverte d'espèces protégées ou de nids.</li>
+            <li>Toute situation susceptible de mettre en danger les personnes ou les biens.</li>
+        </ul>
+        <p>Aucune indemnité ne pourra être réclamée lorsque cette décision est motivée par des impératifs de sécurité ou de la présence de faune protégée.</p>
+
+        <h2>21. Acceptation des CGV</h2>
+        <p>La signature du devis emporte acceptation sans réserve des présentes Conditions Générales de Vente.</p>
+        <p>Les présentes CGV sont remises au client avec le devis et peuvent être fournies à tout moment sur simple demande par Max Ellis.</p>
+    </div>
+
+    <!-- ════ CGV EN ════ -->
+    <div class="cgv-section" data-lang="en">
+
+        <div class="cgv-header-info">
+            <p><strong>MAX ELLIS — Sole Trader</strong></p>
+            <p>Trading as: Max Ellis Tree Care & Landscaping</p>
+        </div>
+
+        <h2>1. Purpose</h2>
+        <p>These Terms and Conditions govern all services provided by Max Ellis (trading as Max Ellis Tree Care & Landscaping), including tree pruning, felling, dismantling, trimming, brush clearing, green space maintenance, chipping, stump removal, and all related services.</p>
+        <div class="cgv-note">Signing the quote constitutes full and unreserved acceptance of these Terms and Conditions.</div>
+
+        <h2>2. Quotes</h2>
+        <p>Quotes are valid for 30 days from their date of issue.</p>
+        <p>Any work not included in the original quote will be subject to an additional quote or supplementary invoice, subject to the client's prior agreement.</p>
+
+        <h2>3. Orders</h2>
+        <p>An order is deemed firm and final upon receipt of the signed quote or any written acceptance from the client.</p>
+
+        <h2>4. Prices</h2>
+        <p>Prices are expressed in euros. The applicable VAT rate is that in force on the date of invoicing.</p>
+
+        <h2>5. Payment Terms</h2>
+        <p>Unless otherwise stated on the quote:</p>
+        <ul>
+            <li>Invoices are payable upon receipt.</li>
+            <li>Any late payment will automatically incur, without prior formal notice, the penalties provided for by the French Commercial Code as well as the statutory fixed compensation for recovery costs.</li>
+        </ul>
+        <p>The company reserves the right to request a deposit before work begins.</p>
+
+        <h2>6. Administrative Authorisations</h2>
+        <p>All administrative procedures required prior to the work are the sole responsibility of the client. The client declares in particular:</p>
+        <ul>
+            <li>Being the owner of the land or duly authorised to have the work carried out.</li>
+            <li>Having obtained all necessary permits or authorisations.</li>
+            <li>Having verified compliance with the Local Urban Plan (PLU) and all applicable regulations.</li>
+            <li>Having verified that the trees concerned are not subject to any special protection (Classified Woodland, remarkable tree, listed site, historic monument, easement, housing development rules, or any other protection).</li>
+        </ul>
+        <div class="cgv-note">By accepting the quote, the client declares that all necessary authorisations have been obtained.</div>
+        <p>The company acts in good faith based on the client's declarations and cannot be held liable for consequences resulting from any absent or irregular administrative authorisation.</p>
+
+        <h2>7. Nature of Trees and Limitations of Liability</h2>
+        <p>Trees are living organisms whose development cannot be fully controlled. Despite compliance with professional arboriculture standards and best pruning practices, the company cannot guarantee:</p>
+        <ul>
+            <li>The physiological recovery of a tree.</li>
+            <li>The absence of subsequent decline.</li>
+            <li>The future development of its health.</li>
+            <li>Its mechanical stability over time.</li>
+            <li>Its reaction to pruning, trimming, or felling.</li>
+        </ul>
+        <p>Since the internal condition of a tree cannot be fully assessed during the preliminary visit, the discovery of cavities, decay, cracks, root defects, or any other hidden defect may lead the company to adapt its working method, temporarily halt work, or propose a supplementary quote.</p>
+        <p>All work is carried out in accordance with professional standards.</p>
+
+        <h2>8. Working Conditions</h2>
+        <p>The client guarantees in particular:</p>
+        <ul>
+            <li>Free and safe access to the work site.</li>
+            <li>The absence of unreported obstacles.</li>
+            <li>The exact location of underground or overhead utilities.</li>
+            <li>Adequate parking to allow equipment access.</li>
+            <li>The absence of people or animals in the work area.</li>
+        </ul>
+        <p>Damage caused to unreported utilities or installations cannot be attributed to the company.</p>
+        <p>Any unnecessary trip may be invoiced.</p>
+
+        <h2>9. Weather Conditions and Force Majeure</h2>
+        <p>Work may be postponed, interrupted, or suspended, particularly in the event of: strong winds, storms, extreme heat, heavy rainfall, frost, fire, natural disaster, major equipment failure, accident, administrative decision, or any event of force majeure as defined by Article 1218 of the French Civil Code.</p>
+        <p>No compensation may be claimed.</p>
+
+        <h2>10. Green Waste</h2>
+        <p>Unless otherwise stated on the quote:</p>
+        <ul>
+            <li>Wood is cut up and left on site.</li>
+            <li>Branches are left on site.</li>
+        </ul>
+        <p>Upon completion of the work, these materials are deemed handed over to the client, who assumes responsibility for their storage, use, and disposal.</p>
+        <p>Where the quote includes chipping, removal, or recycling of green waste, this is carried out in accordance with the terms specified in the quote and invoiced as a separate line item.</p>
+
+        <h2>11. Additional Work</h2>
+        <p>Any work made necessary during the project due to unforeseen circumstances (hollow wood, cavities, additional risks, access difficulties, unreported utilities, more complex dismantling, unstable trees, etc.) will be subject to the client's prior agreement before any supplementary invoicing, except in emergencies involving the safety of people or property.</p>
+
+        <h2>12. Completion Times</h2>
+        <p>Completion times are provided as an indication only. They may be modified due to weather conditions, safety requirements, equipment failure, accident, force majeure, or any event beyond the company's control.</p>
+
+        <h2>13. Liability and Property Protection</h2>
+        <p>The company holds Professional Liability Insurance. Its liability is limited to direct damage resulting from proven fault.</p>
+        <p>The company cannot be held liable for:</p>
+        <ul>
+            <li>Hidden defects in trees.</li>
+            <li>Inaccurate information provided by the client.</li>
+            <li>Unreported utilities.</li>
+            <li>Natural events occurring after the work.</li>
+        </ul>
+        <p>Despite all precautions taken, certain operations may cause temporary marks on lawns, flower beds, paths, surfaces, or plantings. These normal consequences of the technical requirements of the work shall not give rise to compensation unless the company is proven to be at fault.</p>
+
+        <h2>14. Retention of Title</h2>
+        <p>Payment for services remains due until the invoiced amounts are paid in full.</p>
+
+        <h2>15. Complaints</h2>
+        <p>Any dispute regarding the work carried out must be submitted in writing within eight (8) days of completion of the work.</p>
+        <p>After this period, the services shall be deemed accepted, without prejudice to applicable statutory warranties.</p>
+
+        <h2>16. Consumer Mediation</h2>
+        <p>In accordance with Articles L.612-1 et seq. of the French Consumer Code, every consumer has the right to use the services of a consumer mediator free of charge for the amicable resolution of disputes.</p>
+        <p>The contact details of the relevant mediator are available on request or appear on the company's mandatory documents.</p>
+
+        <h2>17. Jurisdiction</h2>
+        <p>These Terms and Conditions are governed by French law. For disputes between businesses, jurisdiction is assigned to the court in the area where the company's registered office is located, unless otherwise required by mandatory legal provisions.</p>
+
+        <h2>18. Site Photographs</h2>
+        <p>The company is authorised to take photographs before, during, and after the work for the purposes of technical monitoring, compiling a file in the event of a claim, and showcasing its expertise.</p>
+        <p>Unless the client objects in writing before work begins, these photographs may be used on the company's communication channels (website, social media, portfolio, marketing materials), provided they do not identify the occupants or infringe upon their privacy.</p>
+
+        <h2>19. Client Presence and Safety</h2>
+        <p>The client's presence during the work is not mandatory.</p>
+        <p>Throughout the duration of the work, the client undertakes to keep all people, animals, and vehicles not essential to the work outside the safety perimeter.</p>
+        <p>The company reserves the right to temporarily suspend work if safety conditions are no longer met.</p>
+
+        <h2>20. Right to Suspend Work</h2>
+        <p>The company reserves the right to immediately interrupt or suspend any operation when safety conditions are no longer met, or due to:</p>
+        <ul>
+            <li>Weather conditions.</li>
+            <li>Unforeseen danger.</li>
+            <li>Non-compliant access.</li>
+            <li>Presence of third parties in the work area.</li>
+            <li>Discovery of protected species or nests.</li>
+            <li>Any situation likely to endanger people or property.</li>
+        </ul>
+        <p>No compensation may be claimed when this decision is motivated by safety requirements or the presence of protected wildlife.</p>
+
+        <h2>21. Acceptance of Terms and Conditions</h2>
+        <p>Signing the quote constitutes unreserved acceptance of these Terms and Conditions.</p>
+        <p>These Terms and Conditions are provided to the client with the quote and are available at any time upon request from Max Ellis.</p>
+    </div>
+
+    <!-- ════ CTA ════ -->
+    <section class="cta-section">
+        <h2 data-lang="fr">Un projet d'élagage ou d'entretien ?</h2>
+        <h2 data-lang="en">Have a pruning or maintenance project?</h2>
+        <p data-lang="fr">Demandez votre devis gratuit en quelques clics.</p>
+        <p data-lang="en">Request your free quote in just a few clicks.</p>
+        <div class="cta-buttons">
+            <a href="/#booking" class="btn btn-primary" data-lang="fr">Prendre rendez-vous</a>
+            <a href="/#booking" class="btn btn-primary" data-lang="en">Book an Appointment</a>
+            <a href="/#contact" class="btn btn-outline-white" data-lang="fr">Nous contacter</a>
+            <a href="/#contact" class="btn btn-outline-white" data-lang="en">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- ════ FOOTER ════ -->
+    <footer>
+        <p data-lang="fr">© 2025 Max Ellis — Élagage & Espaces Verts · SIRET 911 829 505 00021 · Membre de la coopérative <a href="https://jardiniers-sap.fr" target="_blank">Jardiniers SAP</a></p>
+        <p data-lang="en">© 2025 Max Ellis — Tree Care & Landscaping · SIRET 911 829 505 00021 · Member of <a href="https://jardiniers-sap.fr" target="_blank">Jardiniers SAP</a> cooperative</p>
+        <div class="footer-links">
+            <a href="/mentions-legales.html" data-lang="fr">Mentions légales</a>
+            <a href="/mentions-legales.html" data-lang="en">Legal Notice</a>
+            <a href="/cgv.html" data-lang="fr">CGV</a>
+            <a href="/cgv.html" data-lang="en">T&Cs</a>
+        </div>
+    </footer>
+
+    <!-- ════ SCRIPTS ════ -->
+    <script>
+        function setLang(lang) {
+            if (lang === 'en') {
+                document.body.classList.add('lang-en');
+            } else {
+                document.body.classList.remove('lang-en');
+            }
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
+            localStorage.setItem('lang', lang);
+        }
+        (function() {
+            const saved = localStorage.getItem('lang');
+            if (saved) setLang(saved);
+        })();
+
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+
+</body>
+</html>
