@@ -41,6 +41,10 @@
         .legal-content strong { color: var(--noir); }
         .legal-content a { color: var(--mousse-forestiere); text-decoration: none; }
         .legal-content a:hover { text-decoration: underline; }
+        @media (max-width: 768px) {
+            .legal-content { padding: 40px 1.25rem 60px; }
+            .legal-content h2 { font-size: 1.2rem; }
+        }
     </style>
 </head>
 <body>
@@ -48,9 +52,11 @@
     <!-- ════ NAV ════ -->
     <nav>
         <div class="nav-container">
-            <a href="/" class="nav-logo">
-                <img src="/img/logo/logo_nom.png" alt="Max Ellis Élagage" class="nav-logo-img">
-            </a>
+           <a href="/" class="nav-logo">
+    <img src="/img/logo/logo_nom.png" alt="Max Ellis Élagage" class="nav-logo-img">
+</a>
+
+
             <ul class="nav-links" id="navLinks">
                 <li data-lang="fr"><a href="/#services">Services</a></li>
                 <li data-lang="fr" class="dropdown">
@@ -107,8 +113,8 @@
         </div>
     </section>
 
-    <!-- ════ CONTENU ════ -->
-    <div class="legal-content">
+    <!-- ════ CONTENU FR ════ -->
+    <div class="legal-content" data-lang="fr">
         <h2>1. Éditeur du site</h2>
         <p><strong>Max Ellis</strong> — Entrepreneur individuel<br>
         Activité : Élagage, abattage, entretien d'espaces verts<br>
@@ -120,14 +126,14 @@
         <h2>2. Hébergement</h2>
         <p>Ce site est hébergé par <strong>Vercel Inc.</strong><br>
         Adresse : 340 S Lemon Ave #4133, Walnut, CA 91789, USA<br>
-        Site web : <a href="https://vercel.com" target="_blank" rel="noopener">vercel.com</a></p>
+        Site web : <a href="https://vercel.com/" target="_blank" rel="noopener">vercel.com</a></p>
 
         <h2>3. Propriété intellectuelle</h2>
         <p>L'ensemble du contenu de ce site (textes, images, logo, mise en page) est la propriété exclusive de Max Ellis, sauf mention contraire. Toute reproduction, représentation ou diffusion, totale ou partielle, sans autorisation écrite préalable est interdite.</p>
 
         <h2>4. Données personnelles</h2>
         <p>Les données personnelles collectées via le formulaire de contact sont utilisées uniquement pour répondre à vos demandes de devis ou de renseignements. Elles ne sont ni vendues, ni cédées à des tiers.</p>
-        <p>Le formulaire est traité par le service <strong>Formspree</strong> (<a href="https://formspree.io" target="_blank" rel="noopener">formspree.io</a>), qui agit en qualité de sous-traitant. Les données sont conservées le temps nécessaire au traitement de votre demande.</p>
+        <p>Le formulaire est traité par le service <strong>Formspree</strong> (<a href="https://formspree.io/" target="_blank" rel="noopener">formspree.io</a>), qui agit en qualité de sous-traitant. Les données sont conservées le temps nécessaire au traitement de votre demande.</p>
         <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données. Pour exercer ces droits, contactez : <a href="mailto:pro.max.ellis@gmail.com">pro.max.ellis@gmail.com</a>.</p>
 
         <h2>5. Cookies & Google Analytics</h2>
@@ -151,16 +157,65 @@
         <p style="margin-top: 3rem; font-size: 0.85rem; color: var(--gris-marbre);">Dernière mise à jour : mai 2026</p>
     </div>
 
+    <!-- ════ CONTENU EN ════ -->
+    <div class="legal-content" data-lang="en">
+        <h2>1. Site Publisher</h2>
+        <p><strong>Max Ellis</strong> — Sole Trader<br>
+        Activity: Tree pruning, felling, green space maintenance<br>
+        SIRET: 911 829 505 00021<br>
+        Address: La Roche-sur-Yon, 85000, Vendée, France<br>
+        Phone: <a href="tel:+33604023613">+33 6 04 02 36 13</a><br>
+        Email: <a href="mailto:pro.max.ellis@gmail.com">pro.max.ellis@gmail.com</a></p>
+
+        <h2>2. Hosting</h2>
+        <p>This website is hosted by <strong>Vercel Inc.</strong><br>
+        Address: 340 S Lemon Ave #4133, Walnut, CA 91789, USA<br>
+        Website: <a href="https://vercel.com/" target="_blank" rel="noopener">vercel.com</a></p>
+
+        <h2>3. Intellectual Property</h2>
+        <p>All content on this website (text, images, logo, layout) is the exclusive property of Max Ellis unless otherwise stated. Any reproduction, representation or distribution, in whole or in part, without prior written permission is prohibited.</p>
+
+        <h2>4. Personal Data</h2>
+        <p>Personal data collected through the contact form is used solely to respond to your quote requests or enquiries. It is neither sold nor shared with third parties.</p>
+        <p>The form is processed by <strong>Formspree</strong> (<a href="https://formspree.io/" target="_blank" rel="noopener">formspree.io</a>), acting as a data processor. Data is retained for the time necessary to process your request.</p>
+        <p>In accordance with the General Data Protection Regulation (GDPR), you have the right to access, rectify, delete and port your data. To exercise these rights, contact: <a href="mailto:pro.max.ellis@gmail.com">pro.max.ellis@gmail.com</a>.</p>
+
+        <h2>5. Cookies & Google Analytics</h2>
+        <p>This website uses <strong>Google Analytics 4</strong> (ID: G-ZBHES5CSRL) to measure traffic and improve the user experience. Google Analytics places cookies on your browser to collect anonymous information about your visit (pages viewed, duration, approximate geographic origin).</p>
+        <p>This data is processed by <strong>Google LLC</strong> in accordance with its <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy</a>. No personally identifiable data is collected through these cookies.</p>
+        <p>You can refuse cookies by changing your browser settings or by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out add-on</a>.</p>
+
+        <h2>6. Calendly Widget</h2>
+        <p>This website integrates the <strong>Calendly</strong> booking widget (<a href="https://calendly.com" target="_blank" rel="noopener">calendly.com</a>). When you book an appointment, the data you enter (name, email, chosen time slot) is processed directly by Calendly in accordance with its <a href="https://calendly.com/privacy" target="_blank" rel="noopener">privacy policy</a>.</p>
+
+        <h2>7. Liability</h2>
+        <p>Max Ellis endeavours to provide information on this website that is as accurate as possible. However, he cannot be held responsible for any omissions, inaccuracies or failures to update the information.</p>
+        <p>The project photographs shown on the website are examples of completed work and do not constitute a guarantee of identical results.</p>
+
+        <h2>8. External Links</h2>
+        <p>This website may contain links to third-party websites (Jardiniers SAP, Calendly, Google, etc.). Max Ellis cannot be held responsible for the content of these external websites.</p>
+
+        <h2>9. Applicable Law</h2>
+        <p>This legal notice is governed by French law. In the event of a dispute, the French courts shall have sole jurisdiction.</p>
+
+        <p style="margin-top: 3rem; font-size: 0.85rem; color: var(--gris-marbre);">Last updated: May 2026</p>
+    </div>
+
     <!-- ════ FOOTER ════ -->
     <footer>
         <div class="footer-content">
-            <p><strong>Max Ellis</strong> — Élagage & Entretien d'Espaces Verts</p>
-            <p>Auto-Entrepreneur — SIRET : 911 829 505 00021</p>
-            <p>Membre de la coopérative <a href="https://jardiniers-sap.fr" target="_blank" rel="noopener">Jardiniers SAP</a> — Agréé Service à la Personne</p>
-            <p>&copy; 2026 Max Ellis — Tous droits réservés</p>
+            <p><strong>Max Ellis</strong> <span data-lang="fr">— Élagage & Entretien d'Espaces Verts</span><span data-lang="en">— Tree Care & Landscaping</span></p>
+            <p data-lang="fr">Auto-Entrepreneur — SIRET : 911 829 505 00021</p>
+            <p data-lang="en">Sole Trader — SIRET: 911 829 505 00021</p>
+            <p data-lang="fr">Membre de la coopérative <a href="https://jardiniers-sap.fr" target="_blank" rel="noopener">Jardiniers SAP</a> — Agréé Service à la Personne</p>
+            <p data-lang="en">Member of the <a href="https://jardiniers-sap.fr" target="_blank" rel="noopener">Jardiniers SAP</a> cooperative — Certified Personal Service Provider</p>
+            <p data-lang="fr">&copy; 2026 Max Ellis — Tous droits réservés</p>
+            <p data-lang="en">&copy; 2026 Max Ellis — All rights reserved</p>
             <div class="footer-links">
-                <a href="/mentions-legales.html">Mentions légales</a>
-                <a href="/cgv.html">CGV</a>
+                <a href="/mentions-legales.html" data-lang="fr">Mentions légales</a>
+                <a href="/mentions-legales.html" data-lang="en">Legal Notice</a>
+                <a href="/cgv.html" data-lang="fr">CGV</a>
+                <a href="/cgv.html" data-lang="en">Terms & Conditions</a>
             </div>
         </div>
     </footer>

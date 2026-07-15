@@ -60,17 +60,18 @@
             flex-wrap: wrap;
         }
         .article-cover {
-            width: 100%;
-            max-width: 900px;
-            height: 400px;
-            object-fit: cover;
-            margin: -30px auto 0;
-            display: block;
-            border-radius: var(--radius);
-            box-shadow: var(--ombre);
-            position: relative;
-            z-index: 1;
-        }
+    width: calc(100% - 2rem);
+    max-width: 900px;
+    height: 400px;
+    object-fit: cover;
+    margin: -30px auto 0;
+    display: block;
+    border-radius: var(--radius);
+    box-shadow: var(--ombre);
+    position: relative;
+    z-index: 1;
+}
+
         .article-content {
             max-width: 750px;
             margin: 0 auto;
@@ -122,10 +123,11 @@
         .back-link:hover { text-decoration: underline; }
 
         @media (max-width: 768px) {
-            .article-hero h1 { font-size: 1.8rem; }
-            .article-cover { height: 250px; }
-            .article-content { padding: 40px 1.25rem 60px; }
-        }
+    .article-hero h1 { font-size: 1.8rem; }
+    .article-cover { height: 250px; width: calc(100% - 2.5rem); }
+    .article-content { padding: 40px 1.25rem 60px; }
+}
+
         @media (max-width: 480px) {
             .article-hero h1 { font-size: 1.5rem; }
             .article-meta { flex-direction: column; gap: 0.5rem; }
@@ -138,8 +140,10 @@
     <nav>
         <div class="nav-container">
             <a href="/" class="nav-logo">
-                <img src="/img/logo/logo_nom.png" alt="Max Ellis Élagage" class="nav-logo-img">
-            </a>
+    <img src="/img/logo/logo_nom.png" alt="Max Ellis Élagage" class="nav-logo-img">
+</a>
+
+
             <ul class="nav-links" id="navLinks">
                 <li data-lang="fr"><a href="/#services">Services</a></li>
                 <li data-lang="fr" class="dropdown">

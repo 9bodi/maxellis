@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="/style.css">
 
     <style>
+        /* ── Liste chantiers ── */
         .chantiers-list {
             max-width: 1000px;
             margin: 0 auto;
@@ -31,6 +32,8 @@
             flex-direction: column;
             gap: 3rem;
         }
+
+        /* ── Card chantier ── */
         .chantier {
             background: var(--blanc);
             border-radius: var(--radius);
@@ -38,20 +41,30 @@
             box-shadow: var(--ombre);
             border: 1px solid var(--gris-clair);
         }
-        .chantier-photos {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr 1fr;
-            grid-template-rows: 200px 200px;
-            gap: 4px;
-        }
-        .chantier-photos img {
+
+        /* ── Photo principale pleine largeur ── */
+        .chantier-photo-main {
             width: 100%;
-            height: 100%;
+            height: 400px;
             object-fit: cover;
+            display: block;
         }
-        .chantier-photos img:first-child {
-            grid-row: 1 / -1;
+
+        /* ── Bande de photos secondaires ── */
+        .chantier-photos-secondary {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4px;
+            padding: 4px 0 0 0;
         }
+        .chantier-photos-secondary img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ── Body ── */
         .chantier-body {
             padding: 2rem;
         }
@@ -61,6 +74,8 @@
             color: var(--vert-chasseur);
             margin-bottom: 1rem;
         }
+
+        /* ── Meta ── */
         .chantier-meta {
             display: flex;
             gap: 1.5rem;
@@ -75,13 +90,20 @@
             color: var(--gris-marbre);
         }
         .meta-icon { font-size: 1rem; }
-        .chantier-meta-item strong { color: var(--vert-chasseur); font-weight: 600; }
+        .chantier-meta-item strong {
+            color: var(--vert-chasseur);
+            font-weight: 600;
+        }
+
+        /* ── Description ── */
         .chantier-desc {
             color: var(--gris-fer);
             font-size: 0.95rem;
             line-height: 1.8;
             margin-bottom: 1.25rem;
         }
+
+        /* ── Tags ── */
         .chantier-tags {
             display: flex;
             flex-wrap: wrap;
@@ -99,21 +121,34 @@
             font-weight: 600;
         }
 
+        /* ── Responsive ── */
         @media (max-width: 768px) {
-            .chantier-photos {
-                grid-template-columns: 1fr;
-                grid-template-rows: auto;
-                height: auto;
+            .chantier-photo-main {
+                height: 280px;
             }
-            .chantier-photos img { height: 250px; }
-            .chantier-photos img:first-child { grid-row: auto; height: 300px; }
-            .chantier-body { padding: 1.5rem; }
-            .chantier-body h2 { font-size: 1.3rem; }
-            .chantier-meta { gap: 1rem; }
+            .chantier-photos-secondary img {
+                height: 160px;
+            }
+            .chantier-body {
+                padding: 1.5rem;
+            }
+            .chantier-body h2 {
+                font-size: 1.3rem;
+            }
+            .chantier-meta {
+                gap: 1rem;
+            }
         }
         @media (max-width: 480px) {
-            .chantier-photos img { height: 200px; }
-            .chantier-photos img:first-child { height: 250px; }
+            .chantier-photo-main {
+                height: 220px;
+            }
+            .chantier-photos-secondary {
+                grid-template-columns: 1fr;
+            }
+            .chantier-photos-secondary img {
+                height: 200px;
+            }
         }
     </style>
 </head>
@@ -186,12 +221,12 @@
     <!-- ════ CHANTIERS ════ -->
     <section class="chantiers-list">
 
-        <!-- Chantier 1 -->
+        <!-- Chantier 1 — Cyprès Notre-Dame-de-Riez -->
         <div class="chantier">
-            <div class="chantier-photos">
-                <img src="/img/realisations/elagage/cyprès-01.jpg" alt="Abattage cyprès Notre-Dame-de-Riez" loading="lazy">
-                <img src="/img/realisations/elagage/cyprès-02.jpg" alt="Tronçonnage cyprès" loading="lazy">
-                <img src="/img/realisations/elagage/cyprès-03.jpg" alt="Évacuation bois" loading="lazy">
+            <img src="/img/realisations/elagage/nddr-01.jpg" alt="Abattage cyprès Notre-Dame-de-Riez" class="chantier-photo-main" loading="lazy">
+            <div class="chantier-photos-secondary">
+                <img src="/img/realisations/elagage/nddr-02.jpg" alt="Tronçonnage cyprès" loading="lazy">
+                <img src="/img/realisations/elagage/nddr-03.jpg" alt="Évacuation bois" loading="lazy">
             </div>
             <div class="chantier-body">
                 <h2 data-lang="fr">Abattage et élagage d'urgence — Cyprès</h2>
@@ -220,9 +255,11 @@
 
         <!--
         ========== MODÈLE — copier ce bloc pour chaque nouveau chantier ==========
+
+        Pour 3 photos :
         <div class="chantier">
-            <div class="chantier-photos">
-                <img src="/img/realisations/elagage/xxx-01.jpg" alt="Description" loading="lazy">
+            <img src="/img/realisations/elagage/xxx-01.jpg" alt="Description" class="chantier-photo-main" loading="lazy">
+            <div class="chantier-photos-secondary">
                 <img src="/img/realisations/elagage/xxx-02.jpg" alt="Description" loading="lazy">
                 <img src="/img/realisations/elagage/xxx-03.jpg" alt="Description" loading="lazy">
             </div>
@@ -237,11 +274,12 @@
                 <p class="chantier-desc" data-lang="fr">Description en français.</p>
                 <p class="chantier-desc" data-lang="en">Description in English.</p>
                 <div class="chantier-tags">
-                    <span class="chantier-tag" data-lang="fr">Tag 1</span>
-                    <span class="chantier-tag" data-lang="en">Tag 1</span>
+                    <span class="chantier-tag" data-lang="fr">Tag</span>
+                    <span class="chantier-tag" data-lang="en">Tag</span>
                 </div>
             </div>
         </div>
+        ==========================================================================
         -->
 
     </section>

@@ -178,7 +178,17 @@ nav.scrolled {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 100px;
+}
+
+.nav-logo {
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.nav-logo-img {
+    height: 80px;
+    width: auto;
 }
 
 /* Logo */
@@ -196,13 +206,22 @@ nav.scrolled {
 
 .nav-logo {
     text-decoration: none;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.nav-logo-img {
-    height: 40px;
+.nav-logo-icon {
+    height: 50px;
     width: auto;
-    max-height: 40px;
 }
+
+.nav-logo-text {
+    height: 28px;
+    width: auto;
+}
+
 
 /* Nav links */
 .nav-links {
@@ -451,11 +470,12 @@ section {
    10. PAGE HERO (sous-pages)
    ============================ */
 .page-hero {
-    padding: 140px 2rem 60px;
+    padding: 160px 2rem 60px;
     background: var(--evergreen);
     color: var(--blanc);
     text-align: center;
 }
+
 
 .page-hero h1 {
     font-family: 'Comfortaa', cursive;
@@ -573,9 +593,30 @@ footer a:hover {
 /* ============================
    14. RESPONSIVE — GLOBAL
    ============================ */
-
-/* Dropdown mobile */
 @media (max-width: 768px) {
+
+    /* Nav container + logo */
+    .nav-container {
+    height: 80px;
+}
+.nav-logo-img {
+    height: 60px;
+}
+.nav-links {
+    top: 80px;
+}
+.page-hero {
+    padding-top: 130px;
+}
+
+.nav-logo-icon {
+    height: 42px;
+}
+.nav-logo-text {
+    height: 22px;
+}
+
+    /* Dropdown mobile — toggle au tap */
     .dropdown-menu {
         position: static;
         transform: none;
@@ -583,29 +624,35 @@ footer a:hover {
         border: none;
         padding: 0 0 0 1rem;
         background: transparent;
+        display: none;
     }
-
-    .dropdown:hover .dropdown-menu,
-    .dropdown .dropdown-menu {
+    .dropdown.open .dropdown-menu {
         display: block;
     }
-
+    .dropdown:hover .dropdown-menu {
+        display: none;
+    }
+    .dropdown.open:hover .dropdown-menu {
+        display: block;
+    }
     .dropdown-menu a {
         padding: 0.4rem 0;
         font-size: 0.85rem;
     }
-}
+    .dropdown-toggle .arrow {
+        transition: transform 0.3s ease;
+    }
+    .dropdown.open .dropdown-toggle .arrow {
+        transform: rotate(180deg);
+    }
 
-/* Burger + nav mobile */
-@media (max-width: 768px) {
+    /* Burger + nav mobile */
     .burger {
         display: flex;
     }
-
     .nav-links {
         display: none;
         position: absolute;
-        top: 70px;
         left: 0;
         right: 0;
         background: var(--blanc);
@@ -615,39 +662,48 @@ footer a:hover {
         border-bottom: 1px solid var(--gris-clair);
         box-shadow: 0 10px 30px rgba(33,51,36,0.1);
     }
-
     .nav-links.active {
         display: flex;
     }
-
     .lang-switcher {
         margin-left: 0.5rem;
     }
 
+    /* Sous-pages */
+    .page-hero {
+        padding-top: 120px;
+    }
     .page-hero h1 {
         font-size: 1.8rem;
     }
-
     section {
         padding: 60px 1.25rem;
     }
-
     .section-title {
         font-size: 2rem;
     }
-
     .cta-section {
         padding: 40px 1.25rem;
     }
 }
 
 @media (max-width: 480px) {
+    .nav-logo-img {
+    height: 50px;
+}
+
     .lang-btn img {
         width: 20px;
         height: 14px;
     }
-
     .page-hero h1 {
         font-size: 1.5rem;
     }
+    .nav-logo-icon {
+    height: 36px;
+}
+.nav-logo-text {
+    height: 18px;
+}
+
 }
