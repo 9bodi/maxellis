@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Max Ellis — Élagage & Entretien d'Espaces Verts en Vendée</title>
     <meta name="description" content="Élagage, abattage, taille de haies, entretien de jardins en Vendée. Devis gratuit. Intervention La Roche-sur-Yon et alentours. Max Ellis, professionnel assuré.">
-    
-        <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Max Ellis — Élagage & Espaces Verts en Vendée">
     <meta property="og:description" content="Élagage, abattage, taille de haies, entretien de jardins en Vendée. Devis gratuit. Max Ellis, professionnel assuré.">
@@ -22,684 +22,180 @@
     <meta name="twitter:description" content="Élagage, abattage, taille de haies, entretien de jardins en Vendée. Devis gratuit.">
     <meta name="twitter:image" content="https://espacesverts-vendee.fr/img/elagage.png">
 
-    <!-- Schema.org — LocalBusiness -->
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Max Ellis — Élagage & Espaces Verts",
-      "description": "Élagage, abattage, taille de haies, entretien de jardins en Vendée. Devis gratuit, intervention rapide.",
-      "url": "https://espacesverts-vendee.fr",
-      "telephone": "+33604023613",
-      "email": "pro.max.ellis@gmail.com",
-      "image": "https://espacesverts-vendee.fr/img/max.jpeg",
-      "priceRange": "€€",
-      "currenciesAccepted": "EUR",
-      "paymentAccepted": "Cash, Bank Transfer, Check",
-      "areaServed": {
-        "@type": "State",
-        "name": "Vendée",
-        "sameAs": "https://fr.wikipedia.org/wiki/Vend%C3%A9e_(d%C3%A9partement)"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "La Roche-sur-Yon",
-        "addressRegion": "Pays de la Loire",
-        "postalCode": "85000",
-        "addressCountry": "FR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 46.6705,
-        "longitude": -1.4269
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-          "opens": "08:00",
-          "closes": "18:00"
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Max Ellis — Élagage & Espaces Verts",
+        "description": "Élagage, abattage, taille de haies, entretien de jardins en Vendée.",
+        "url": "https://espacesverts-vendee.fr",
+        "telephone": "+33604023613",
+        "email": "pro.max.ellis@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "La Roche-sur-Yon",
+            "addressRegion": "Vendée",
+            "postalCode": "85000",
+            "addressCountry": "FR"
+        },
+        "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Vendée"
+        },
+        "priceRange": "€€",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+            "opens": "08:00",
+            "closes": "18:00"
         }
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5",
-        "reviewCount": "6",
-        "bestRating": "5"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Services",
-        "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Élagage & Abattage"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Taille de Haies & Arbustes"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Entretien de Jardins"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Débroussaillage"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Évacuation Déchets Verts"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Aménagement Paysager"}}
-        ]
-      },
-      "sameAs": []
     }
     </script>
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBHES5CSRL"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-ZBHES5CSRL');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ZBHES5CSRL');
     </script>
 
-    <!-- Google Fonts — Comfortaa (titres) + Poppins (textes) -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Calendly CSS -->
-    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <!-- CSS Global -->
+    <link rel="stylesheet" href="/style.css">
 
+    <!-- CSS spécifique à la homepage -->
     <style>
-        /* ============================
-           CHARTE GRAPHIQUE MAX ELLIS
-        ============================ */
-        :root {
-            --vert-chasseur: #3A5A40;
-            --mousse-forestiere: #6E8A22;
-            --olive-pale: #B3C973;
-            --gris-marbre: #647572;
-            --evergreen: #213324;
-            --gris-fer: #485453;
-            --vert-clair-bg: #EEF2E2;
-            --beige: #F7F6F1;
-            --blanc: #FFFFFF;
-            --noir: #1A1A1A;
-            --gris-clair: #DDE0DC;
-            --ombre: 0 4px 20px rgba(33,51,36,0.10);
-            --radius: 12px;
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            color: var(--noir);
-            line-height: 1.7;
-            background: var(--blanc);
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        /* ============================
-           LANGUAGE SWITCHER (NEW)
-        ============================ */
-        .lang-switcher {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .lang-btn {
-            background: none;
-            border: 2px solid transparent;
-            border-radius: 4px;
-            cursor: pointer;
-            padding: 2px;
-            line-height: 0;
-            transition: var(--transition);
-            opacity: 0.6;
-        }
-
-        .lang-btn:hover {
-            opacity: 1;
-        }
-
-        .lang-btn.active {
-            border-color: var(--mousse-forestiere);
-            opacity: 1;
-        }
-
-        .lang-btn img {
-            width: 24px;
-            height: 16px;
-            object-fit: cover;
-            border-radius: 2px;
-        }
-
-        /* Hide EN content by default, show FR */
-        [data-lang="en"] {
-            display: none !important;
-        }
-
-        /* When body has lang-en class, swap visibility */
-        body.lang-en [data-lang="fr"] {
-            display: none !important;
-        }
-
-        body.lang-en [data-lang="en"] {
-            display: block !important;
-        }
-
-        /* Inline elements in EN */
-        body.lang-en a[data-lang="en"],
-        body.lang-en button[data-lang="en"],
-        body.lang-en span[data-lang="en"],
-        body.lang-en label[data-lang="en"],
-        body.lang-en option[data-lang="en"] {
-            display: inline-block !important;
-        }
-
-        /* Block elements that need specific display values */
-        body.lang-en h1[data-lang="en"],
-        body.lang-en h2[data-lang="en"],
-        body.lang-en h3[data-lang="en"],
-        body.lang-en h4[data-lang="en"],
-        body.lang-en h5[data-lang="en"],
-        body.lang-en h6[data-lang="en"],
-        body.lang-en p[data-lang="en"],
-        body.lang-en div[data-lang="en"],
-        body.lang-en li[data-lang="en"] {
-            display: block !important;
-        }
-
-        /* Flex containers need to stay flex in EN */
-        body.lang-en .hero-buttons,
-        body.lang-en .about-badges,
-        body.lang-en .about-stats,
-        body.lang-en .zone-tags,
-        body.lang-en .step-card-actions,
-        body.lang-en .zip-field {
-            display: flex !important;
-        }
-
-        /* Grid containers need to stay grid in EN */
-        body.lang-en .services-grid,
-        body.lang-en .gallery-grid,
-        body.lang-en .reviews-grid,
-        body.lang-en .about-content,
-        body.lang-en .contact-wrapper {
-            display: grid !important;
-        }
-
-        /* ============================
-           NAVIGATION
-        ============================ */
-        nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--gris-clair);
-            padding: 0 2rem;
-            transition: var(--transition);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-        }
-
-        .logo {
-            font-family: 'Comfortaa', cursive;
-            font-size: 1.5rem;
-            color: var(--vert-chasseur);
-            text-decoration: none;
-            font-weight: 700;
-        }
-
-        .logo span {
-            color: var(--mousse-forestiere);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--gris-fer);
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: var(--mousse-forestiere);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--mousse-forestiere);
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .nav-logo-img { height: 45px; width: auto; }
-
-
-/* ============================
-   DROPDOWN MENU
-============================ */
-.dropdown {
-    position: relative;
-}
-.dropdown-toggle {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-}
-.dropdown-toggle .arrow {
-    font-size: 0.7rem;
-    transition: var(--transition);
-}
-.dropdown:hover .dropdown-toggle .arrow {
-    transform: rotate(180deg);
-}
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background: var(--blanc);
-    border-radius: var(--radius);
-    box-shadow: 0 8px 30px rgba(33,51,36,0.12);
-    border: 1px solid var(--gris-clair);
-    padding: 0.75rem 0;
-    min-width: 220px;
-    z-index: 1001;
-    list-style: none;
-}
-.dropdown:hover .dropdown-menu {
-    display: block;
-}
-.dropdown-menu li {
-    list-style: none;
-}
-.dropdown-menu a {
-    display: block;
-    padding: 0.6rem 1.25rem;
-    font-size: 0.85rem;
-    color: var(--gris-fer);
-    text-decoration: none;
-    transition: var(--transition);
-    white-space: nowrap;
-}
-.dropdown-menu a:hover {
-    background: var(--vert-clair-bg);
-    color: var(--mousse-forestiere);
-}
-.dropdown-menu a::after {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .dropdown-menu {
-        position: static;
-        transform: none;
-        box-shadow: none;
-        border: none;
-        padding: 0 0 0 1rem;
-        background: transparent;
-    }
-    .dropdown:hover .dropdown-menu,
-    .dropdown .dropdown-menu {
-        display: block;
-    }
-    .dropdown-menu a {
-        padding: 0.4rem 0;
-        font-size: 0.85rem;
-    }
-}
-
-        .burger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-            background: none;
-            border: none;
-            padding: 5px;
-        }
-
-        .burger span {
-            width: 25px;
-            height: 2px;
-            background: var(--vert-chasseur);
-            transition: var(--transition);
-            border-radius: 2px;
-        }
-
-        .burger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .burger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .burger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
-
-        /* ============================
-           BOUTONS
-        ============================ */
-        .btn {
-            display: inline-block;
-            padding: 14px 32px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            font-family: 'Poppins', sans-serif;
-            transition: var(--transition);
-            cursor: pointer;
-            border: none;
-            text-align: center;
-        }
-
-        .btn-primary {
-            background: var(--mousse-forestiere);
-            color: var(--blanc);
-        }
-
-        .btn-primary:hover {
-            background: var(--vert-chasseur);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(58,90,64,0.3);
-        }
-
-        .btn-outline {
-            border: 2px solid var(--blanc);
-            color: var(--blanc);
-            background: transparent;
-        }
-
-        .btn-outline:hover {
-            background: var(--blanc);
-            color: var(--vert-chasseur);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--vert-chasseur);
-            border: 2px solid var(--vert-chasseur);
-        }
-
-        .btn-secondary:hover {
-            background: var(--vert-clair-bg);
-        }
-
-        /* ============================
-           SECTIONS COMMUNES
-        ============================ */
-        section {
-            padding: 100px 2rem;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-family: 'Comfortaa', cursive;
-            font-size: 2.5rem;
-            color: var(--vert-chasseur);
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .section-subtitle {
-            color: var(--gris-marbre);
-            text-align: center;
-            font-size: 1.05rem;
-            margin-bottom: 3rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* ============================
-           HERO
-        ============================ */
+        /* ── Hero ── */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            position: relative;
-            background:
-                linear-gradient(rgba(33,51,36,0.55), rgba(33,51,36,0.55)),
-                url('img/elagage.png')
- center/cover no-repeat;
+            padding: 120px 2rem 80px;
+            background: linear-gradient(135deg, var(--evergreen) 0%, var(--vert-chasseur) 100%);
             color: var(--blanc);
-            padding: 2rem;
+            position: relative;
+            overflow: hidden;
         }
-
-        .hero-content {
-            max-width: 750px;
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(110,138,34,0.15) 0%, transparent 70%);
+            border-radius: 50%;
         }
-
+        .hero-content { position: relative; z-index: 1; max-width: 800px; }
         .hero h1 {
             font-family: 'Comfortaa', cursive;
             font-size: 3.5rem;
-            line-height: 1.2;
+            font-weight: 700;
             margin-bottom: 1.5rem;
+            line-height: 1.2;
         }
+        .hero h1 span { color: var(--olive-pale); }
+        .hero p { font-size: 1.2rem; margin-bottom: 2.5rem; opacity: 0.9; max-width: 600px; margin-left: auto; margin-right: auto; }
+        .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-        .hero p {
-            font-size: 1.15rem;
-            margin-bottom: 2.5rem;
-            opacity: 0.9;
-            line-height: 1.8;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* ============================
-           SERVICES
-        ============================ */
-        .services {
-            background: var(--beige);
-        }
-
+        /* ── Services ── */
+        .services { background: var(--blanc); }
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
-
         .service-card {
-            background: var(--blanc);
+            background: var(--beige);
             border-radius: var(--radius);
             padding: 2.5rem 2rem;
             text-align: center;
-            box-shadow: var(--ombre);
             transition: var(--transition);
-            border-bottom: 3px solid transparent;
+            border: 1px solid transparent;
         }
-
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(33,51,36,0.12);
-            border-bottom-color: var(--mousse-forestiere);
+            box-shadow: var(--ombre);
+            border-color: var(--olive-pale);
         }
-
-        .service-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
+        .service-icon { font-size: 2.5rem; margin-bottom: 1rem; }
         .service-card h3 {
             font-family: 'Comfortaa', cursive;
-            font-size: 1.1rem;
-            margin-bottom: 0.75rem;
+            font-size: 1.15rem;
             color: var(--vert-chasseur);
+            margin-bottom: 0.75rem;
         }
+        .service-card p { font-size: 0.9rem; color: var(--gris-fer); }
 
-        .service-card p {
-            color: var(--gris-marbre);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        /* ============================
-           AVANTAGE FISCAL
-        ============================ */
+        /* ── Fiscal ── */
         .fiscal {
-            background: var(--evergreen);
-            color: var(--blanc);
+            background: var(--vert-clair-bg);
             text-align: center;
             padding: 60px 2rem;
         }
-
-        .fiscal h2 {
-            font-family: 'Comfortaa', cursive;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .fiscal p {
-            max-width: 700px;
-            margin: 0 auto 0.75rem;
-            font-size: 1.05rem;
-            opacity: 0.9;
-        }
-
-        .fiscal .highlight {
-            font-family: 'Comfortaa', cursive;
-            font-size: 2.5rem;
+        .fiscal .container { max-width: 700px; }
+        .fiscal h2 { font-family: 'Comfortaa', cursive; color: var(--vert-chasseur); margin-bottom: 1rem; font-size: 2rem; }
+        .highlight {
+            display: inline-block;
+            background: var(--mousse-forestiere);
+            color: var(--blanc);
+            padding: 8px 20px;
+            border-radius: 50px;
             font-weight: 700;
-            color: var(--olive-pale);
-            display: block;
+            font-size: 1.2rem;
             margin: 1rem 0;
         }
+        .fiscal p { color: var(--gris-fer); font-size: 0.95rem; line-height: 1.8; }
 
-        /* ============================
-           À PROPOS
-        ============================ */
+        /* ── About ── */
+        .about { background: var(--blanc); }
         .about-content {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 3rem;
+            align-items: start;
         }
-
-        .about-image {
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--ombre);
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 450px;
-            object-fit: cover;
-        }
-
+        .about-image img { width: 100%; border-radius: var(--radius); box-shadow: var(--ombre); }
         .about-text h3 {
             font-family: 'Comfortaa', cursive;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             color: var(--vert-chasseur);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
-
-        .about-text p {
-            color: var(--gris-marbre);
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-        }
-
-        .about-badges {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            margin-top: 1.5rem;
-        }
-
+        .about-text p { color: var(--gris-fer); margin-bottom: 1rem; font-size: 0.95rem; }
+        .about-badges { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
         .badge {
             background: var(--vert-clair-bg);
             color: var(--vert-chasseur);
-            padding: 8px 16px;
+            padding: 6px 16px;
             border-radius: 50px;
             font-size: 0.8rem;
             font-weight: 600;
         }
-
-        .about-stats {
-            display: flex;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
+        .about-stats { display: flex; gap: 2rem; margin-top: 2rem; }
         .stat-number {
             font-family: 'Comfortaa', cursive;
-            font-size: 2rem;
-            color: var(--mousse-forestiere);
+            font-size: 1.8rem;
             font-weight: 700;
+            color: var(--mousse-forestiere);
         }
+        .stat-label { font-size: 0.8rem; color: var(--gris-marbre); margin-top: 4px; }
 
-        .stat-label {
-            font-size: 0.85rem;
-            color: var(--gris-marbre);
-        }
-
-        /* ============================
-           GALERIE
-        ============================ */
-        .gallery {
-            background: var(--beige);
-        }
-
+        /* ── Gallery ── */
+        .gallery { background: var(--beige); }
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1.5rem;
         }
-
         .gallery-item {
             border-radius: var(--radius);
             overflow: hidden;
@@ -707,23 +203,11 @@
             cursor: pointer;
             aspect-ratio: 4/3;
         }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .gallery-item:hover img { transform: scale(1.05); }
         .gallery-item .gallery-label {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            bottom: 0; left: 0; right: 0;
             padding: 1rem;
             background: linear-gradient(transparent, rgba(33,51,36,0.75));
             color: white;
@@ -731,134 +215,44 @@
             font-weight: 500;
         }
 
-        /* ============================
-           AVIS CLIENTS
-        ============================ */
-        .reviews {
-            background: var(--blanc);
-        }
-
-        .reviews-header {
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-
-        .stars {
-            color: #D4A017;
-            font-size: 1.5rem;
-            letter-spacing: 2px;
-        }
-
+        /* ── Reviews ── */
+        .reviews { background: var(--blanc); }
+        .reviews-header { text-align: center; margin-bottom: 1rem; }
+        .stars { color: #D4A017; font-size: 1.5rem; letter-spacing: 2px; }
         .reviews-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-top: 2rem;
         }
-
         .review-card {
             background: var(--beige);
             border-radius: var(--radius);
             padding: 2rem;
             border-left: 4px solid var(--olive-pale);
         }
-
-        .review-card .review-stars {
-            color: #D4A017;
-            margin-bottom: 0.75rem;
-        }
-
-        .review-card p {
-            color: var(--gris-fer);
-            font-size: 0.95rem;
-            font-style: italic;
-            line-height: 1.6;
-        }
-
-        .review-card .review-service {
-            display: inline-block;
-            margin-top: 1rem;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--mousse-forestiere);
-            font-style: normal;
-        }
-
-        /* ============================
-           BOOKING
-        ============================ */
-        .booking {
-            background: var(--beige);
-        }
-
-        .booking-step {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .calendly-wrapper {
-            max-width: 100%;
-            margin-top: 1.5rem;
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--ombre);
-            border: 2px solid var(--gris-clair);
-            background: var(--blanc);
-        }
-
-        .calendly-wrapper-header {
-            background: var(--vert-chasseur);
-            color: var(--blanc);
-            padding: 1.25rem 2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .calendly-wrapper-header .cw-icon {
-            font-size: 1.5rem;
-        }
-
-        .calendly-wrapper-header h4 {
-            font-family: 'Comfortaa', cursive;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-
-        .calendly-wrapper-header p {
-            font-size: 0.85rem;
-            opacity: 0.8;
-            margin-top: 2px;
-        }
-
-        .calendly-inline-widget {
-            min-width: 280px;
-            height: 700px;
-        }
-
-        .calendly-wrapper-footer {
+        .review-card .review-stars { color: #D4A017; font-size: 1rem; margin-bottom: 0.75rem; }
+        .review-card p { font-size: 0.9rem; color: var(--gris-fer); font-style: italic; margin-bottom: 1rem; }
+        .review-service {
+            font-size: 0.75rem;
             background: var(--vert-clair-bg);
-            padding: 0.75rem 2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.8rem;
-            color: var(--gris-marbre);
+            color: var(--vert-chasseur);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-weight: 500;
         }
 
-        .calendly-wrapper-footer span {
-            color: var(--mousse-forestiere);
-            font-weight: 600;
-        }
-
+        /* ── Booking ── */
+        .booking { background: var(--beige); }
+        .booking-step { max-width: 700px; margin: 0 auto; }
         .step-card {
             background: var(--blanc);
             border-radius: var(--radius);
-            padding: 3rem 2.5rem;
+            padding: 3rem 2rem;
             text-align: center;
             box-shadow: var(--ombre);
         }
-
+        .step-card-refused { border: 2px solid #dc3545; }
         .step-badge {
             display: inline-block;
             background: var(--vert-clair-bg);
@@ -869,540 +263,202 @@
             font-weight: 600;
             margin-bottom: 1.5rem;
         }
-
-        .step-badge-success {
-            background: #D1FAE5;
-            color: #065F46;
-        }
-
-        .step-badge-error {
-            background: #FEE2E2;
-            color: #991B1B;
-        }
-
-        .step-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
+        .step-badge-success { background: var(--mousse-forestiere); color: var(--blanc); }
+        .step-badge-error { background: #dc3545; color: var(--blanc); }
+        .step-icon { font-size: 3rem; margin-bottom: 1rem; }
         .step-card h3 {
             font-family: 'Comfortaa', cursive;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: var(--vert-chasseur);
             margin-bottom: 0.75rem;
         }
-
-        .step-card p {
-            color: var(--gris-marbre);
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
-        }
-
-        .zip-form {
-            margin-top: 1.5rem;
-        }
-
-        .zip-form label {
-            display: block;
-            font-weight: 600;
-            font-size: 0.85rem;
-            margin-bottom: 0.5rem;
-            color: var(--noir);
-        }
-
-        .zip-field {
-            display: flex;
-            gap: 0.75rem;
-            justify-content: center;
-            margin-top: 0.5rem;
-        }
-
+        .step-card p { color: var(--gris-fer); font-size: 0.95rem; margin-bottom: 1.5rem; }
+        .zip-form { max-width: 400px; margin: 0 auto; }
+        .zip-form label { display: block; text-align: left; font-weight: 600; font-size: 0.85rem; color: var(--vert-chasseur); margin-bottom: 0.5rem; }
+        .zip-field { display: flex; gap: 0.75rem; }
         .zip-field input {
-            padding: 14px 20px;
-            border: 2px solid var(--gris-clair);
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-family: 'Poppins', sans-serif;
-            width: 160px;
-            text-align: center;
-            letter-spacing: 3px;
-            font-weight: 600;
+            flex: 1; padding: 14px 16px; border: 2px solid var(--gris-clair); border-radius: var(--radius);
+            font-size: 1.1rem; font-family: 'Poppins', sans-serif; text-align: center; letter-spacing: 4px;
             transition: var(--transition);
         }
-
-        .zip-field input:focus {
-            outline: none;
-            border-color: var(--mousse-forestiere);
-            box-shadow: 0 0 0 3px rgba(110,138,34,0.15);
-        }
-
-        .zip-error {
-            color: #D32F2F;
-            font-size: 0.85rem;
-            margin-top: 1rem;
-            min-height: 1.2rem;
-        }
-
+        .zip-field input:focus { outline: none; border-color: var(--mousse-forestiere); box-shadow: 0 0 0 3px rgba(110,138,34,0.15); }
+        .zip-error { color: #dc3545; font-size: 0.85rem; margin-top: 0.5rem; min-height: 1.2rem; }
         .zone-info {
-            margin-top: 1.5rem;
-            font-size: 0.8rem;
-            color: var(--gris-marbre);
+            margin-top: 1.5rem; font-size: 0.8rem; color: var(--gris-marbre);
+            background: var(--vert-clair-bg); padding: 10px 16px; border-radius: 8px;
         }
-
-        .step-confirmed {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            background: var(--vert-clair-bg);
-            color: var(--vert-chasseur);
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 500;
-        }
-
-        .change-zip {
-            background: none;
-            border: none;
-            color: var(--vert-chasseur);
-            cursor: pointer;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.85rem;
-            text-decoration: underline;
-        }
-
-        .change-zip:hover {
-            color: var(--mousse-forestiere);
-        }
-
-        .step-card-refused {
-            border: 2px solid #FEE2E2;
-        }
-
-        .zone-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            justify-content: center;
-            margin: 1rem 0;
-        }
-
+        .zone-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin: 1rem 0 1.5rem; }
         .zone-tag {
-            background: var(--vert-clair-bg);
-            color: var(--vert-chasseur);
-            padding: 6px 14px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 500;
+            background: var(--vert-clair-bg); color: var(--vert-chasseur);
+            padding: 6px 14px; border-radius: 50px; font-size: 0.8rem; font-weight: 500;
+        }
+        .step-card-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
+        .step-confirmed {
+            text-align: center; margin-bottom: 1.5rem; padding: 1rem;
+            background: rgba(110,138,34,0.1); border-radius: var(--radius); font-weight: 600; color: var(--mousse-forestiere);
+        }
+        .change-zip { background: none; border: none; color: var(--gris-marbre); text-decoration: underline; cursor: pointer; margin-left: 1rem; font-size: 0.85rem; }
+        .calendly-wrapper {
+            background: var(--blanc); border-radius: var(--radius); overflow: hidden;
+            box-shadow: var(--ombre); border: 1px solid var(--gris-clair);
+        }
+        .calendly-wrapper-header {
+            display: flex; align-items: center; gap: 1rem;
+            padding: 1.25rem 1.5rem; background: var(--vert-clair-bg); border-bottom: 1px solid var(--gris-clair);
+        }
+        .cw-icon { font-size: 1.5rem; }
+        .calendly-wrapper-header h4 { font-family: 'Comfortaa', cursive; color: var(--vert-chasseur); margin-bottom: 2px; font-size: 1rem; }
+        .calendly-wrapper-header p { font-size: 0.85rem; color: var(--gris-marbre); }
+        .calendly-wrapper-footer {
+            text-align: center; padding: 0.75rem; font-size: 0.8rem; color: var(--gris-marbre);
+            background: var(--beige); border-top: 1px solid var(--gris-clair);
         }
 
-        .step-card-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-
-        /* ============================
-           CONTACT
-        ============================ */
-        .contact {
-            background: var(--blanc);
-        }
-
+        /* ── Contact ── */
+        .contact { background: var(--blanc); }
         .contact-wrapper {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3rem;
         }
-
         .contact-info h3 {
             font-family: 'Comfortaa', cursive;
-            font-size: 1.6rem;
+            font-size: 1.4rem;
             color: var(--vert-chasseur);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
-
-        .contact-info p {
-            color: var(--gris-marbre);
-            margin-bottom: 2rem;
-        }
-
-        .contact-detail {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1.25rem;
-        }
-
-        .contact-detail-icon {
-            width: 45px;
-            height: 45px;
-            background: var(--vert-clair-bg);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-
-        .contact-detail-text {
-            font-size: 0.95rem;
-            color: var(--noir);
-            text-decoration: none;
-        }
-
-        .contact-detail-text:hover {
-            color: var(--mousse-forestiere);
-        }
-
-        .contact-detail-label {
-            font-size: 0.8rem;
-            color: var(--gris-marbre);
-        }
-
-        .contact-form {
-            background: var(--beige);
-            padding: 2.5rem;
-            border-radius: var(--radius);
-            box-shadow: var(--ombre);
-        }
-
-        .form-group {
-            margin-bottom: 1.25rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            font-size: 0.85rem;
-            margin-bottom: 0.5rem;
-            color: var(--noir);
-        }
-
+        .contact-info > p { color: var(--gris-fer); font-size: 0.95rem; margin-bottom: 2rem; }
+        .contact-detail { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1.5rem; }
+        .contact-detail-icon { font-size: 1.3rem; margin-top: 2px; }
+        .contact-detail-label { font-size: 0.75rem; color: var(--gris-marbre); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+        .contact-detail-text { font-weight: 500; color: var(--vert-chasseur); text-decoration: none; font-size: 0.95rem; }
+        a.contact-detail-text:hover { color: var(--mousse-forestiere); }
+        .contact-form { background: var(--beige); border-radius: var(--radius); padding: 2.5rem; }
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label { display: block; font-size: 0.85rem; font-weight: 600; color: var(--vert-chasseur); margin-bottom: 0.4rem; }
         .form-group input,
         .form-group textarea,
         .form-group select {
-            width: 100%;
-            padding: 12px 16px;
-            border: 1.5px solid var(--gris-clair);
-            border-radius: 8px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.95rem;
-            transition: var(--transition);
-            background: var(--blanc);
+            width: 100%; padding: 12px 16px; border: 2px solid var(--gris-clair); border-radius: var(--radius);
+            font-family: 'Poppins', sans-serif; font-size: 0.9rem; transition: var(--transition); background: var(--blanc);
         }
-
         .form-group input:focus,
         .form-group textarea:focus,
         .form-group select:focus {
-            outline: none;
-            border-color: var(--mousse-forestiere);
-            box-shadow: 0 0 0 3px rgba(110,138,34,0.15);
+            outline: none; border-color: var(--mousse-forestiere); box-shadow: 0 0 0 3px rgba(110,138,34,0.15);
         }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+        .contact-form .btn { width: 100%; }
 
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .contact-form .btn {
-            width: 100%;
-        }
-
-        /* ============================
-           FOOTER
-        ============================ */
-        footer {
-            background: var(--evergreen);
-            color: rgba(255,255,255,0.8);
-            text-align: center;
-            padding: 2.5rem 2rem;
-        }
-
-        footer a {
-            color: var(--olive-pale);
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            color: var(--blanc);
-        }
-
-        .footer-content {
-            max-width: 1100px;
-            margin: 0 auto;
-            font-size: 0.85rem;
-        }
-
-        .footer-content p {
-            margin-bottom: 0.5rem;
-        }
-
-        /* ============================
-           RESPONSIVE — TABLETTE
-        ============================ */
+        /* ── Responsive tablette ── */
         @media (max-width: 968px) {
-            .services-grid,
-            .reviews-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .contact-wrapper {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .hero h1 {
-                font-size: 2.8rem;
-            }
+            .services-grid, .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+            .about-content { grid-template-columns: 1fr; gap: 2rem; }
+            .contact-wrapper { grid-template-columns: 1fr; gap: 2rem; }
+            .hero h1 { font-size: 2.8rem; }
         }
 
-        /* ============================
-           RESPONSIVE — MOBILE
-        ============================ */
+        /* ── Responsive mobile ── */
         @media (max-width: 768px) {
-            .burger {
-                display: flex;
-            }
-
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background: var(--blanc);
-                flex-direction: column;
-                padding: 2rem;
-                gap: 1.5rem;
-                border-bottom: 1px solid var(--gris-clair);
-                box-shadow: 0 10px 30px rgba(33,51,36,0.1);
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .services-grid,
-            .reviews-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 0.75rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            section {
-                padding: 60px 1.25rem;
-            }
-
-            .about-image img {
-                height: 300px;
-            }
-
-            .about-stats {
-                justify-content: center;
-            }
-
-            .calendly-inline-widget {
-                height: 900px !important;
-            }
-
-            .contact-form {
-                padding: 1.5rem;
-            }
-
-            .step-card {
-                padding: 2rem 1.5rem;
-            }
-
-            .fiscal .highlight {
-                font-size: 2rem;
-            }
-
-            .calendly-wrapper-header {
-                padding: 1rem 1.25rem;
-                flex-wrap: wrap;
-            }
-
-            .calendly-wrapper-footer {
-                padding: 0.75rem 1.25rem;
-                flex-wrap: wrap;
-            }
-
-            .lang-switcher {
-                margin-left: 0.5rem;
-            }
+            .hero { min-height: auto; padding: 140px 1.5rem 80px; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1rem; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .services-grid { grid-template-columns: 1fr; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .zip-field { flex-direction: column; }
+            .about-stats { flex-direction: column; gap: 1rem; }
         }
 
         @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-stats {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .zip-field {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .step-card-actions {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .lang-btn img {
-                width: 20px;
-                height: 14px;
-            }
+            .hero h1 { font-size: 1.8rem; }
+            .gallery-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- ======================== NAVIGATION ======================== -->
+    <!-- ════ NAV ════ -->
     <nav>
-    <div class="nav-container">
-        <a href="#" class="logo">Max<span>Ellis</span></a>
-        <ul class="nav-links" id="navLinks">
-            <li data-lang="fr"><a href="#services">Services</a></li>
-            <li data-lang="fr"><a href="#about">À propos</a></li>
-            
-   <li data-lang="fr" class="dropdown">
-    <a href="/realisations/elagage.html" class="dropdown-toggle">Réalisations <span class="arrow">▾</span></a>
-    <ul class="dropdown-menu">
-        <li><a href="/realisations/elagage.html">Élagage</a></li>
-        <li><a href="#gallery">Taille de Haies</a></li>
-        <li><a href="#gallery">Entretien de Jardins</a></li>
-        <li><a href="#gallery">Débroussaillage</a></li>
-        <li><a href="#gallery">Aménagement Paysager</a></li>
-        <li><a href="#gallery">Évacuation</a></li>
-    </ul>
-</li>
-
-
-            <li data-lang="fr"><a href="/blog/">Blog</a></li>
-            <li data-lang="fr"><a href="#reviews">Avis</a></li>
-            <li data-lang="fr"><a href="/entretien-annuel.html">Programme Entretien</a></li>
-            <li data-lang="fr"><a href="#booking">Rendez-vous</a></li>
-            <li data-lang="fr"><a href="#contact">Contact</a></li>
-
-            <li data-lang="en"><a href="#services">Services</a></li>
-            <li data-lang="en"><a href="#about">About</a></li>
-          <li data-lang="en" class="dropdown">
-    <a href="/realisations/elagage.html" class="dropdown-toggle">Our Work <span class="arrow">▾</span></a>
-    <ul class="dropdown-menu">
-        <li><a href="/realisations/elagage.html">Tree Pruning</a></li>
-        <li><a href="#gallery">Hedge Trimming</a></li>
-        <li><a href="#gallery">Garden Maintenance</a></li>
-        <li><a href="#gallery">Brush Clearing</a></li>
-        <li><a href="#gallery">Landscaping</a></li>
-        <li><a href="#gallery">Waste Removal</a></li>
-    </ul>
-</li>
-
-
-
-            <li data-lang="en"><a href="/blog/">Blog</a></li>
-            <li data-lang="en"><a href="#reviews">Reviews</a></li>
-            <li data-lang="en"><a href="/entretien-annuel.html">Maintenance Program</a></li>
-            <li data-lang="en"><a href="#booking">Book Now</a></li>
-            <li data-lang="en"><a href="#contact">Contact</a></li>
-        </ul>
-        <div class="lang-switcher">
-            <button class="lang-btn active" id="btnFR" onclick="setLanguage('fr')" title="Français">
-                <img src="https://flagcdn.com/w40/fr.png" alt="FR">
-            </button>
-            <button class="lang-btn" id="btnEN" onclick="setLanguage('en')" title="English">
-                <img src="https://flagcdn.com/w40/gb.png" alt="EN">
-            </button>
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/img/logo/logo_nom.png" alt="Max Ellis Élagage" class="nav-logo-img">
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li data-lang="fr"><a href="#services">Services</a></li>
+                <li data-lang="fr" class="dropdown">
+                    <a href="/realisations/elagage.html" class="dropdown-toggle">Réalisations <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/realisations/elagage.html">Élagage & Abattage</a></li>
+                        <li><a href="/realisations/taille-de-haie.html">Taille de Haies</a></li>
+                        <li><a href="/realisations/entretien.html">Entretien de Jardins</a></li>
+                        <li><a href="/realisations/debroussaillage.html">Débroussaillage</a></li>
+                        <li><a href="/realisations/abattage.html">Abattage</a></li>
+                        <li><a href="/realisations/evacuation.html">Évacuation</a></li>
+                    </ul>
+                </li>
+                <li data-lang="fr"><a href="#about">À propos</a></li>
+                <li data-lang="fr"><a href="/blog/">Blog</a></li>
+                <li data-lang="fr"><a href="/entretien-annuel.html">Programme Entretien</a></li>
+                <li data-lang="fr"><a href="#booking">Rendez-vous</a></li>
+                <li data-lang="fr"><a href="#contact">Contact</a></li>
+                <li data-lang="en"><a href="#services">Services</a></li>
+                <li data-lang="en" class="dropdown">
+                    <a href="/realisations/elagage.html" class="dropdown-toggle">Our Work <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/realisations/elagage.html">Tree Pruning</a></li>
+                        <li><a href="/realisations/taille-de-haie.html">Hedge Trimming</a></li>
+                        <li><a href="/realisations/entretien.html">Garden Maintenance</a></li>
+                        <li><a href="/realisations/debroussaillage.html">Brush Clearing</a></li>
+                        <li><a href="/realisations/abattage.html">Tree Felling</a></li>
+                        <li><a href="/realisations/evacuation.html">Waste Removal</a></li>
+                    </ul>
+                </li>
+                <li data-lang="en"><a href="#about">About</a></li>
+                <li data-lang="en"><a href="/blog/">Blog</a></li>
+                <li data-lang="en"><a href="/entretien-annuel.html">Maintenance Program</a></li>
+                <li data-lang="en"><a href="#booking">Book Now</a></li>
+                <li data-lang="en"><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <button class="lang-btn active" id="btnFR" onclick="setLang('fr')" title="Français"><img src="https://flagcdn.com/w40/fr.png" alt="FR"></button>
+                <button class="lang-btn" id="btnEN" onclick="setLang('en')" title="English"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></button>
+            </div>
+            <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
-        <button class="burger" id="burger" aria-label="Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </div>
-</nav>
+    </nav>
 
-
-
-    <!-- ======================== HERO ======================== -->
+    <!-- ════ HERO ════ -->
     <section class="hero" id="hero">
         <div class="hero-content">
-            <h1 data-lang="fr">Élagage & Espaces Verts en Vendée</h1>
-            <h1 data-lang="en">Tree Care & Landscaping in Vendée</h1>
-            
-            <p data-lang="fr">
-                Professionnel qualifié basé près de La Roche-sur-Yon.<br>
-                Élagage, taille, entretien de jardins — devis gratuit, intervention rapide.
-            </p>
-            <p data-lang="en">
-                Qualified professional based near La Roche-sur-Yon.<br>
-                Tree pruning, trimming, garden maintenance — free quote, fast service.
-            </p>
-            
+            <h1 data-lang="fr">Élagage & <span>Espaces Verts</span> en Vendée</h1>
+            <h1 data-lang="en">Tree Care & <span>Landscaping</span> in Vendée</h1>
+            <p data-lang="fr">Élagage, abattage, taille de haies, entretien de jardins. Professionnel assuré, devis gratuit et intervention rapide.</p>
+            <p data-lang="en">Tree pruning, felling, hedge trimming, garden maintenance. Insured professional, free quote and fast service.</p>
             <div class="hero-buttons">
                 <a href="#booking" class="btn btn-primary" data-lang="fr">Prendre rendez-vous</a>
                 <a href="#booking" class="btn btn-primary" data-lang="en">Book an Appointment</a>
-                
                 <a href="#contact" class="btn btn-outline" data-lang="fr">Demander un devis</a>
                 <a href="#contact" class="btn btn-outline" data-lang="en">Request a Quote</a>
             </div>
         </div>
     </section>
 
-    <!-- ======================== SERVICES ======================== -->
+    <!-- ════ SERVICES ════ -->
     <section class="services" id="services">
         <div class="container">
-            <h2 class="section-title" data-lang="fr">Mes Services</h2>
-            <h2 class="section-title" data-lang="en">My Services</h2>
-            
-            <p class="section-subtitle" data-lang="fr">Un savoir-faire complet pour la gestion de vos espaces verts, en veillant à leur sécurité et leur esthétique.</p>
-            <p class="section-subtitle" data-lang="en">Complete expertise in managing your green spaces, ensuring their safety and beauty.</p>
-            
+            <h2 class="section-title" data-lang="fr">Nos Services</h2>
+            <h2 class="section-title" data-lang="en">Our Services</h2>
+            <p class="section-subtitle" data-lang="fr">Des prestations complètes pour l'entretien et la valorisation de vos espaces verts.</p>
+            <p class="section-subtitle" data-lang="en">Complete services for the care and enhancement of your green spaces.</p>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🌳</div>
+                    <div class="service-icon">🌲</div>
                     <h3 data-lang="fr">Élagage & Abattage</h3>
                     <h3 data-lang="en">Tree Pruning & Felling</h3>
-                    <p data-lang="fr">Taille précise et sécurisée, quel que soit le type d'arbre. Abattage contrôlé avec évacuation.</p>
-                    <p data-lang="en">Precise and safe pruning for any type of tree. Controlled felling with full removal.</p>
+                    <p data-lang="fr">Taille raisonnée, élagage en hauteur, abattage sécurisé et démontage d'arbres dangereux. Intervention sur corde ou nacelle.</p>
+                    <p data-lang="en">Careful pruning, high tree trimming, safe felling and dismantling of dangerous trees. Rope or cherry picker access.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">✂️</div>
@@ -1429,29 +485,29 @@
                     <div class="service-icon">🚛</div>
                     <h3 data-lang="fr">Évacuation Déchets Verts</h3>
                     <h3 data-lang="en">Green Waste Removal</h3>
-                    <p data-lang="fr">Ramassage, broyage et évacuation de tous vos déchets verts après intervention.</p>
-                    <p data-lang="en">Collection, chipping and removal of all your green waste after every job.</p>
+                    <p data-lang="fr">Broyage sur place ou évacuation en déchetterie. Nettoyage complet du chantier après intervention.</p>
+                    <p data-lang="en">On-site shredding or removal to the recycling centre. Complete site cleanup after work.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🌺</div>
+                    <div class="service-icon">🌿</div>
                     <h3 data-lang="fr">Aménagement Paysager</h3>
                     <h3 data-lang="en">Landscape Design</h3>
-                    <p data-lang="fr">Création de massifs, engazonnement, mise en valeur de vos espaces extérieurs sur mesure.</p>
-                    <p data-lang="en">Custom flower bed creation, lawn installation, and enhancement of your outdoor spaces.</p>
+                    <p data-lang="fr">Création et aménagement de jardins, plantations, engazonnement et conseil personnalisé.</p>
+                    <p data-lang="en">Garden design and creation, planting, turfing and personalised advice.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ======================== AVANTAGE FISCAL ======================== -->
+    <!-- ════ FISCAL ════ -->
     <section class="fiscal">
-        <div data-lang="fr">
-            <h2>Avantage fiscal — Services à la personne</h2>
-            <p>Membre de la coopérative <strong>Jardiniers SAP</strong>, agréée service à la personne.</p>
-            <span class="highlight">-50% de crédit d'impôt</span>
-            <p>Bénéficiez d'une réduction ou d'un crédit d'impôt de 50 % sur vos factures d'entretien de jardin, avec possibilité d'avance immédiate pour ne régler que la moitié dès le départ.</p>
+        <div class="container" data-lang="fr">
+            <h2>Avantage fiscal — Service à la Personne</h2>
+            <p>Membre de la coopérative <strong>Jardiniers SAP</strong>, prestataire agréé Service à la Personne.</p>
+            <span class="highlight">Crédit d'impôt de 50 %</span>
+            <p>Bénéficiez d'une déduction ou d'un crédit d'impôt de 50 % sur vos factures d'entretien de jardin, avec possibilité d'avance immédiate pour ne régler que la moitié dès le départ.</p>
         </div>
-        <div data-lang="en">
+        <div class="container" data-lang="en">
             <h2>Tax Benefit — Personal Services</h2>
             <p>Member of the <strong>Jardiniers SAP</strong> cooperative, certified personal service provider.</p>
             <span class="highlight">50% Tax Credit</span>
@@ -1459,15 +515,13 @@
         </div>
     </section>
 
-    <!-- ======================== À PROPOS ======================== -->
+    <!-- ════ À PROPOS ════ -->
     <section class="about" id="about">
         <div class="container">
             <h2 class="section-title" data-lang="fr">À Propos</h2>
             <h2 class="section-title" data-lang="en">About</h2>
-            
             <p class="section-subtitle" data-lang="fr">Un professionnel passionné à votre service.</p>
             <p class="section-subtitle" data-lang="en">A passionate professional at your service.</p>
-
             <div class="about-content">
                 <div class="about-image">
                     <img src="img/max.jpeg" alt="Max Ellis — Élagage Vendée">
@@ -1475,34 +529,19 @@
                 <div class="about-text">
                     <h3 data-lang="fr">Max Ellis, professionnel de l'élagage en Vendée</h3>
                     <h3 data-lang="en">Max Ellis, Tree Care Professional in Vendée</h3>
-                    
-                    <p data-lang="fr">
-                        Situé près de La Roche-sur-Yon, je mets mon expertise en élagage à votre service sur l'ensemble du secteur vendéen. Que ce soit pour un entretien régulier ou un projet ponctuel, je vous accompagne dans la gestion de vos espaces verts.
-                    </p>
-                    <p data-lang="en">
-                        Based near La Roche-sur-Yon, I bring my tree care expertise to the entire Vendée area. Whether you need regular maintenance or a one-off project, I'm here to help manage your green spaces.
-                    </p>
-                    
-                    <p data-lang="fr">
-                        Formé à la MFR La Ferrière et fort d'une expérience solide en entretien forestier et élagage, j'interviens chez les particuliers et les professionnels avec un engagement constant : un travail soigné, sécurisé et respectueux de vos végétaux.
-                    </p>
-                    <p data-lang="en">
-                        Trained at MFR La Ferrière with solid experience in forestry maintenance and tree pruning, I work with both private and professional clients with a constant commitment: careful, safe work that respects your plants.
-                    </p>
-
+                    <p data-lang="fr">Situé près de La Roche-sur-Yon, je mets mon expertise en élagage à votre service sur l'ensemble du secteur vendéen. Que ce soit pour un entretien régulier ou un projet ponctuel, je vous accompagne dans la gestion de vos espaces verts.</p>
+                    <p data-lang="en">Based near La Roche-sur-Yon, I bring my tree care expertise to the entire Vendée area. Whether you need regular maintenance or a one-off project, I'm here to help manage your green spaces.</p>
+                    <p data-lang="fr">Formé à la MFR La Ferrière et fort d'une expérience solide en entretien forestier et élagage, j'interviens chez les particuliers et les professionnels avec un engagement constant : un travail soigné, sécurisé et respectueux de vos végétaux.</p>
+                    <p data-lang="en">Trained at MFR La Ferrière with solid experience in forestry maintenance and tree pruning, I work with both private and professional clients with a constant commitment: careful, safe work that respects your plants.</p>
                     <div class="about-badges">
                         <span class="badge" data-lang="fr">Assurance RC Pro</span>
                         <span class="badge" data-lang="en">Professional Liability Insurance</span>
-                        
                         <span class="badge" data-lang="fr">Formation MFR La Ferrière</span>
                         <span class="badge" data-lang="en">MFR La Ferrière Certified</span>
-                        
                         <span class="badge">Jardiniers SAP</span>
-                        
                         <span class="badge" data-lang="fr">Crédit d'impôt 50%</span>
                         <span class="badge" data-lang="en">50% Tax Credit</span>
                     </div>
-
                     <div class="about-stats">
                         <div class="stat">
                             <div class="stat-number">144+</div>
@@ -1525,15 +564,13 @@
         </div>
     </section>
 
-   <!-- ======================== GALERIE ======================== -->
+    <!-- ════ GALERIE ════ -->
     <section class="gallery" id="gallery">
         <div class="container">
             <h2 class="section-title" data-lang="fr">Réalisations</h2>
             <h2 class="section-title" data-lang="en">Our Work</h2>
-            
             <p class="section-subtitle" data-lang="fr">Quelques exemples de mes interventions récentes en Vendée.</p>
             <p class="section-subtitle" data-lang="en">Recent examples of my work across Vendée.</p>
-
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <img src="img/elagage.png" alt="Élagage d'arbre" loading="lazy">
@@ -1569,18 +606,16 @@
         </div>
     </section>
 
-    <!-- ======================== AVIS CLIENTS ======================== -->
+    <!-- ════ AVIS ════ -->
     <section class="reviews" id="reviews">
         <div class="container">
             <h2 class="section-title" data-lang="fr">Avis Clients</h2>
             <h2 class="section-title" data-lang="en">Client Reviews</h2>
-            
             <div class="reviews-header">
                 <div class="stars">★★★★★</div>
                 <p class="section-subtitle" data-lang="fr">Note de 5/5</p>
                 <p class="section-subtitle" data-lang="en">Rated 5/5</p>
             </div>
-
             <div class="reviews-grid">
                 <div class="review-card">
                     <div class="review-stars">★★★★★</div>
@@ -1628,88 +663,59 @@
         </div>
     </section>
 
-    <!-- ======================== RENDEZ-VOUS — FILTRE CP + CALENDLY ======================== -->
+    <!-- ════ RENDEZ-VOUS ════ -->
     <section class="booking" id="booking">
         <div class="container">
             <h2 class="section-title" data-lang="fr">Prendre Rendez-vous</h2>
             <h2 class="section-title" data-lang="en">Book an Appointment</h2>
-            
             <p class="section-subtitle" data-lang="fr">Réservez une visite sur site pour un devis gratuit et sans engagement.</p>
             <p class="section-subtitle" data-lang="en">Book an on-site visit for a free, no-obligation quote.</p>
 
-            <!-- ====== ÉTAPE 1 : Code postal ====== -->
+            <!-- Étape 1 : Code postal -->
             <div id="step1" class="booking-step">
                 <div class="step-card">
                     <div class="step-badge" data-lang="fr">Étape 1/2</div>
                     <div class="step-badge" data-lang="en">Step 1/2</div>
-                    
                     <div class="step-icon">📍</div>
-                    
                     <h3 data-lang="fr">Où se situe votre terrain ?</h3>
                     <h3 data-lang="en">Where is your property located?</h3>
-                    
                     <p data-lang="fr">Je vérifie que vous êtes dans ma zone d'intervention avant de vous proposer un créneau.</p>
                     <p data-lang="en">I'll check you're within my service area before offering a time slot.</p>
-                    
                     <form class="zip-form" onsubmit="event.preventDefault(); checkZip();">
                         <label for="zipInput" data-lang="fr">Votre code postal</label>
                         <label for="zipInput" data-lang="en">Your postal code</label>
-                        
                         <div class="zip-field">
-                            <input 
-                                type="text" 
-                                id="zipInput" 
-                                placeholder="Ex : 85000"
-                                maxlength="5"
-                                inputmode="numeric"
-                                pattern="[0-9]{5}"
-                                autocomplete="postal-code"
-                                required
-                            >
+                            <input type="text" id="zipInput" placeholder="Ex : 85000" maxlength="5" inputmode="numeric" pattern="[0-9]{5}" autocomplete="postal-code" required>
                             <button type="submit" class="btn btn-primary" data-lang="fr">Continuer →</button>
                             <button type="submit" class="btn btn-primary" data-lang="en">Continue →</button>
                         </div>
                         <div id="zipError" class="zip-error"></div>
                     </form>
-
-                    <div class="zone-info" data-lang="fr">
-                        📍 Zone d'intervention : Vendée — La Roche-sur-Yon, Les Sables-d'Olonne et alentours (85000 à 85499)
-                    </div>
-                    <div class="zone-info" data-lang="en">
-                        📍 Service area: Vendée — La Roche-sur-Yon, Les Sables-d'Olonne and surroundings (85000 to 85499)
-                    </div>
+                    <div class="zone-info" data-lang="fr">📍 Zone d'intervention : Vendée — La Roche-sur-Yon, Les Sables-d'Olonne et alentours (85000 à 85499)</div>
+                    <div class="zone-info" data-lang="en">📍 Service area: Vendée — La Roche-sur-Yon, Les Sables-d'Olonne and surroundings (85000 to 85499)</div>
                 </div>
             </div>
 
-            <!-- ====== ÉTAPE 2 : Calendly ====== -->
+            <!-- Étape 2 : Calendly -->
             <div id="step2" class="booking-step" style="display: none;">
                 <div class="step-confirmed">
                     <span id="confirmedZip"></span>
                     <button onclick="resetBooking()" class="change-zip" data-lang="fr">Modifier</button>
                     <button onclick="resetBooking()" class="change-zip" data-lang="en">Change</button>
                 </div>
-
                 <div class="step-badge step-badge-success" style="margin-bottom:1rem;" data-lang="fr">Étape 2/2 — Choisissez votre créneau</div>
                 <div class="step-badge step-badge-success" style="margin-bottom:1rem;" data-lang="en">Step 2/2 — Choose your time slot</div>
-
                 <div class="calendly-wrapper">
                     <div class="calendly-wrapper-header">
                         <span class="cw-icon">📅</span>
                         <div>
                             <h4 data-lang="fr">Visite sur site — Devis gratuit</h4>
                             <h4 data-lang="en">On-site Visit — Free Quote</h4>
-                            
                             <p data-lang="fr">Choisissez un créneau qui vous convient, je me déplace chez vous.</p>
                             <p data-lang="en">Pick a time that works for you, I'll come to your property.</p>
                         </div>
                     </div>
-
-                    <div class="calendly-inline-widget" 
-                         id="calendlyWidget"
-                         data-url="https://calendly.com/pro-max-ellis/15min?hide_gdpr_banner=1&hide_event_type_details=1&primary_color=6E8A22"
-                         style="min-width:280px; height:700px;">
-                    </div>
-
+                    <div class="calendly-inline-widget" id="calendlyWidget" data-url="https://calendly.com/pro-max-ellis/15min?hide_gdpr_banner=1&hide_event_type_details=1&primary_color=6E8A22" style="min-width:280px; height:700px;"></div>
                     <div class="calendly-wrapper-footer">
                         <span data-lang="fr">🔒 Gratuit & sans engagement — Confirmation immédiate par email</span>
                         <span data-lang="en">🔒 Free & no obligation — Instant email confirmation</span>
@@ -1717,23 +723,18 @@
                 </div>
             </div>
 
-            <!-- ====== HORS ZONE ====== -->
+            <!-- Hors zone -->
             <div id="stepOutOfZone" class="booking-step" style="display: none;">
                 <div class="step-card step-card-refused">
                     <div class="step-badge step-badge-error" data-lang="fr">Hors zone</div>
                     <div class="step-badge step-badge-error" data-lang="en">Out of area</div>
-                    
                     <div class="step-icon">😔</div>
-                    
                     <h3 data-lang="fr">Je n'interviens pas encore dans votre secteur</h3>
                     <h3 data-lang="en">I don't yet cover your area</h3>
-                    
                     <p data-lang="fr">Votre code postal (<strong id="refusedZip"></strong>) est en dehors de ma zone d'intervention actuelle.</p>
                     <p data-lang="en">Your postal code (<strong id="refusedZipEN"></strong>) is outside my current service area.</p>
-                    
                     <p data-lang="fr">J'interviens en <strong>Vendée</strong>, secteur La Roche-sur-Yon / Les Sables-d'Olonne :</p>
                     <p data-lang="en">I work in <strong>Vendée</strong>, La Roche-sur-Yon / Les Sables-d'Olonne area:</p>
-                    
                     <div class="zone-tags">
                         <span class="zone-tag">85000 — La Roche-sur-Yon</span>
                         <span class="zone-tag">85100 — Les Sables-d'Olonne</span>
@@ -1741,14 +742,11 @@
                         <span class="zone-tag">85300 — Challans</span>
                         <span class="zone-tag">85400 — Luçon</span>
                     </div>
-                    
                     <p data-lang="fr">Vous pouvez tout de même me contacter, j'étudierai votre demande :</p>
                     <p data-lang="en">You can still contact me, I'll review your request:</p>
-                    
                     <div class="step-card-actions">
                         <a href="#contact" class="btn btn-primary" data-lang="fr">Me contacter</a>
                         <a href="#contact" class="btn btn-primary" data-lang="en">Contact Me</a>
-                        
                         <button onclick="resetBooking()" class="btn btn-secondary" data-lang="fr">← Réessayer</button>
                         <button onclick="resetBooking()" class="btn btn-secondary" data-lang="en">← Try Again</button>
                     </div>
@@ -1757,23 +755,19 @@
         </div>
     </section>
 
-    <!-- ======================== CONTACT ======================== -->
+    <!-- ════ CONTACT ════ -->
     <section class="contact" id="contact">
         <div class="container">
             <h2 class="section-title" data-lang="fr">Contact</h2>
             <h2 class="section-title" data-lang="en">Contact</h2>
-            
             <p class="section-subtitle" data-lang="fr">Une question ? Un devis ? Je vous réponds sous 15 minutes en moyenne.</p>
             <p class="section-subtitle" data-lang="en">A question? A quote? I reply within 15 minutes on average.</p>
-
             <div class="contact-wrapper">
                 <div class="contact-info">
                     <h3 data-lang="fr">Parlons de votre projet</h3>
                     <h3 data-lang="en">Let's talk about your project</h3>
-                    
                     <p data-lang="fr">Devis gratuit et sans engagement. N'hésitez pas à me contacter directement par téléphone pour une réponse immédiate.</p>
                     <p data-lang="en">Free quote, no obligation. Feel free to call me directly for an immediate response.</p>
-
                     <div class="contact-detail">
                         <div class="contact-detail-icon">📞</div>
                         <div>
@@ -1787,7 +781,6 @@
                         <div>
                             <div class="contact-detail-label">Email</div>
                             <a href="mailto:pro.max.ellis@gmail.com" class="contact-detail-text">pro.max.ellis@gmail.com</a>
-
                         </div>
                     </div>
                     <div class="contact-detail">
@@ -1809,7 +802,6 @@
                         </div>
                     </div>
                 </div>
-
                 <form class="contact-form" action="https://formspree.io/f/xeepannz" method="POST">
                     <div class="form-group">
                         <label for="name" data-lang="fr">Nom complet</label>
@@ -1831,28 +823,20 @@
                         <select id="service" name="service" required>
                             <option value="" disabled selected data-lang="fr">Choisir un service</option>
                             <option value="" disabled selected data-lang="en">Choose a service</option>
-                            
                             <option value="elagage" data-lang="fr">Élagage / Abattage</option>
                             <option value="elagage" data-lang="en">Tree Pruning / Felling</option>
-                            
                             <option value="taille-haies" data-lang="fr">Taille de haies / Arbustes</option>
                             <option value="taille-haies" data-lang="en">Hedge / Shrub Trimming</option>
-                            
                             <option value="tonte" data-lang="fr">Tonte de pelouse</option>
                             <option value="tonte" data-lang="en">Lawn Mowing</option>
-                            
                             <option value="debroussaillage" data-lang="fr">Débroussaillage</option>
                             <option value="debroussaillage" data-lang="en">Brush Clearing</option>
-                            
                             <option value="entretien" data-lang="fr">Entretien de jardin</option>
                             <option value="entretien" data-lang="en">Garden Maintenance</option>
-                            
                             <option value="amenagement" data-lang="fr">Aménagement paysager</option>
                             <option value="amenagement" data-lang="en">Landscape Design</option>
-                            
                             <option value="evacuation" data-lang="fr">Évacuation déchets verts</option>
                             <option value="evacuation" data-lang="en">Green Waste Removal</option>
-                            
                             <option value="autre" data-lang="fr">Autre</option>
                             <option value="autre" data-lang="en">Other</option>
                         </select>
@@ -1869,7 +853,21 @@
         </div>
     </section>
 
-    <!-- ======================== FOOTER ======================== -->
+    <!-- ════ CTA ════ -->
+    <section class="cta-section">
+        <h2 data-lang="fr">Un projet d'élagage ou d'entretien ?</h2>
+        <h2 data-lang="en">Have a tree care or maintenance project?</h2>
+        <p data-lang="fr">Demandez votre devis gratuit en quelques clics.</p>
+        <p data-lang="en">Request your free quote in just a few clicks.</p>
+        <div class="cta-buttons">
+            <a href="#booking" class="btn btn-primary" data-lang="fr">Prendre rendez-vous</a>
+            <a href="#booking" class="btn btn-primary" data-lang="en">Book an Appointment</a>
+            <a href="#contact" class="btn btn-outline-white" data-lang="fr">Nous contacter</a>
+            <a href="#contact" class="btn btn-outline-white" data-lang="en">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- ════ FOOTER ════ -->
     <footer>
         <div class="footer-content">
             <p><strong>Max Ellis</strong> <span data-lang="fr">— Élagage & Entretien d'Espaces Verts</span><span data-lang="en">— Tree Care & Landscaping</span></p>
@@ -1877,151 +875,64 @@
             <p data-lang="en">Sole Trader — SIRET: 911 829 505 00021</p>
             <p data-lang="fr">Membre de la coopérative <a href="https://jardiniers-sap.fr" target="_blank" rel="noopener">Jardiniers SAP</a> — Agréé Service à la Personne</p>
             <p data-lang="en">Member of the <a href="https://jardiniers-sap.fr" target="_blank" rel="noopener">Jardiniers SAP</a> cooperative — Certified Personal Service Provider</p>
-            <p data-lang="fr">&copy; 2026 Max Ellis — Tous droits réservés — <a href="/mentions-legales.html">Mentions légales</a></p>
-            <p data-lang="en">&copy; 2026 Max Ellis — All rights reserved — <a href="/mentions-legales.html">Legal Notice</a></p>
-            <a href="/cgv.html" data-lang="fr">CGV</a>
-            <a href="/cgv.html" data-lang="en">T&Cs</a>
-
+            <p data-lang="fr">&copy; 2026 Max Ellis — Tous droits réservés</p>
+            <p data-lang="en">&copy; 2026 Max Ellis — All rights reserved</p>
+            <div class="footer-links">
+                <a href="/mentions-legales.html" data-lang="fr">Mentions légales</a>
+                <a href="/mentions-legales.html" data-lang="en">Legal Notice</a>
+                <a href="/cgv.html" data-lang="fr">CGV</a>
+                <a href="/cgv.html" data-lang="en">T&Cs</a>
+            </div>
         </div>
     </footer>
 
-  <!-- ======================== SCRIPTS ======================== -->
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-
-<script>
-
-        // ============================
-        // LANGUAGE SWITCHER
-        // ============================
-        let currentLang = localStorage.getItem('preferredLanguage') || 'fr';
-        
-        // Apply language on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            setLanguage(currentLang);
-        });
-
-        function setLanguage(lang) {
-            currentLang = lang;
-            localStorage.setItem('preferredLanguage', lang);
-            
-            // Update HTML lang attribute
-            document.documentElement.lang = lang;
-            
-            // Toggle body class for EN
-            if (lang === 'en') {
-                document.body.classList.add('lang-en');
-            } else {
-                document.body.classList.remove('lang-en');
-            }
-            
-            // Update button states
-            document.getElementById('btnFR').classList.toggle('active', lang === 'fr');
-            document.getElementById('btnEN').classList.toggle('active', lang === 'en');
-            
-            // Update page title & meta description
+    <!-- ════ SCRIPTS ════ -->
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script src="/main.js"></script>
+    <script>
+        // ── Homepage : mise à jour meta title/desc selon la langue ──
+        var origSetLang = setLang;
+        setLang = function(lang) {
+            origSetLang(lang);
             if (lang === 'en') {
                 document.title = 'Max Ellis — Tree Care & Landscaping in Vendée';
-                document.querySelector('meta[name="description"]').content = 
-                    'Tree pruning, felling, hedge trimming, garden maintenance in Vendée. Free quote. La Roche-sur-Yon and surrounding areas. Max Ellis, insured professional.';
+                document.querySelector('meta[name="description"]').content = 'Tree pruning, felling, hedge trimming, garden maintenance in Vendée. Free quote. La Roche-sur-Yon and surrounding areas. Max Ellis, insured professional.';
             } else {
                 document.title = 'Max Ellis — Élagage & Entretien d\'Espaces Verts en Vendée';
-                document.querySelector('meta[name="description"]').content = 
-                    'Élagage, abattage, taille de haies, entretien de jardins en Vendée. Devis gratuit. Intervention La Roche-sur-Yon et alentours. Max Ellis, professionnel assuré.';
+                document.querySelector('meta[name="description"]').content = 'Élagage, abattage, taille de haies, entretien de jardins en Vendée. Devis gratuit. Intervention La Roche-sur-Yon et alentours. Max Ellis, professionnel assuré.';
             }
+        };
+        setLang(currentLang);
 
-            // Track language change in Google Analytics
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'language_change', {
-                    'event_category': 'engagement',
-                    'event_label': lang
-                });
-            }
-        }
-
-        // ============================
-        // MENU BURGER MOBILE
-        // ============================
-        const burger = document.getElementById('burger');
-        const navLinks = document.getElementById('navLinks');
-
-        burger.addEventListener('click', () => {
-            burger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                burger.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
-
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            nav.style.boxShadow = window.scrollY > 50 
-                ? '0 2px 20px rgba(33,51,36,0.1)' 
-                : 'none';
-        });
-
-        // ============================
-        // FILTRE CODE POSTAL
-        // ============================
+        // ── Filtre code postal ──
         function checkZip() {
-            const input = document.getElementById('zipInput').value.trim();
-            const errorDiv = document.getElementById('zipError');
-
+            var input = document.getElementById('zipInput').value.trim();
+            var errorDiv = document.getElementById('zipError');
             if (!/^\d{5}$/.test(input)) {
-                errorDiv.textContent = currentLang === 'fr' 
-                    ? "Veuillez entrer un code postal valide (5 chiffres)."
-                    : "Please enter a valid postal code (5 digits).";
+                errorDiv.textContent = currentLang === 'fr' ? "Veuillez entrer un code postal valide (5 chiffres)." : "Please enter a valid postal code (5 digits).";
                 return;
             }
-
             errorDiv.textContent = "";
-            const zip = parseInt(input, 10);
-            const isValid = (zip >= 85000 && zip <= 85499);
-
+            var zip = parseInt(input, 10);
+            var isValid = (zip >= 85000 && zip <= 85499);
             if (isValid) {
-                // Zone OK
                 document.getElementById('step1').style.display = 'none';
                 document.getElementById('stepOutOfZone').style.display = 'none';
                 document.getElementById('step2').style.display = 'block';
-                
-                const confirmText = currentLang === 'fr'
+                var confirmText = currentLang === 'fr'
                     ? '✓ Code postal ' + input + ' — Vous êtes dans ma zone d\'intervention'
                     : '✓ Postal code ' + input + ' — You are within my service area';
                 document.getElementById('confirmedZip').textContent = confirmText;
-                
-                document.getElementById('step2').scrollIntoView({ 
-                    behavior: 'smooth', block: 'start' 
-                });
-
-                // Track in Google Analytics
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'zip_code_valid', {
-                        'event_category': 'booking',
-                        'event_label': input
-                    });
-                }
+                document.getElementById('step2').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                if (typeof gtag !== 'undefined') { gtag('event', 'zip_code_valid', { event_category: 'booking', event_label: input }); }
             } else {
-                // Hors zone
                 document.getElementById('step1').style.display = 'none';
                 document.getElementById('step2').style.display = 'none';
                 document.getElementById('stepOutOfZone').style.display = 'block';
                 document.getElementById('refusedZip').textContent = input;
                 document.getElementById('refusedZipEN').textContent = input;
-                
-                document.getElementById('stepOutOfZone').scrollIntoView({ 
-                    behavior: 'smooth', block: 'center' 
-                });
-
-                // Track in Google Analytics
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'zip_code_invalid', {
-                        'event_category': 'booking',
-                        'event_label': input
-                    });
-                }
+                document.getElementById('stepOutOfZone').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                if (typeof gtag !== 'undefined') { gtag('event', 'zip_code_invalid', { event_category: 'booking', event_label: input }); }
             }
         }
 
@@ -2031,16 +942,11 @@
             document.getElementById('step1').style.display = 'block';
             document.getElementById('step2').style.display = 'none';
             document.getElementById('stepOutOfZone').style.display = 'none';
-            document.getElementById('step1').scrollIntoView({ 
-                behavior: 'smooth', block: 'center' 
-            });
+            document.getElementById('step1').scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
 
         document.getElementById('zipInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                e.preventDefault();
-                checkZip();
-            }
+            if (e.key === 'Enter') { e.preventDefault(); checkZip(); }
         });
     </script>
 

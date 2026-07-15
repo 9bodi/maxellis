@@ -1,0 +1,653 @@
+/* ============================================================
+   STYLE.CSS — Max Ellis — Fichier CSS Global
+   Utilisé par TOUTES les pages du site
+   ============================================================ */
+
+/* ============================
+   1. VARIABLES
+   ============================ */
+:root {
+    --vert-chasseur: #3A5A40;
+    --mousse-forestiere: #6E8A22;
+    --olive-pale: #B3C973;
+    --vert-tilleul: #A3B865;
+    --gris-marbre: #647572;
+    --evergreen: #213324;
+    --gris-fer: #485453;
+    --vert-clair-bg: #EEF2E2;
+    --beige: #F7F6F1;
+    --blanc: #FFFFFF;
+    --noir: #1A1A1A;
+    --gris-clair: #DDE0DC;
+    --gris-texte: #4A4A4A;
+    --ombre: 0 4px 20px rgba(33,51,36,0.10);
+    --radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+/* ============================
+   2. RESET
+   ============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--noir);
+    line-height: 1.7;
+    background: var(--blanc);
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ============================
+   3. LANGUE (FR/EN toggle)
+   ============================ */
+[data-lang="en"] {
+    display: none !important;
+}
+
+body.lang-en [data-lang="fr"] {
+    display: none !important;
+}
+
+body.lang-en [data-lang="en"] {
+    display: block !important;
+}
+
+/* Inline elements */
+body.lang-en a[data-lang="en"],
+body.lang-en button[data-lang="en"],
+body.lang-en span[data-lang="en"],
+body.lang-en label[data-lang="en"],
+body.lang-en option[data-lang="en"] {
+    display: inline-block !important;
+}
+
+/* Block elements */
+body.lang-en h1[data-lang="en"],
+body.lang-en h2[data-lang="en"],
+body.lang-en h3[data-lang="en"],
+body.lang-en h4[data-lang="en"],
+body.lang-en h5[data-lang="en"],
+body.lang-en h6[data-lang="en"],
+body.lang-en p[data-lang="en"],
+body.lang-en div[data-lang="en"],
+body.lang-en li[data-lang="en"] {
+    display: block !important;
+}
+
+/* Flex containers keep flex in EN */
+body.lang-en .hero-buttons,
+body.lang-en .about-badges,
+body.lang-en .about-stats,
+body.lang-en .zone-tags,
+body.lang-en .step-card-actions,
+body.lang-en .zip-field,
+body.lang-en .cta-buttons,
+body.lang-en .engagements,
+body.lang-en .pricing-cards,
+body.lang-en .two-columns {
+    display: flex !important;
+}
+
+/* Grid containers keep grid in EN */
+body.lang-en .services-grid,
+body.lang-en .gallery-grid,
+body.lang-en .reviews-grid,
+body.lang-en .about-content,
+body.lang-en .contact-wrapper,
+body.lang-en .blog-grid {
+    display: grid !important;
+}
+
+/* Table elements */
+body.lang-en table[data-lang="en"] {
+    display: table !important;
+}
+
+/* ============================
+   4. LANG SWITCHER
+   ============================ */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.lang-btn {
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 2px;
+    line-height: 0;
+    transition: var(--transition);
+    opacity: 0.6;
+}
+
+.lang-btn:hover {
+    opacity: 1;
+}
+
+.lang-btn.active {
+    border-color: var(--mousse-forestiere);
+    opacity: 1;
+}
+
+.lang-btn img {
+    width: 24px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+/* ============================
+   5. NAVIGATION
+   ============================ */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--gris-clair);
+    padding: 0 2rem;
+    transition: var(--transition);
+}
+
+nav.scrolled {
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+/* Logo */
+.logo {
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.5rem;
+    color: var(--vert-chasseur);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.logo span {
+    color: var(--mousse-forestiere);
+}
+
+.nav-logo {
+    text-decoration: none;
+}
+
+.nav-logo-img {
+    height: 40px;
+    width: auto;
+    max-height: 40px;
+}
+
+/* Nav links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--gris-fer);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: var(--mousse-forestiere);
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--mousse-forestiere);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* ============================
+   6. DROPDOWN MENU
+   ============================ */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.dropdown-toggle .arrow {
+    font-size: 0.7rem;
+    transition: var(--transition);
+}
+
+.dropdown:hover .dropdown-toggle .arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--blanc);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 30px rgba(33,51,36,0.12);
+    border: 1px solid var(--gris-clair);
+    padding: 0.75rem 0;
+    min-width: 220px;
+    z-index: 1001;
+    list-style: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    list-style: none;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.85rem;
+    color: var(--gris-fer);
+    text-decoration: none;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+    background: var(--vert-clair-bg);
+    color: var(--mousse-forestiere);
+}
+
+.dropdown-menu a::after {
+    display: none;
+}
+
+/* ============================
+   7. BURGER MENU
+   ============================ */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    background: none;
+    border: none;
+    padding: 5px;
+}
+
+.burger span {
+    width: 25px;
+    height: 2px;
+    background: var(--vert-chasseur);
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+.burger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ============================
+   8. BOUTONS
+   ============================ */
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    font-family: 'Poppins', sans-serif;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--mousse-forestiere);
+    color: var(--blanc);
+}
+
+.btn-primary:hover {
+    background: var(--vert-chasseur);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(58,90,64,0.3);
+}
+
+a.btn-primary {
+    color: var(--blanc);
+}
+
+.btn-outline {
+    border: 2px solid var(--blanc);
+    color: var(--blanc);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: var(--blanc);
+    color: var(--vert-chasseur);
+}
+
+.btn-outline-white {
+    border: 2px solid var(--blanc);
+    color: var(--blanc);
+    background: transparent;
+}
+
+.btn-outline-white:hover {
+    background: var(--blanc);
+    color: var(--vert-chasseur);
+}
+
+a.btn-outline-white {
+    color: var(--blanc);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--vert-chasseur);
+    border: 2px solid var(--vert-chasseur);
+}
+
+.btn-secondary:hover {
+    background: var(--vert-clair-bg);
+}
+
+.btn-outline-green {
+    border: 2px solid var(--mousse-forestiere);
+    color: var(--mousse-forestiere);
+    background: transparent;
+}
+
+.btn-outline-green:hover {
+    background: var(--mousse-forestiere);
+    color: var(--blanc);
+}
+
+/* ============================
+   9. SECTIONS COMMUNES
+   ============================ */
+section {
+    padding: 100px 2rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Comfortaa', cursive;
+    font-size: 2.5rem;
+    color: var(--vert-chasseur);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section-subtitle {
+    color: var(--gris-marbre);
+    text-align: center;
+    font-size: 1.05rem;
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================
+   10. PAGE HERO (sous-pages)
+   ============================ */
+.page-hero {
+    padding: 140px 2rem 60px;
+    background: var(--evergreen);
+    color: var(--blanc);
+    text-align: center;
+}
+
+.page-hero h1 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 2.8rem;
+    margin-bottom: 0.75rem;
+}
+
+.page-hero p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.breadcrumb {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.breadcrumb a {
+    color: var(--olive-pale);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: var(--blanc);
+}
+
+/* ============================
+   11. CTA SECTION
+   ============================ */
+.cta-section {
+    background: var(--evergreen);
+    color: var(--blanc);
+    text-align: center;
+    padding: 60px 2rem;
+}
+
+.cta-section h2 {
+    font-family: 'Comfortaa', cursive;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    max-width: 600px;
+    margin: 0 auto 0.5rem;
+    font-size: 1.05rem;
+    opacity: 0.9;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+/* ============================
+   12. FOOTER
+   ============================ */
+footer {
+    background: var(--evergreen);
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 2.5rem 2rem;
+}
+
+footer a {
+    color: var(--olive-pale);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--blanc);
+}
+
+.footer-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    font-size: 0.85rem;
+}
+
+.footer-content p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links {
+    margin-top: 8px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+}
+
+/* ============================
+   13. INFO BOX (réutilisé sur CGV, entretien, blog)
+   ============================ */
+.info-box {
+    background: var(--vert-clair-bg);
+    border-left: 4px solid var(--mousse-forestiere);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 1.25rem 1.5rem;
+    margin: 2rem 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.info-box strong {
+    color: var(--vert-chasseur);
+}
+
+/* ============================
+   14. RESPONSIVE — GLOBAL
+   ============================ */
+
+/* Dropdown mobile */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        transform: none;
+        box-shadow: none;
+        border: none;
+        padding: 0 0 0 1rem;
+        background: transparent;
+    }
+
+    .dropdown:hover .dropdown-menu,
+    .dropdown .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        padding: 0.4rem 0;
+        font-size: 0.85rem;
+    }
+}
+
+/* Burger + nav mobile */
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--blanc);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+        border-bottom: 1px solid var(--gris-clair);
+        box-shadow: 0 10px 30px rgba(33,51,36,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .lang-switcher {
+        margin-left: 0.5rem;
+    }
+
+    .page-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 60px 1.25rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .cta-section {
+        padding: 40px 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .lang-btn img {
+        width: 20px;
+        height: 14px;
+    }
+
+    .page-hero h1 {
+        font-size: 1.5rem;
+    }
+}

@@ -7,200 +7,126 @@
     <meta name="description" content="Mentions légales du site espacesverts-vendee.fr — Max Ellis, élagage et entretien d'espaces verts en Vendée.">
     <meta name="robots" content="noindex">
 
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBHES5CSRL"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-ZBHES5CSRL');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ZBHES5CSRL');
     </script>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
 
     <style>
-        :root {
-            --vert-chasseur: #3A5A40;
-            --mousse-forestiere: #6E8A22;
-            --olive-pale: #B3C973;
-            --gris-marbre: #647572;
-            --evergreen: #213324;
-            --gris-fer: #485453;
-            --vert-clair-bg: #EEF2E2;
-            --beige: #F7F6F1;
-            --blanc: #FFFFFF;
-            --noir: #1A1A1A;
-            --gris-clair: #DDE0DC;
-            --ombre: 0 4px 20px rgba(33,51,36,0.10);
-            --radius: 12px;
-            --transition: all 0.3s ease;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Poppins', sans-serif; color: var(--noir); line-height: 1.7; background: var(--blanc); }
-        img { max-width: 100%; display: block; }
-
-        /* Navigation */
-        nav {
-            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-            background: rgba(255,255,255,0.95); backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--gris-clair); padding: 0 2rem;
-            transition: var(--transition);
-        }
-        .nav-container {
-            max-width: 1200px; margin: 0 auto; display: flex;
-            justify-content: space-between; align-items: center; height: 70px;
-        }
-        .logo { font-family: 'Comfortaa', cursive; font-size: 1.5rem; color: var(--vert-chasseur); text-decoration: none; font-weight: 700; }
-        .logo span { color: var(--mousse-forestiere); }
-        .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--gris-fer); font-size: 0.9rem; font-weight: 500; transition: var(--transition); }
-        .nav-links a:hover { color: var(--mousse-forestiere); }
-        .burger { display: none; flex-direction: column; cursor: pointer; gap: 5px; background: none; border: none; padding: 5px; }
-        .burger span { width: 25px; height: 2px; background: var(--vert-chasseur); transition: var(--transition); border-radius: 2px; }
-        .burger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        .burger.active span:nth-child(2) { opacity: 0; }
-        .burger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-
-        /* Page hero */
-        .page-hero {
-            padding: 140px 2rem 60px;
-            background: var(--evergreen);
-            color: var(--blanc);
-            text-align: center;
-        }
-        .page-hero h1 {
-            font-family: 'Comfortaa', cursive;
-            font-size: 2.5rem;
-            margin-bottom: 0.75rem;
-        }
-        .breadcrumb {
-            margin-top: 1rem;
-            font-size: 0.85rem;
-            opacity: 0.8;
-        }
-        .breadcrumb a {
-            color: var(--olive-pale);
-            text-decoration: none;
-        }
-        .breadcrumb a:hover { color: var(--blanc); }
-
-        /* Content */
         .legal-content {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
-            padding: 60px 2rem 100px;
+            padding: 60px 2rem 80px;
         }
         .legal-content h2 {
             font-family: 'Comfortaa', cursive;
             font-size: 1.4rem;
             color: var(--vert-chasseur);
             margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--vert-clair-bg);
-        }
-        .legal-content h2:first-child {
-            margin-top: 0;
+            margin-bottom: 0.75rem;
         }
         .legal-content p {
             color: var(--gris-fer);
             font-size: 0.95rem;
             margin-bottom: 1rem;
+            line-height: 1.8;
         }
-        .legal-content strong {
-            color: var(--noir);
-        }
-        .legal-content a {
-            color: var(--mousse-forestiere);
-            text-decoration: none;
-        }
-        .legal-content a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer { background: var(--evergreen); color: rgba(255,255,255,0.8); text-align: center; padding: 2.5rem 2rem; }
-        footer a { color: var(--olive-pale); text-decoration: none; }
-        footer a:hover { color: var(--blanc); }
-        .footer-content { max-width: 1100px; margin: 0 auto; font-size: 0.85rem; }
-        .footer-content p { margin-bottom: 0.5rem; }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .burger { display: flex; }
-            .nav-links {
-                display: none; position: absolute; top: 70px; left: 0; right: 0;
-                background: var(--blanc); flex-direction: column; padding: 2rem; gap: 1.5rem;
-                border-bottom: 1px solid var(--gris-clair); box-shadow: 0 10px 30px rgba(33,51,36,0.1);
-            }
-            .nav-links.active { display: flex; }
-            .page-hero h1 { font-size: 1.8rem; }
-            .legal-content { padding: 40px 1.25rem 60px; }
-        }
+        .legal-content strong { color: var(--noir); }
+        .legal-content a { color: var(--mousse-forestiere); text-decoration: none; }
+        .legal-content a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- ════ NAV ════ -->
     <nav>
         <div class="nav-container">
             <a href="/" class="nav-logo">
-    <img src="/img/logo/logo_nom.png" alt="Max Ellis Élagage" class="nav-logo-img">
-</a>
-
+                <img src="/img/logo/logo_nom.png" alt="Max Ellis Élagage" class="nav-logo-img">
+            </a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="/#services">Services</a></li>
-                <li><a href="/#about">À propos</a></li>
-                <li><a href="/#gallery">Réalisations</a></li>
-                <li><a href="/#reviews">Avis</a></li>
-                <li><a href="/#booking">Rendez-vous</a></li>
-                <li><a href="/#contact">Contact</a></li>
+                <li data-lang="fr"><a href="/#services">Services</a></li>
+                <li data-lang="fr" class="dropdown">
+                    <a href="/realisations/elagage.html" class="dropdown-toggle">Réalisations <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/realisations/elagage.html">Élagage & Abattage</a></li>
+                        <li><a href="/realisations/taille-de-haie.html">Taille de Haies</a></li>
+                        <li><a href="/realisations/entretien.html">Entretien de Jardins</a></li>
+                        <li><a href="/realisations/debroussaillage.html">Débroussaillage</a></li>
+                        <li><a href="/realisations/abattage.html">Abattage</a></li>
+                        <li><a href="/realisations/evacuation.html">Évacuation</a></li>
+                    </ul>
+                </li>
+                <li data-lang="fr"><a href="/#about">À propos</a></li>
+                <li data-lang="fr"><a href="/blog/">Blog</a></li>
+                <li data-lang="fr"><a href="/entretien-annuel.html">Programme Entretien</a></li>
+                <li data-lang="fr"><a href="/#booking">Rendez-vous</a></li>
+                <li data-lang="fr"><a href="/#contact">Contact</a></li>
+                <li data-lang="en"><a href="/#services">Services</a></li>
+                <li data-lang="en" class="dropdown">
+                    <a href="/realisations/elagage.html" class="dropdown-toggle">Our Work <span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/realisations/elagage.html">Tree Pruning</a></li>
+                        <li><a href="/realisations/taille-de-haie.html">Hedge Trimming</a></li>
+                        <li><a href="/realisations/entretien.html">Garden Maintenance</a></li>
+                        <li><a href="/realisations/debroussaillage.html">Brush Clearing</a></li>
+                        <li><a href="/realisations/abattage.html">Tree Felling</a></li>
+                        <li><a href="/realisations/evacuation.html">Waste Removal</a></li>
+                    </ul>
+                </li>
+                <li data-lang="en"><a href="/#about">About</a></li>
+                <li data-lang="en"><a href="/blog/">Blog</a></li>
+                <li data-lang="en"><a href="/entretien-annuel.html">Maintenance Program</a></li>
+                <li data-lang="en"><a href="/#booking">Book Now</a></li>
+                <li data-lang="en"><a href="/#contact">Contact</a></li>
             </ul>
-            <button class="burger" id="burger" aria-label="Menu">
-                <span></span><span></span><span></span>
-            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn active" id="btnFR" onclick="setLang('fr')" title="Français"><img src="https://flagcdn.com/w40/fr.png" alt="FR"></button>
+                <button class="lang-btn" id="btnEN" onclick="setLang('en')" title="English"><img src="https://flagcdn.com/w40/gb.png" alt="EN"></button>
+            </div>
+            <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
         </div>
     </nav>
 
-    <!-- Hero -->
+    <!-- ════ HERO ════ -->
     <section class="page-hero">
-        <h1>Mentions Légales</h1>
+        <h1 data-lang="fr">Mentions Légales</h1>
+        <h1 data-lang="en">Legal Notice</h1>
         <div class="breadcrumb">
-            <a href="/">Accueil</a> / Mentions légales
+            <a href="/" data-lang="fr">Accueil</a>
+            <a href="/" data-lang="en">Home</a>
+            <span data-lang="fr"> / Mentions légales</span>
+            <span data-lang="en"> / Legal Notice</span>
         </div>
     </section>
 
-    <!-- Contenu -->
+    <!-- ════ CONTENU ════ -->
     <div class="legal-content">
-
         <h2>1. Éditeur du site</h2>
-        <p>
-            <strong>Nom :</strong> Max Ellis<br>
-            <strong>Statut :</strong> Auto-Entrepreneur<br>
-            <strong>SIRET :</strong> 911 829 505 00021<br>
-            <strong>Activité :</strong> Élagage & Entretien d'Espaces Verts<br>
-            <strong>Adresse :</strong> Château-Guibert, Vendée (85), France<br>
-            <strong>Téléphone :</strong> <a href="tel:+33604023613">06 04 02 36 13</a><br>
-            <strong>Email :</strong> <a href="mailto:pro.max.ellis@gmail.com">pro.max.ellis@gmail.com</a><br>
-            <strong>Directeur de la publication :</strong> Max Ellis
-        </p>
+        <p><strong>Max Ellis</strong> — Entrepreneur individuel<br>
+        Activité : Élagage, abattage, entretien d'espaces verts<br>
+        SIRET : 911 829 505 00021<br>
+        Adresse : La Roche-sur-Yon, 85000, Vendée, France<br>
+        Téléphone : <a href="tel:+33604023613">06 04 02 36 13</a><br>
+        Email : <a href="mailto:pro.max.ellis@gmail.com">pro.max.ellis@gmail.com</a></p>
 
-        <h2>2. Hébergeur</h2>
-        <p>
-            <strong>Nom :</strong> Vercel Inc.<br>
-            <strong>Adresse :</strong> 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis<br>
-            <strong>Site web :</strong> <a href="https://vercel.com" target="_blank" rel="noopener">https://vercel.com</a>
-        </p>
+        <h2>2. Hébergement</h2>
+        <p>Ce site est hébergé par <strong>Vercel Inc.</strong><br>
+        Adresse : 340 S Lemon Ave #4133, Walnut, CA 91789, USA<br>
+        Site web : <a href="https://vercel.com" target="_blank" rel="noopener">vercel.com</a></p>
 
         <h2>3. Propriété intellectuelle</h2>
-        <p>L'ensemble du contenu de ce site (textes, images, graphismes, logo, icônes, mise en page) est la propriété exclusive de Max Ellis, sauf mention contraire. Toute reproduction, représentation, modification, publication ou adaptation de tout ou partie des éléments du site est interdite sans autorisation écrite préalable.</p>
+        <p>L'ensemble du contenu de ce site (textes, images, logo, mise en page) est la propriété exclusive de Max Ellis, sauf mention contraire. Toute reproduction, représentation ou diffusion, totale ou partielle, sans autorisation écrite préalable est interdite.</p>
 
-        <h2>4. Données personnelles & RGPD</h2>
-        <p>Les données personnelles collectées via le formulaire de contact (nom, email, téléphone, message) sont utilisées uniquement pour répondre à vos demandes de devis ou de renseignements. Elles ne sont ni vendues, ni cédées à des tiers.</p>
+        <h2>4. Données personnelles</h2>
+        <p>Les données personnelles collectées via le formulaire de contact sont utilisées uniquement pour répondre à vos demandes de devis ou de renseignements. Elles ne sont ni vendues, ni cédées à des tiers.</p>
         <p>Le formulaire est traité par le service <strong>Formspree</strong> (<a href="https://formspree.io" target="_blank" rel="noopener">formspree.io</a>), qui agit en qualité de sous-traitant. Les données sont conservées le temps nécessaire au traitement de votre demande.</p>
         <p>Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données. Pour exercer ces droits, contactez : <a href="mailto:pro.max.ellis@gmail.com">pro.max.ellis@gmail.com</a>.</p>
 
@@ -223,36 +149,22 @@
         <p>Les présentes mentions légales sont régies par le droit français. En cas de litige, les tribunaux français seront seuls compétents.</p>
 
         <p style="margin-top: 3rem; font-size: 0.85rem; color: var(--gris-marbre);">Dernière mise à jour : mai 2026</p>
-
     </div>
 
-    <!-- Footer -->
+    <!-- ════ FOOTER ════ -->
     <footer>
         <div class="footer-content">
             <p><strong>Max Ellis</strong> — Élagage & Entretien d'Espaces Verts</p>
             <p>Auto-Entrepreneur — SIRET : 911 829 505 00021</p>
             <p>Membre de la coopérative <a href="https://jardiniers-sap.fr" target="_blank" rel="noopener">Jardiniers SAP</a> — Agréé Service à la Personne</p>
-            <p>&copy; 2026 Max Ellis — Tous droits réservés — <a href="/mentions-legales.html">Mentions légales</a></p>
-            <a href="/cgv.html" data-lang="fr">CGV</a>
-            <a href="/cgv.html" data-lang="en">T&Cs</a>
+            <p>&copy; 2026 Max Ellis — Tous droits réservés</p>
+            <div class="footer-links">
+                <a href="/mentions-legales.html">Mentions légales</a>
+                <a href="/cgv.html">CGV</a>
+            </div>
         </div>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-        const burger = document.getElementById('burger');
-        const navLinks = document.getElementById('navLinks');
-        burger.addEventListener('click', () => {
-            burger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                burger.classList.remove('active');
-                navLinks.classList.remove('active');
-            });
-        });
-    </script>
-
+    <script src="/main.js"></script>
 </body>
 </html>
