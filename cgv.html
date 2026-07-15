@@ -63,6 +63,8 @@ body.lang-en a.btn[data-lang="fr"] { display: none; }
         .nav-links { list-style: none; display: flex; align-items: center; gap: 30px; }
         .nav-links a { text-decoration: none; color: var(--gris-texte); font-weight: 500; font-size: 0.9rem; transition: var(--transition); }
         .nav-links a:hover { color: var(--mousse-forestiere); }
+        .nav-logo-img { height: 45px; width: auto; }
+
 
         /* Dropdown */
         .dropdown { position: relative; }
@@ -139,7 +141,10 @@ body.lang-en a.btn[data-lang="fr"] { display: none; }
 
     <!-- ════ NAV ════ -->
     <nav class="navbar">
-        <a href="/" class="nav-logo">MaxEllis</a>
+        <a href="/" class="nav-logo">
+    <img src="/img/logo/logo_nom.png" alt="Max Ellis Élagage" class="nav-logo-img">
+</a>
+
         <ul class="nav-links">
             <li data-lang="fr"><a href="/#services">Services</a></li>
             <li data-lang="en"><a href="/#services">Services</a></li>

@@ -54,6 +54,7 @@
         .burger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
         .burger.active span:nth-child(2) { opacity: 0; }
         .burger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+        .nav-logo-img { height: 45px; width: auto; }
 
         /* Dropdown */
         .dropdown { position: relative; }
@@ -161,7 +162,10 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="/" class="logo">Max<span>Ellis</span></a>
+            <a href="/" class="nav-logo">
+    <img src="/img/logo/logo_nom.png" alt="Max Ellis Élagage" class="nav-logo-img">
+</a>
+
             <ul class="nav-links" id="navLinks">
                 <li data-lang="fr"><a href="/#services">Services</a></li>
                 <li data-lang="fr" class="dropdown">
