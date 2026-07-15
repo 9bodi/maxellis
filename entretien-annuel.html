@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programme Annuel d'Entretien | Max Ellis Élagage & Espaces Verts en Vendée</title>
+    <meta name="description" content="Programme annuel d'entretien de jardins et d'arbres par Max Ellis en Vendée. ~14 visites/an, tonte, taille, désherbage. Crédit d'impôt 50 %. À partir de 90 €/mois.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://espacesverts-vendee.fr/entretien-annuel.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Programme Annuel d'Entretien — Max Ellis Vendée">
+    <meta property="og:description" content="Entretien de jardin toute l'année : ~14 visites, tonte, taille, désherbage. Crédit d'impôt 50 %. À partir de 90 €/mois après avantage fiscal.">
+    <meta property="og:url" content="https://espacesverts-vendee.fr/entretien-annuel.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://espacesverts-vendee.fr/img/entretien.png">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBHES5CSRL"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-ZBHES5CSRL');
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ── Variables ── */
+        :root {
+            --evergreen: #2C4A2E;
+            --vert-chasseur: #3A5A40;
+            --mousse-forestiere: #6E8A22;
+            --vert-tilleul: #A3B865;
+            --blanc: #FFFFFF;
+            --gris-clair: #F5F5F0;
+            --gris-texte: #4A4A4A;
+            --transition: all 0.3s ease;
+        }
+
+        /* ── Language toggle ── */
+        [data-lang="en"] { display: none; }
+        body.lang-en [data-lang="fr"] { display: none; }
+        body.lang-en [data-lang="en"] { display: block; }
+        body.lang-en span[data-lang="en"],
+        body.lang-en a[data-lang="en"] { display: inline; }
+        body.lang-en a.btn[data-lang="en"] { display: inline-block; }
+        a.btn[data-lang="en"] { display: none; }
+        body.lang-en a.btn[data-lang="fr"] { display: none; }
+
+        /* ── Reset ── */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; color: var(--gris-texte); background: var(--blanc); line-height: 1.7; }
+
+        /* ── Nav ── */
+        .navbar { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.97); backdrop-filter: blur(10px); z-index: 1000; padding: 15px 5%; display: flex; align-items: center; justify-content: space-between; transition: var(--transition); }
+        .navbar.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.1); }
+        .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--vert-chasseur); text-decoration: none; font-weight: 700; }
+        .nav-links { list-style: none; display: flex; align-items: center; gap: 30px; }
+        .nav-links a { text-decoration: none; color: var(--gris-texte); font-weight: 500; font-size: 0.9rem; transition: var(--transition); }
+        .nav-links a:hover { color: var(--mousse-forestiere); }
+
+        /* Dropdown */
+        .dropdown { position: relative; }
+        .dropdown-toggle { display: inline; cursor: pointer; }
+        .dropdown-toggle .arrow { font-size: 0.7rem; }
+        .dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: var(--blanc); box-shadow: 0 8px 25px rgba(0,0,0,0.1); border-radius: 8px; min-width: 220px; padding: 8px 0; z-index: 100; }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu li { list-style: none; }
+        .dropdown-menu a { display: block; padding: 8px 20px; font-size: 0.85rem; }
+        .dropdown-menu a:hover { background: var(--gris-clair); color: var(--mousse-forestiere); }
+
+        /* Language switcher */
+        .lang-switcher { display: flex; gap: 8px; margin-left: 15px; }
+        .lang-btn { background: none; border: 2px solid transparent; border-radius: 4px; cursor: pointer; padding: 2px; transition: var(--transition); opacity: 0.5; }
+        .lang-btn.active { opacity: 1; border-color: var(--mousse-forestiere); }
+        .lang-btn img { width: 24px; height: 18px; display: block; }
+
+        /* Burger */
+        .burger { display: none; flex-direction: column; cursor: pointer; gap: 5px; }
+        .burger span { width: 25px; height: 3px; background: var(--vert-chasseur); border-radius: 3px; transition: var(--transition); }
+
+        /* ── Hero ── */
+        .page-hero { background: linear-gradient(135deg, var(--evergreen), var(--vert-chasseur)); color: var(--blanc); padding: 140px 5% 80px; text-align: center; }
+        .page-hero h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 1rem; }
+        .page-hero p { font-size: 1.1rem; opacity: 0.9; max-width: 650px; margin: 0 auto; }
+
+        /* ── Main content ── */
+        .content-wrapper { max-width: 1100px; margin: 0 auto; padding: 60px 5%; }
+
+        /* ── Intro ── */
+        .intro { text-align: center; max-width: 800px; margin: 0 auto 3rem; }
+        .intro h2 { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--vert-chasseur); margin-bottom: 1rem; }
+        .intro p { font-size: 1.05rem; }
+
+        /* ── Engagements ── */
+        .engagements { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.5rem; margin-bottom: 4rem; }
+        .engagement-card { text-align: center; padding: 1.5rem 1rem; background: var(--gris-clair); border-radius: 12px; transition: var(--transition); }
+        .engagement-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+        .engagement-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+        .engagement-card h3 { font-size: 0.9rem; color: var(--vert-chasseur); margin-bottom: 0.5rem; font-weight: 600; }
+        .engagement-card p { font-size: 0.8rem; line-height: 1.5; }
+
+        /* ── Services inclus ── */
+        .section-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--vert-chasseur); text-align: center; margin-bottom: 2rem; padding-bottom: 0.75rem; border-bottom: 3px solid var(--vert-tilleul); display: inline-block; }
+        .section-title-wrapper { text-align: center; margin-bottom: 2rem; }
+        .services-intro { text-align: center; max-width: 700px; margin: 0 auto 2rem; font-size: 0.95rem; }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 4rem; }
+        .service-item { display: flex; align-items: center; gap: 12px; padding: 1rem 1.25rem; background: var(--gris-clair); border-radius: 10px; transition: var(--transition); }
+        .service-item:hover { background: var(--blanc); box-shadow: 0 4px 15px rgba(0,0,0,0.08); }
+        .service-icon { font-size: 1.5rem; flex-shrink: 0; }
+        .service-item span { font-size: 0.9rem; font-weight: 500; }
+
+        /* ── Planning ── */
+        .planning-table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.06); }
+        .planning-table thead { background: var(--vert-chasseur); color: var(--blanc); }
+        .planning-table th { padding: 14px 20px; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .planning-table td { padding: 12px 20px; font-size: 0.9rem; border-bottom: 1px solid #eee; }
+        .planning-table tr:last-child td { border-bottom: none; }
+        .planning-table tr:nth-child(even) { background: var(--gris-clair); }
+        .planning-table tr:hover { background: rgba(110,138,34,0.08); }
+        .planning-table .month-icon { margin-right: 8px; }
+        .planning-table .no-visit { color: #999; font-style: italic; }
+        .planning-note { font-size: 0.85rem; color: #888; margin-top: 0.75rem; margin-bottom: 4rem; }
+
+        /* ── Tarifs ── */
+        .pricing-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 2rem; }
+        .pricing-card { background: var(--blanc); border: 2px solid var(--gris-clair); border-radius: 16px; padding: 2rem; text-align: center; transition: var(--transition); position: relative; overflow: hidden; }
+        .pricing-card:hover { border-color: var(--mousse-forestiere); transform: translateY(-4px); box-shadow: 0 12px 35px rgba(0,0,0,0.1); }
+        .pricing-card.popular { border-color: var(--mousse-forestiere); }
+        .pricing-card.popular::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--mousse-forestiere), var(--vert-tilleul)); }
+        .pricing-size-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .pricing-size { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--vert-chasseur); margin-bottom: 0.5rem; }
+        .pricing-price { font-size: 2.2rem; font-weight: 700; color: var(--evergreen); margin: 1rem 0 0.25rem; }
+        .pricing-price small { font-size: 0.9rem; font-weight: 400; }
+        .pricing-credit { background: linear-gradient(135deg, rgba(110,138,34,0.1), rgba(163,184,101,0.1)); border-radius: 8px; padding: 0.75rem; margin: 1rem 0; }
+        .pricing-credit .credit-label { font-size: 0.75rem; color: var(--mousse-forestiere); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        .pricing-credit .credit-price { font-size: 1.5rem; font-weight: 700; color: var(--mousse-forestiere); }
+        .pricing-credit .credit-price small { font-size: 0.8rem; font-weight: 400; }
+        .pricing-note { text-align: center; font-size: 0.9rem; max-width: 700px; margin: 0 auto 2rem; }
+
+        /* ── Info boxes ── */
+        .info-box { background: var(--gris-clair); border-left: 4px solid var(--mousse-forestiere); padding: 1.25rem 1.75rem; border-radius: 0 10px 10px 0; margin: 1.5rem 0; font-size: 0.95rem; line-height: 1.7; }
+        .info-box strong { color: var(--vert-chasseur); }
+
+        /* ── Payment & Credit ── */
+        .two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 3rem 0; }
+        .column-card { background: var(--gris-clair); border-radius: 12px; padding: 2rem; }
+        .column-card h3 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--vert-chasseur); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 10px; }
+        .column-card h4 { font-size: 0.95rem; font-weight: 600; color: var(--evergreen); margin: 1rem 0 0.5rem; }
+        .column-card p { font-size: 0.9rem; margin-bottom: 0.75rem; }
+        .column-card ul { margin: 0.5rem 0 1rem 1.25rem; font-size: 0.85rem; }
+        .column-card ul li { margin-bottom: 0.4rem; }
+        .badge-recommended { background: var(--mousse-forestiere); color: var(--blanc); font-size: 0.7rem; padding: 3px 10px; border-radius: 20px; font-weight: 600; text-transform: uppercase; margin-left: 8px; }
+        .small-note { font-size: 0.8rem; color: #888; font-style: italic; margin-top: 0.5rem; }
+
+        /* ── CTA ── */
+        .cta-section { background: var(--evergreen); color: var(--blanc); text-align: center; padding: 60px 2rem; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .cta-section h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 1rem; }
+        .cta-section p { margin-bottom: 0.5rem; opacity: 0.9; max-width: 650px; margin-left: auto; margin-right: auto; }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem; }
+
+        /* Buttons */
+        .btn { display: inline-block; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; font-family: 'Poppins', sans-serif; transition: var(--transition); cursor: pointer; border: none; text-align: center; }
+        .btn-primary { background: var(--mousse-forestiere); color: #FFFFFF; }
+        .btn-primary:hover { background: var(--vert-chasseur); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(58,90,64,0.3); }
+        a.btn-primary { color: #FFFFFF; }
+        .btn-outline-white { border: 2px solid var(--blanc); color: #FFFFFF; background: transparent; }
+        .btn-outline-white:hover { background: var(--blanc); color: var(--vert-chasseur); }
+        a.btn-outline-white { color: #FFFFFF; }
+        .btn-outline { border: 2px solid var(--mousse-forestiere); color: var(--mousse-forestiere); background: transparent; }
+        .btn-outline:hover { background: var(--mousse-forestiere); color: var(--blanc); }
+
+        /* ── Footer ── */
+        footer { background: var(--evergreen); color: rgba(255,255,255,0.7); text-align: center; padding: 30px 5%; font-size: 0.85rem; }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+        footer a:hover { color: var(--blanc); }
+        .footer-links { margin-top: 8px; }
+        .footer-links a { margin: 0 10px; }
+
+        /* ── Responsive ── */
+        @media (max-width: 968px) {
+            .engagements { grid-template-columns: repeat(3, 1fr); }
+            .pricing-cards { grid-template-columns: 1fr; max-width: 400px; margin-left: auto; margin-right: auto; }
+            .two-columns { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: fixed; top: 0; right: -100%; width: 70%; height: 100vh; background: var(--blanc); flex-direction: column; padding: 80px 30px 30px; gap: 20px; box-shadow: -5px 0 20px rgba(0,0,0,0.1); transition: right 0.3s ease; }
+            .nav-links.active { display: flex; right: 0; }
+            .burger { display: flex; }
+            .dropdown-menu { position: static; box-shadow: none; padding-left: 15px; }
+            .dropdown:hover .dropdown-menu { display: block; }
+            .page-hero h1 { font-size: 1.8rem; }
+            .engagements { grid-template-columns: repeat(2, 1fr); }
+            .services-grid { grid-template-columns: 1fr 1fr; }
+            .content-wrapper { padding: 40px 5%; }
+            .section-title { font-size: 1.4rem; }
+        }
+        @media (max-width: 480px) {
+            .engagements { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ════ NAV ════ -->
+    <nav class="navbar">
+        <a href="/" class="nav-logo">MaxEllis</a>
+        <ul class="nav-links">
+            <li data-lang="fr"><a href="/#services">Services</a></li>
+            <li data-lang="en"><a href="/#services">Services</a></li>
+
+            <li data-lang="fr" class="dropdown">
+                <a href="/realisations/elagage.html" class="dropdown-toggle">Réalisations <span class="arrow">▾</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/realisations/elagage.html">Élagage</a></li>
+                    <li><a href="#gallery">Taille de Haies</a></li>
+                    <li><a href="#gallery">Entretien de Jardins</a></li>
+                    <li><a href="#gallery">Débroussaillage</a></li>
+                    <li><a href="#gallery">Aménagement Paysager</a></li>
+                    <li><a href="#gallery">Évacuation</a></li>
+                </ul>
+            </li>
+            <li data-lang="en" class="dropdown">
+                <a href="/realisations/elagage.html" class="dropdown-toggle">Our Work <span class="arrow">▾</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="/realisations/elagage.html">Tree Pruning</a></li>
+                    <li><a href="#gallery">Hedge Trimming</a></li>
+                    <li><a href="#gallery">Garden Maintenance</a></li>
+                    <li><a href="#gallery">Brush Clearing</a></li>
+                    <li><a href="#gallery">Landscaping</a></li>
+                    <li><a href="#gallery">Waste Removal</a></li>
+                </ul>
+            </li>
+
+            <li data-lang="fr"><a href="/blog/">Blog</a></li>
+            <li data-lang="en"><a href="/blog/">Blog</a></li>
+            <li data-lang="fr"><a href="/#contact">Contact</a></li>
+            <li data-lang="en"><a href="/#contact">Contact</a></li>
+
+            <li class="lang-switcher">
+                <button class="lang-btn active" onclick="setLang('fr')" title="Français">
+                    <img src="https://flagcdn.com/w40/fr.png" alt="FR">
+                </button>
+                <button class="lang-btn" onclick="setLang('en')" title="English">
+                    <img src="https://flagcdn.com/w40/gb.png" alt="EN">
+                </button>
+            </li>
+        </ul>
+        <div class="burger" onclick="toggleMenu()">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- ════ HERO ════ -->
+    <section class="page-hero">
+        <h1 data-lang="fr">Programme Annuel d'Entretien</h1>
+        <h1 data-lang="en">Annual Garden & Tree Care Program</h1>
+        <p data-lang="fr">Votre jardin. Notre soin. Toute l'année. — Un entretien régulier, une attention experte, un jardin magnifique.</p>
+        <p data-lang="en">Your garden. Our care. All year long. — Regular care, expert attention, a beautiful garden.</p>
+    </section>
+
+    <!-- ════ CONTENT ════ -->
+    <div class="content-wrapper">
+
+        <!-- ── Intro ── -->
+        <div class="intro" data-lang="fr">
+            <h2>Un seul programme. En toutes saisons.</h2>
+            <p>Notre Programme Annuel d'Entretien des Jardins & des Arbres est conçu pour garder votre jardin et vos arbres en bonne santé, beaux et épanouis toute l'année. Environ 14 visites programmées par an, adaptées à chaque saison.</p>
+        </div>
+        <div class="intro" data-lang="en">
+            <h2>One program. All seasons.</h2>
+            <p>Our Annual Garden & Tree Care Program is designed to keep your garden and trees healthy, beautiful and thriving all year round. Around 14 scheduled visits per year, tailored to each season.</p>
+        </div>
+
+        <!-- ── Engagements ── -->
+        <div class="engagements" data-lang="fr">
+            <div class="engagement-card">
+                <div class="engagement-icon">🎓</div>
+                <h3>Expertise professionnelle</h3>
+                <p>Élagueur qualifié, passionné par les arbres, les plantes et les jardins.</p>
+            </div>
+            <div class="engagement-card">
+                <div class="engagement-icon">📋</div>
+                <h3>Suivi régulier</h3>
+                <p>Environ 14 visites programmées par an pour préserver votre jardin dans les meilleures conditions.</p>
+            </div>
+            <div class="engagement-card">
+                <div class="engagement-icon">🔍</div>
+                <h3>Gestion proactive</h3>
+                <p>Surveillance régulière, traitements préventifs et interventions ciblées pour protéger votre jardin.</p>
+            </div>
+            <div class="engagement-card">
+                <div class="engagement-icon">🌱</div>
+                <h3>Pratiques durables</h3>
+                <p>Méthodes respectueuses de l'environnement pour des résultats durables et un espace extérieur plus sain.</p>
+            </div>
+            <div class="engagement-card">
+                <div class="engagement-icon">💚</div>
+                <h3>Tranquillité d'esprit</h3>
+                <p>Un seul professionnel de confiance, un seul programme, une sérénité totale.</p>
+            </div>
+        </div>
+
+        <div class="engagements" data-lang="en">
+            <div class="engagement-card">
+                <div class="engagement-icon">🎓</div>
+                <h3>Professional Expertise</h3>
+                <p>A qualified tree care specialist, passionate about trees, plants and gardens.</p>
+            </div>
+            <div class="engagement-card">
+                <div class="engagement-icon">📋</div>
+                <h3>Regular Monitoring</h3>
+                <p>Around 14 visits per year to keep your garden in the best possible condition, all year round.</p>
+            </div>
+            <div class="engagement-card">
+                <div class="engagement-icon">🔍</div>
+                <h3>Proactive Management</h3>
+                <p>Regular monitoring, preventive treatments and targeted interventions to protect your garden and trees.</p>
+            </div>
+            <div class="engagement-card">
+                <div class="engagement-icon">🌱</div>
+                <h3>Sustainable Practices</h3>
+                <p>Environmentally friendly methods for lasting results and a healthier outdoor space.</p>
+            </div>
+            <div class="engagement-card">
+                <div class="engagement-icon">💚</div>
+                <h3>Peace of Mind</h3>
+                <p>One trusted professional, one simple program, complete peace of mind.</p>
+            </div>
+        </div>
+
+        <!-- ── Services inclus ── -->
+        <div class="section-title-wrapper">
+            <h2 class="section-title" data-lang="fr">Services inclus</h2>
+            <h2 class="section-title" data-lang="en">Services Included</h2>
+        </div>
+
+        <p class="services-intro" data-lang="fr">Chaque visite planifiée est adaptée à la saison et aux besoins spécifiques de votre jardin. Selon la période de l'année, votre programme d'entretien peut inclure :</p>
+        <p class="services-intro" data-lang="en">Each scheduled visit is tailored to the season and the specific needs of your garden. Depending on the time of year, your maintenance programme may include:</p>
+
+        <div class="services-grid" data-lang="fr">
+            <div class="service-item"><span class="service-icon">🌿</span><span>Tonte de pelouse</span></div>
+            <div class="service-item"><span class="service-icon">✂️</span><span>Débordure de pelouse</span></div>
+            <div class="service-item"><span class="service-icon">🌾</span><span>Débroussaillage</span></div>
+            <div class="service-item"><span class="service-icon">🌳</span><span>Taille de haies</span></div>
+            <div class="service-item"><span class="service-icon">🪴</span><span>Taille d'arbustes</span></div>
+            <div class="service-item"><span class="service-icon">🌻</span><span>Désherbage</span></div>
+            <div class="service-item"><span class="service-icon">🚛</span><span>Évacuation des déchets verts</span></div>
+            <div class="service-item"><span class="service-icon">🍂</span><span>Nettoyage saisonnier du jardin</span></div>
+            <div class="service-item"><span class="service-icon">🔎</span><span>Suivi général de la santé du jardin</span></div>
+        </div>
+
+        <div class="services-grid" data-lang="en">
+            <div class="service-item"><span class="service-icon">🌿</span><span>Lawn mowing</span></div>
+            <div class="service-item"><span class="service-icon">✂️</span><span>Lawn edging</span></div>
+            <div class="service-item"><span class="service-icon">🌾</span><span>Strimming</span></div>
+            <div class="service-item"><span class="service-icon">🌳</span><span>Hedge trimming</span></div>
+            <div class="service-item"><span class="service-icon">🪴</span><span>Shrub pruning</span></div>
+            <div class="service-item"><span class="service-icon">🌻</span><span>Weed control</span></div>
+            <div class="service-item"><span class="service-icon">🚛</span><span>Green waste removal</span></div>
+            <div class="service-item"><span class="service-icon">🍂</span><span>Seasonal garden tidy-up</span></div>
+            <div class="service-item"><span class="service-icon">🔎</span><span>General garden health monitoring</span></div>
+        </div>
+
+        <!-- ── Planning ── -->
+        <div class="section-title-wrapper" style="margin-top: 4rem;">
+            <h2 class="section-title" data-lang="fr">Planning annuel des visites</h2>
+            <h2 class="section-title" data-lang="en">Annual Schedule of Recommended Visits</h2>
+        </div>
+
+        <table class="planning-table" data-lang="fr">
+            <thead><tr><th>Mois</th><th>Visites planifiées</th></tr></thead>
+            <tbody>
+                <tr><td><span class="month-icon">❄️</span> Janvier</td><td>1</td></tr>
+                <tr><td><span class="month-icon">❄️</span> Février</td><td>1</td></tr>
+                <tr><td><span class="month-icon">🌱</span> Mars</td><td>2</td></tr>
+                <tr><td><span class="month-icon">🌱</span> Avril</td><td>2</td></tr>
+                <tr><td><span class="month-icon">🌿</span> Mai</td><td>1</td></tr>
+                <tr><td><span class="month-icon">☀️</span> Juin</td><td>1</td></tr>
+                <tr><td><span class="month-icon">☀️</span> Juillet</td><td class="no-visit">Aucune visite planifiée *</td></tr>
+                <tr><td><span class="month-icon">☀️</span> Août</td><td class="no-visit">Aucune visite planifiée *</td></tr>
+                <tr><td><span class="month-icon">🍂</span> Septembre</td><td>2</td></tr>
+                <tr><td><span class="month-icon">🍂</span> Octobre</td><td>2</td></tr>
+                <tr><td><span class="month-icon">🍁</span> Novembre</td><td>1</td></tr>
+                <tr><td><span class="month-icon">❄️</span> Décembre</td><td>1</td></tr>
+            </tbody>
+        </table>
+        <p class="planning-note" data-lang="fr">* Aucune visite planifiée en juillet et août.</p>
+
+        <table class="planning-table" data-lang="en">
+            <thead><tr><th>Month</th><th>Scheduled Visits</th></tr></thead>
+            <tbody>
+                <tr><td><span class="month-icon">❄️</span> January</td><td>1</td></tr>
+                <tr><td><span class="month-icon">❄️</span> February</td><td>1</td></tr>
+                <tr><td><span class="month-icon">🌱</span> March</td><td>2</td></tr>
+                <tr><td><span class="month-icon">🌱</span> April</td><td>2</td></tr>
+                <tr><td><span class="month-icon">🌿</span> May</td><td>1</td></tr>
+                <tr><td><span class="month-icon">☀️</span> June</td><td>1</td></tr>
+                <tr><td><span class="month-icon">☀️</span> July</td><td class="no-visit">No scheduled visit *</td></tr>
+                <tr><td><span class="month-icon">☀️</span> August</td><td class="no-visit">No scheduled visit *</td></tr>
+                <tr><td><span class="month-icon">🍂</span> September</td><td>2</td></tr>
+                <tr><td><span class="month-icon">🍂</span> October</td><td>2</td></tr>
+                <tr><td><span class="month-icon">🍁</span> November</td><td>1</td></tr>
+                <tr><td><span class="month-icon">❄️</span> December</td><td>1</td></tr>
+            </tbody>
+        </table>
+        <p class="planning-note" data-lang="en">* No scheduled visit in July and August.</p>
+
+        <!-- ── Tarifs ── -->
+        <div class="section-title-wrapper" style="margin-top: 4rem;">
+            <h2 class="section-title" data-lang="fr">Nos tarifs d'entretien</h2>
+            <h2 class="section-title" data-lang="en">Our Maintenance Pricing</h2>
+        </div>
+
+        <p class="pricing-note" data-lang="fr">Tarifs TTC (TVA à 20 % incluse) — Environ 14 visites programmées par an</p>
+        <p class="pricing-note" data-lang="en">Prices incl. VAT (20%) — Around 14 scheduled visits per year</p>
+
+        <div class="pricing-cards" data-lang="fr">
+            <div class="pricing-card">
+                <div class="pricing-size-icon">🏡</div>
+                <div class="pricing-size">Jusqu'à 300 m²</div>
+                <div class="pricing-price">180 € <small>/mois</small></div>
+                <p style="font-size:0.85rem; color:#888;">à partir de</p>
+                <div class="pricing-credit">
+                    <div class="credit-label">Après crédit d'impôt 50 %</div>
+                    <div class="credit-price">90 € <small>/mois</small></div>
+                </div>
+                <a href="/#booking" class="btn btn-outline" style="margin-top:1rem;">Demander un devis</a>
+            </div>
+            <div class="pricing-card popular">
+                <div class="pricing-size-icon">🏠</div>
+                <div class="pricing-size">De 300 à 1 000 m²</div>
+                <div class="pricing-price">360 € <small>/mois</small></div>
+                <p style="font-size:0.85rem; color:#888;">à partir de</p>
+                <div class="pricing-credit">
+                    <div class="credit-label">Après crédit d'impôt 50 %</div>
+                    <div class="credit-price">180 € <small>/mois</small></div>
+                </div>
+                <a href="/#booking" class="btn btn-primary" style="margin-top:1rem;">Demander un devis</a>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-size-icon">🏞️</div>
+                <div class="pricing-size">Plus de 1 000 m²</div>
+                <div class="pricing-price">540 € <small>/mois</small></div>
+                <p style="font-size:0.85rem; color:#888;">à partir de</p>
+                <div class="pricing-credit">
+                    <div class="credit-label">Après crédit d'impôt 50 %</div>
+                    <div class="credit-price">270 € <small>/mois</small></div>
+                </div>
+                <a href="/#booking" class="btn btn-outline" style="margin-top:1rem;">Demander un devis</a>
+            </div>
+        </div>
+
+        <div class="pricing-cards" data-lang="en">
+            <div class="pricing-card">
+                <div class="pricing-size-icon">🏡</div>
+                <div class="pricing-size">Up to 300 m²</div>
+                <div class="pricing-price">€180 <small>/month</small></div>
+                <p style="font-size:0.85rem; color:#888;">from</p>
+                <div class="pricing-credit">
+                    <div class="credit-label">After 50% tax credit</div>
+                    <div class="credit-price">€90 <small>/month</small></div>
+                </div>
+                <a href="/#booking" class="btn btn-outline" style="margin-top:1rem;">Request a quote</a>
+            </div>
+            <div class="pricing-card popular">
+                <div class="pricing-size-icon">🏠</div>
+                <div class="pricing-size">300 to 1,000 m²</div>
+                <div class="pricing-price">€360 <small>/month</small></div>
+                <p style="font-size:0.85rem; color:#888;">from</p>
+                <div class="pricing-credit">
+                    <div class="credit-label">After 50% tax credit</div>
+                    <div class="credit-price">€180 <small>/month</small></div>
+                </div>
+                <a href="/#booking" class="btn btn-primary" style="margin-top:1rem;">Request a quote</a>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-size-icon">🏞️</div>
+                <div class="pricing-size">Over 1,000 m²</div>
+                <div class="pricing-price">€540 <small>/month</small></div>
+                <p style="font-size:0.85rem; color:#888;">from</p>
+                <div class="pricing-credit">
+                    <div class="credit-label">After 50% tax credit</div>
+                    <div class="credit-price">€270 <small>/month</small></div>
+                </div>
+                <a href="/#booking" class="btn btn-outline" style="margin-top:1rem;">Request a quote</a>
+            </div>
+        </div>
+
+        <!-- ── Info box ── -->
+        <div class="info-box" data-lang="fr">
+            <strong>ℹ️ Chaque jardin est unique.</strong> Le tarif final est déterminé après une visite sur site et prend en compte la densité des plantations, le nombre et la taille des arbres, l'accessibilité, le volume des déchets verts et le niveau d'entretien souhaité. Un devis personnalisé, gratuit et sans engagement, vous sera toujours proposé.
+        </div>
+        <div class="info-box" data-lang="en">
+            <strong>ℹ️ Every garden is unique.</strong> The final price is determined after an on-site visit and takes into account the density of plantings, the number and size of trees, accessibility, the volume of green waste and the desired level of maintenance. A personalised, free and no-obligation quote will always be provided.
+        </div>
+
+        <!-- ── Payment & Credit d'impôt ── -->
+        <div class="two-columns" data-lang="fr">
+            <div class="column-card">
+                <h3>💳 Modalités de règlement</h3>
+                <h4>12 mensualités égales <span class="badge-recommended">Recommandé</span></h4>
+                <p>Répartissez le coût annuel de manière régulière tout au long de l'année.</p>
+                <h4>10 mensualités saisonnières</h4>
+                <p>Aucun paiement en juillet et en août. Le coût annuel est réparti sur les dix autres mensualités. Le montant annuel total reste identique.</p>
+            </div>
+            <div class="column-card">
+                <h3>% Crédit d'impôt de 50 %</h3>
+                <p>Lorsque les prestations sont éligibles au dispositif Service à la Personne, vous pouvez bénéficier d'un crédit d'impôt de 50 % sur les prestations éligibles.</p>
+                <h4>✅ Prestations éligibles :</h4>
+                <ul>
+                    <li>Entretien courant des jardins</li>
+                    <li>Entretien des arbres et arbustes jusqu'à 4 mètres de hauteur</li>
+                </ul>
+                <h4>❌ Prestations non éligibles :</h4>
+                <ul>
+                    <li>Travaux d'élagage importants, abattages, démontages ou aménagements paysagers</li>
+                </ul>
+                <p class="small-note">* Sous réserve d'éligibilité au dispositif Service à la Personne et conformément à la législation en vigueur.</p>
+            </div>
+        </div>
+
+        <div class="two-columns" data-lang="en">
+            <div class="column-card">
+                <h3>💳 Payment Options</h3>
+                <h4>12 equal monthly payments <span class="badge-recommended">Recommended</span></h4>
+                <p>Spread the annual cost evenly throughout the year.</p>
+                <h4>10 seasonal monthly payments</h4>
+                <p>No payment in July and August. The annual cost is spread over the other ten months. The total annual amount remains the same.</p>
+            </div>
+            <div class="column-card">
+                <h3>% 50% Tax Credit</h3>
+                <p>If you are eligible under the "Service à la Personne" scheme, you can benefit from a 50% tax credit on eligible services.</p>
+                <h4>✅ Eligible services:</h4>
+                <ul>
+                    <li>Routine garden maintenance</li>
+                    <li>Care of trees and shrubs up to 4 metres in height</li>
+                </ul>
+                <h4>❌ Non-eligible services:</h4>
+                <ul>
+                    <li>Major pruning, felling, dismantling or landscaping works</li>
+                </ul>
+                <p class="small-note">* Subject to eligibility under the "Service à la Personne" scheme and current legislation.</p>
+            </div>
+        </div>
+
+    </div><!-- /content-wrapper -->
+
+    <!-- ════ CTA ════ -->
+    <section class="cta-section">
+        <h2 data-lang="fr">Un jardin magnifique. Une sérénité totale.</h2>
+        <h2 data-lang="en">A beautiful garden. Total peace of mind.</h2>
+        <p data-lang="fr">Demandez votre devis personnalisé gratuit et sans engagement.</p>
+        <p data-lang="en">Request your free, no-obligation personalised quote.</p>
+        <div class="cta-buttons">
+            <a href="/#booking" class="btn btn-primary" data-lang="fr">Prendre rendez-vous</a>
+            <a href="/#booking" class="btn btn-primary" data-lang="en">Book an Appointment</a>
+            <a href="tel:+33604023613" class="btn btn-outline-white" data-lang="fr">Appeler : 06 04 02 36 13</a>
+            <a href="tel:+33604023613" class="btn btn-outline-white" data-lang="en">Call: 06 04 02 36 13</a>
+        </div>
+    </section>
+
+    <!-- ════ FOOTER ════ -->
+    <footer>
+        <p data-lang="fr">© 2025 Max Ellis — Élagage & Espaces Verts · SIRET 911 829 505 00021 · Membre de la coopérative <a href="https://jardiniers-sap.fr" target="_blank">Jardiniers SAP</a></p>
+        <p data-lang="en">© 2025 Max Ellis — Tree Care & Landscaping · SIRET 911 829 505 00021 · Member of <a href="https://jardiniers-sap.fr" target="_blank">Jardiniers SAP</a> cooperative</p>
+        <div class="footer-links">
+            <a href="/mentions-legales.html" data-lang="fr">Mentions légales</a>
+            <a href="/mentions-legales.html" data-lang="en">Legal Notice</a>
+            <a href="/cgv.html" data-lang="fr">CGV</a>
+            <a href="/cgv.html" data-lang="en">T&Cs</a>
+        </div>
+    </footer>
+
+    <!-- ════ SCRIPTS ════ -->
+    <script>
+        function setLang(lang) {
+            if (lang === 'en') {
+                document.body.classList.add('lang-en');
+            } else {
+                document.body.classList.remove('lang-en');
+            }
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector(`.lang-btn[onclick="setLang('${lang}')"]`).classList.add('active');
+            localStorage.setItem('lang', lang);
+        }
+        (function() {
+            const saved = localStorage.getItem('lang');
+            if (saved) setLang(saved);
+        })();
+
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+
+        window.addEventListener('scroll', () => {
+            document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
+
+</body>
+</html>
