@@ -42,9 +42,9 @@
 
         /* Nav */
         nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--gris-clair); padding: 0 2rem; transition: var(--transition); }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 70px; }
-        .logo { font-family: 'Comfortaa', cursive; font-size: 1.5rem; color: var(--vert-chasseur); text-decoration: none; font-weight: 700; }
-        .logo span { color: var(--mousse-forestiere); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; height: 100px; }
+        .nav-logo { text-decoration: none; flex-shrink: 0; }
+        .nav-logo-img { height: 80px; width: auto; }
         .nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
         .nav-links a { text-decoration: none; color: var(--gris-fer); font-size: 0.9rem; font-weight: 500; transition: var(--transition); position: relative; }
         .nav-links a:hover { color: var(--mousse-forestiere); }
@@ -85,7 +85,7 @@
         a.btn-outline-white { color: var(--blanc); }
 
         /* Page hero */
-        .page-hero { padding: 140px 2rem 60px; background: linear-gradient(rgba(33,51,36,0.6), rgba(33,51,36,0.6)), url('/img/taille_de_haies.png') center/cover no-repeat; color: var(--blanc); text-align: center; }
+        .page-hero { padding: 160px 2rem 60px; background: linear-gradient(rgba(33,51,36,0.6), rgba(33,51,36,0.6)), url('/img/taille_de_haies.png') center/cover no-repeat; color: var(--blanc); text-align: center; }
         .page-hero h1 { font-family: 'Comfortaa', cursive; font-size: 2.8rem; margin-bottom: 0.75rem; }
         .page-hero p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
         .breadcrumb { margin-top: 1rem; font-size: 0.85rem; opacity: 0.8; }
@@ -135,11 +135,14 @@
         /* Responsive */
         @media (max-width: 768px) {
             .burger { display: flex; }
-            .nav-links { display: none; position: absolute; top: 70px; left: 0; right: 0; background: var(--blanc); flex-direction: column; padding: 2rem; gap: 1.5rem; border-bottom: 1px solid var(--gris-clair); box-shadow: 0 10px 30px rgba(33,51,36,0.1); }
+            .nav-container { height: 80px; }
+            .nav-logo-img { height: 60px; }
+            .nav-links { display: none; position: absolute; top: 80px; left: 0; right: 0; background: var(--blanc); flex-direction: column; padding: 2rem; gap: 1.5rem; border-bottom: 1px solid var(--gris-clair); box-shadow: 0 10px 30px rgba(33,51,36,0.1); }
             .nav-links.active { display: flex; }
             .dropdown-menu { position: static; transform: none; box-shadow: none; border: none; padding: 0 0 0 1rem; background: transparent; }
             .dropdown:hover .dropdown-menu, .dropdown .dropdown-menu { display: block; }
             .dropdown-menu a { padding: 0.4rem 0; font-size: 0.85rem; }
+            .page-hero { padding-top: 140px; }
             .page-hero h1 { font-size: 2rem; }
             .chantier-photo-single { height: 300px; }
             .chantier-photos { grid-template-columns: 1fr; grid-template-rows: auto; height: auto; }
@@ -150,6 +153,7 @@
             .chantier-meta { gap: 1rem; }
         }
         @media (max-width: 480px) {
+            .nav-logo-img { height: 50px; }
             .page-hero h1 { font-size: 1.6rem; }
             .cta-buttons { flex-direction: column; align-items: center; }
             .chantier-photo-single { height: 220px; }
@@ -163,11 +167,13 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="/" class="logo">Max<span>Ellis</span></a>
+            <a href="/" class="nav-logo">
+                <img src="/img/logo/logo_nom.png" alt="Max Ellis Élagage" class="nav-logo-img">
+            </a>
             <ul class="nav-links" id="navLinks">
                 <li data-lang="fr"><a href="/#services">Services</a></li>
                 <li data-lang="fr" class="dropdown">
-                    <a href="#" class="dropdown-toggle">Réalisations <span class="arrow">▾</span></a>
+                    <a href="#" class="dropdown-toggle" style="color:var(--mousse-forestiere);">Réalisations <span class="arrow">▾</span></a>
                     <ul class="dropdown-menu">
                         <li><a href="/realisations/elagage.html">Élagage & Abattage</a></li>
                         <li><a href="/realisations/taille-de-haie.html">Taille de Haies</a></li>
@@ -179,11 +185,12 @@
                 </li>
                 <li data-lang="fr"><a href="/#about">À propos</a></li>
                 <li data-lang="fr"><a href="/blog/">Blog</a></li>
+                <li data-lang="fr"><a href="/entretien-annuel.html">Programme Entretien</a></li>
                 <li data-lang="fr"><a href="/#booking">Rendez-vous</a></li>
                 <li data-lang="fr"><a href="/#contact">Contact</a></li>
                 <li data-lang="en"><a href="/#services">Services</a></li>
                 <li data-lang="en" class="dropdown">
-                    <a href="#" class="dropdown-toggle">Our Work <span class="arrow">▾</span></a>
+                    <a href="#" class="dropdown-toggle" style="color:var(--mousse-forestiere);">Our Work <span class="arrow">▾</span></a>
                     <ul class="dropdown-menu">
                         <li><a href="/realisations/elagage.html">Tree Pruning</a></li>
                         <li><a href="/realisations/taille-de-haie.html">Hedge Trimming</a></li>
@@ -195,6 +202,7 @@
                 </li>
                 <li data-lang="en"><a href="/#about">About</a></li>
                 <li data-lang="en"><a href="/blog/">Blog</a></li>
+                <li data-lang="en"><a href="/entretien-annuel.html">Maintenance Program</a></li>
                 <li data-lang="en"><a href="/#booking">Book Now</a></li>
                 <li data-lang="en"><a href="/#contact">Contact</a></li>
             </ul>
@@ -226,7 +234,7 @@
             <!-- Chantier 1 : Taille haie de lauriers — Thorigny -->
             <div class="chantier">
                 <div class="chantier-photo-single">
-                    <img src="/img/realisations/taille/laurier-01.jpg" alt="Taille d'une haie de lauriers à Thorigny en Vendée" loading="lazy">
+                    <img src="/img/realisations/taille/laurier-01.png" alt="Taille d'une haie de lauriers à Thorigny en Vendée" loading="lazy">
                 </div>
                 <div class="chantier-body">
                     <h2 data-lang="fr">Taille d'une haie de lauriers à Thorigny</h2>
