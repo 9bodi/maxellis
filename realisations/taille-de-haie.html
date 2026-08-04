@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="/img/logo/favicon.png">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taille de Haies — Réalisations | Max Ellis Vendée</title>
-    <meta name="description" content="Découvrez nos réalisations en élagage et abattage d'arbres en Vendée. Chantiers à La Roche-sur-Yon et alentours. Max Ellis, professionnel assuré.">
+    <meta name="description" content="Découvrez nos réalisations en taille de haies en Vendée. Haies de lauriers, thuyas, cyprès et plus. Max Ellis, professionnel assuré.">
     <meta property="og:title" content="Taille de Haies — Réalisations | Max Ellis">
-    <meta property="og:description" content="Nos chantiers de taille de Haies en Vendée. Photos avant/après.">
-    <meta property="og:url" content="https://espacesverts-vendee.fr/realisations/taille-de-haies.html">
+    <meta property="og:description" content="Nos chantiers de taille de haies en Vendée. Photos avant/après.">
+    <meta property="og:url" content="https://espacesverts-vendee.fr/realisations/taille-de-haie.html">
     <meta property="og:image" content="https://espacesverts-vendee.fr/img/taille_de_haies.png">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBHES5CSRL"></script>
     <script>
@@ -56,7 +55,6 @@
         .burger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
         .burger.active span:nth-child(2) { opacity: 0; }
         .burger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-        .nav-logo-img { height: 45px; width: auto; }
 
         /* Dropdown */
         .dropdown { position: relative; }
@@ -79,10 +77,12 @@
 
         /* Buttons */
         .btn { display: inline-block; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; font-family: 'Poppins', sans-serif; transition: var(--transition); cursor: pointer; border: none; text-align: center; }
-        .btn-primary { background: var(--mousse-forestiere); color: var(--blanc); }
-        .btn-primary:hover { background: var(--vert-chasseur); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(58,90,64,0.3); }
+        .btn-primary { background: var(--vert-chasseur); color: #FFFFFF; }
+        .btn-primary:hover { background: var(--evergreen); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(58,90,64,0.3); }
+        a.btn-primary { color: #FFFFFF; }
         .btn-outline-white { border: 2px solid var(--blanc); color: var(--blanc); background: transparent; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: var(--transition); }
         .btn-outline-white:hover { background: var(--blanc); color: var(--vert-chasseur); }
+        a.btn-outline-white { color: var(--blanc); }
 
         /* Page hero */
         .page-hero { padding: 140px 2rem 60px; background: linear-gradient(rgba(33,51,36,0.6), rgba(33,51,36,0.6)), url('/img/taille_de_haies.png') center/cover no-repeat; color: var(--blanc); text-align: center; }
@@ -95,23 +95,29 @@
         /* Chantiers */
         .chantiers { padding: 80px 2rem; }
         .container { max-width: 1100px; margin: 0 auto; }
-        .chantier { background: var(--beige); border-radius: var(--radius); overflow: hidden; margin-bottom: 3rem; box-shadow: var(--ombre); }
-        .chantier-photos { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px; height: 400px; }
-        .chantier-photos img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
-        .chantier-photos img:hover { transform: scale(1.02); }
-        .chantier-photos img:first-child { grid-row: 1 / -1; }
-        .chantier-body { padding: 2rem 2.5rem; }
-        .chantier-meta { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem; }
-        .chantier-meta-item { display: flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--gris-marbre); }
-        .chantier-meta-item strong { color: var(--vert-chasseur); }
-        .chantier-body h2 { font-family: 'Comfortaa', cursive; font-size: 1.5rem; color: var(--vert-chasseur); margin-bottom: 1rem; }
-        .chantier-body p { color: var(--gris-fer); font-size: 0.95rem; line-height: 1.7; margin-bottom: 0.75rem; }
-        .chantier-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
-        .chantier-tag { background: var(--vert-clair-bg); color: var(--vert-chasseur); padding: 6px 14px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; }
+        .chantier { background: var(--blanc); border-radius: var(--radius); overflow: hidden; margin-bottom: 3rem; box-shadow: var(--ombre); }
 
-        /* Empty state */
-        .empty-state { text-align: center; padding: 60px 2rem; color: var(--gris-marbre); }
-        .empty-state p { font-size: 1.1rem; margin-bottom: 1.5rem; }
+        /* Photo unique pleine largeur */
+        .chantier-photo-single { width: 100%; height: 450px; overflow: hidden; }
+        .chantier-photo-single img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .chantier-photo-single img:hover { opacity: 0.9; }
+
+        /* Photos : grande à gauche, 2 petites à droite */
+        .chantier-photos { display: grid; grid-template-columns: 2fr 1fr; grid-template-rows: 1fr 1fr; gap: 4px; height: 450px; overflow: hidden; }
+        .chantier-photos img { width: 100%; height: 100%; object-fit: cover; cursor: pointer; transition: var(--transition); }
+        .chantier-photos img:hover { opacity: 0.9; }
+        .chantier-photos img:first-child { grid-row: 1 / -1; }
+
+        /* Corps du chantier */
+        .chantier-body { padding: 2.5rem 2.5rem 2rem; }
+        .chantier-body h2 { font-family: 'Comfortaa', cursive; font-size: 1.5rem; color: var(--vert-chasseur); margin-bottom: 1rem; }
+        .chantier-meta { display: flex; flex-wrap: wrap; gap: 1.5rem; margin-bottom: 1.25rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--gris-clair); }
+        .chantier-meta-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--gris-fer); }
+        .chantier-meta-item .meta-icon { font-size: 1.1rem; }
+        .chantier-meta-item strong { color: var(--vert-chasseur); font-weight: 600; }
+        .chantier-body .chantier-desc { color: var(--gris-fer); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.25rem; }
+        .chantier-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; padding-top: 1.25rem; border-top: 1px solid var(--gris-clair); }
+        .chantier-tag { background: var(--vert-clair-bg); color: var(--vert-chasseur); padding: 6px 14px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; }
 
         /* CTA */
         .cta-section { background: var(--evergreen); color: var(--blanc); text-align: center; padding: 60px 2rem; }
@@ -135,14 +141,20 @@
             .dropdown:hover .dropdown-menu, .dropdown .dropdown-menu { display: block; }
             .dropdown-menu a { padding: 0.4rem 0; font-size: 0.85rem; }
             .page-hero h1 { font-size: 2rem; }
+            .chantier-photo-single { height: 300px; }
             .chantier-photos { grid-template-columns: 1fr; grid-template-rows: auto; height: auto; }
-            .chantier-photos img { height: 200px; }
-            .chantier-photos img:first-child { grid-row: auto; }
+            .chantier-photos img { height: 250px; }
+            .chantier-photos img:first-child { grid-row: auto; height: 300px; }
             .chantier-body { padding: 1.5rem; }
+            .chantier-body h2 { font-size: 1.3rem; }
+            .chantier-meta { gap: 1rem; }
         }
         @media (max-width: 480px) {
             .page-hero h1 { font-size: 1.6rem; }
             .cta-buttons { flex-direction: column; align-items: center; }
+            .chantier-photo-single { height: 220px; }
+            .chantier-photos img { height: 200px; }
+            .chantier-photos img:first-child { height: 250px; }
         }
     </style>
 </head>
@@ -151,12 +163,7 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="/" class="nav-logo">
-    <img src="/img/logo/logo_nom.png" alt="Max Ellis Élagage" class="nav-logo-img">
-</a>
-
-
-
+            <a href="/" class="logo">Max<span>Ellis</span></a>
             <ul class="nav-links" id="navLinks">
                 <li data-lang="fr"><a href="/#services">Services</a></li>
                 <li data-lang="fr" class="dropdown">
@@ -171,7 +178,7 @@
                     </ul>
                 </li>
                 <li data-lang="fr"><a href="/#about">À propos</a></li>
-                <li data-lang="fr"><a href="/#reviews">Avis</a></li>
+                <li data-lang="fr"><a href="/blog/">Blog</a></li>
                 <li data-lang="fr"><a href="/#booking">Rendez-vous</a></li>
                 <li data-lang="fr"><a href="/#contact">Contact</a></li>
                 <li data-lang="en"><a href="/#services">Services</a></li>
@@ -187,7 +194,7 @@
                     </ul>
                 </li>
                 <li data-lang="en"><a href="/#about">About</a></li>
-                <li data-lang="en"><a href="/#reviews">Reviews</a></li>
+                <li data-lang="en"><a href="/blog/">Blog</a></li>
                 <li data-lang="en"><a href="/#booking">Book Now</a></li>
                 <li data-lang="en"><a href="/#contact">Contact</a></li>
             </ul>
@@ -201,14 +208,14 @@
 
     <!-- Page Hero -->
     <section class="page-hero">
-        <h1 data-lang="fr">Élagage & Abattage</h1>
-        <h1 data-lang="en">Tree Pruning & Felling</h1>
-        <p data-lang="fr">Découvrez mes interventions d'élagage et d'abattage réalisées en Vendée.</p>
-        <p data-lang="en">Discover my tree pruning and felling projects across Vendée.</p>
+        <h1 data-lang="fr">Taille de Haies</h1>
+        <h1 data-lang="en">Hedge Trimming</h1>
+        <p data-lang="fr">Découvrez mes interventions de taille de haies réalisées en Vendée.</p>
+        <p data-lang="en">Discover my hedge trimming projects across Vendée.</p>
         <div class="breadcrumb">
             <a href="/" data-lang="fr">Accueil</a><a href="/" data-lang="en">Home</a>
             <span> / </span>
-            <span data-lang="fr">Élagage & Abattage</span><span data-lang="en">Tree Pruning & Felling</span>
+            <span data-lang="fr">Taille de Haies</span><span data-lang="en">Hedge Trimming</span>
         </div>
     </section>
 
@@ -216,43 +223,80 @@
     <section class="chantiers">
         <div class="container">
 
-            <!-- État vide — à supprimer quand tu ajoutes des chantiers -->
-            <div class="empty-state">
-                <p data-lang="fr">Les réalisations arrivent bientôt. Revenez nous voir !</p>
-                <p data-lang="en">Projects coming soon. Check back later!</p>
-                <a href="/#contact" class="btn btn-primary" data-lang="fr">Demander un devis</a>
-                <a href="/#contact" class="btn btn-primary" data-lang="en">Request a Quote</a>
+            <!-- Chantier 1 : Taille haie de lauriers — Thorigny -->
+            <div class="chantier">
+                <div class="chantier-photo-single">
+                    <img src="/img/realisations/taille/laurier-01.jpg" alt="Taille d'une haie de lauriers à Thorigny en Vendée" loading="lazy">
+                </div>
+                <div class="chantier-body">
+                    <h2 data-lang="fr">Taille d'une haie de lauriers à Thorigny</h2>
+                    <h2 data-lang="en">Laurel Hedge Trimming in Thorigny</h2>
+
+                    <div class="chantier-meta">
+                        <div class="chantier-meta-item">
+                            <span class="meta-icon">📍</span>
+                            <strong>Thorigny</strong>
+                        </div>
+                        <div class="chantier-meta-item">
+                            <span class="meta-icon">📅</span>
+                            <strong data-lang="fr">Juin 2026</strong>
+                            <strong data-lang="en">June 2026</strong>
+                        </div>
+                        <div class="chantier-meta-item">
+                            <span class="meta-icon">⏱️</span>
+                            <strong data-lang="fr">Demi-journée</strong>
+                            <strong data-lang="en">Half day</strong>
+                        </div>
+                    </div>
+
+                    <p class="chantier-desc" data-lang="fr">Intervention pour l'entretien complet d'une haie de lauriers au sein d'une propriété privée à Thorigny. La taille régulière des haies permet de conserver un aspect soigné, de maintenir une croissance équilibrée et de garantir une bonne intégration dans le paysage du jardin.</p>
+                    <p class="chantier-desc" data-lang="en">Complete maintenance of a laurel hedge at a private property in Thorigny. Regular hedge trimming helps maintain a neat appearance, balanced growth and seamless integration into the garden landscape.</p>
+
+                    <p class="chantier-desc" data-lang="fr">Au programme : taille de la haie sur les faces latérales et le dessus, reprise des volumes afin de retrouver une ligne nette et homogène, élimination des pousses désordonnées et du bois dépérissant, nettoyage complet du chantier et évacuation des déchets verts.</p>
+                    <p class="chantier-desc" data-lang="en">The work included: trimming both lateral faces and the top of the hedge, reshaping to restore a clean, even line, removing unruly growth and dead wood, and full site cleanup with green waste removal.</p>
+
+                    <p class="chantier-desc" data-lang="fr">Grâce à une taille réalisée avec soin, la haie retrouve toute sa densité, son esthétisme et sa fonction d'écran végétal tout en favorisant une croissance harmonieuse pour les saisons à venir.</p>
+                    <p class="chantier-desc" data-lang="en">Thanks to careful trimming, the hedge has regained its density, visual appeal and screening function while promoting healthy growth for the seasons ahead.</p>
+
+                    <div class="chantier-tags">
+                        <span class="chantier-tag" data-lang="fr">Taille de Haie</span>
+                        <span class="chantier-tag" data-lang="fr">Laurier</span>
+                        <span class="chantier-tag" data-lang="fr">Entretien Jardin</span>
+                        <span class="chantier-tag" data-lang="fr">Thorigny</span>
+                        <span class="chantier-tag" data-lang="fr">Vendée</span>
+                        <span class="chantier-tag" data-lang="en">Hedge Trimming</span>
+                        <span class="chantier-tag" data-lang="en">Laurel</span>
+                        <span class="chantier-tag" data-lang="en">Garden Maintenance</span>
+                        <span class="chantier-tag" data-lang="en">Thorigny</span>
+                        <span class="chantier-tag" data-lang="en">Vendée</span>
+                    </div>
+                </div>
             </div>
 
             <!--
-            ========== MODÈLE DE CHANTIER ==========
-            Copiez ce bloc et collez-le au-dessus pour chaque nouveau chantier.
-            Supprimez le div "empty-state" quand vous ajoutez le premier chantier.
-
+            ========== MODÈLE — copier ce bloc pour chaque nouveau chantier ==========
             <div class="chantier">
+                <div class="chantier-photo-single">
+                    <img src="/img/realisations/taille/xxx-01.jpg" alt="Description" loading="lazy">
+                </div>
                 <div class="chantier-photos">
-                    <img src="/img/realisations/taille/chantier-1-01.jpg" alt="Description photo 1" loading="lazy">
-                    <img src="/img/realisations/taille/chantier-1-02.jpg" alt="Description photo 2" loading="lazy">
-                    <img src="/img/realisations/taille/chantier-1-03.jpg" alt="Description photo 3" loading="lazy">
+                    <img src="/img/realisations/taille/xxx-01.jpg" alt="Description" loading="lazy">
+                    <img src="/img/realisations/taille/xxx-02.jpg" alt="Description" loading="lazy">
+                    <img src="/img/realisations/taille/xxx-03.jpg" alt="Description" loading="lazy">
                 </div>
                 <div class="chantier-body">
+                    <h2 data-lang="fr">Titre du chantier</h2>
+                    <h2 data-lang="en">Project Title</h2>
                     <div class="chantier-meta">
-                        <div class="chantier-meta-item">📍 <strong>Commune</strong></div>
-                        <div class="chantier-meta-item">📅 <strong>Mois 2026</strong></div>
-                        <div class="chantier-meta-item">⏱️ <strong>Durée</strong></div>
+                        <div class="chantier-meta-item"><span class="meta-icon">📍</span><strong>Commune</strong></div>
+                        <div class="chantier-meta-item"><span class="meta-icon">📅</span><strong data-lang="fr">Mois 2026</strong><strong data-lang="en">Month 2026</strong></div>
+                        <div class="chantier-meta-item"><span class="meta-icon">⏱</span><strong data-lang="fr">Durée</strong><strong data-lang="en">Duration</strong></div>
                     </div>
-                    <div data-lang="fr">
-                        <h2>Titre du chantier</h2>
-                        <p>Description détaillée du chantier en français.</p>
-                    </div>
-                    <div data-lang="en">
-                        <h2>Project Title</h2>
-                        <p>Detailed project description in English.</p>
-                    </div>
+                    <p class="chantier-desc" data-lang="fr">Description en français.</p>
+                    <p class="chantier-desc" data-lang="en">Description in English.</p>
                     <div class="chantier-tags">
-                        <span class="chantier-tag">Tag 1</span>
-                        <span class="chantier-tag">Tag 2</span>
-                        <span class="chantier-tag">Commune</span>
+                        <span class="chantier-tag" data-lang="fr">Tag</span>
+                        <span class="chantier-tag" data-lang="en">Tag</span>
                     </div>
                 </div>
             </div>
@@ -263,8 +307,8 @@
 
     <!-- CTA -->
     <section class="cta-section">
-        <h2 data-lang="fr">Un projet d'élagage ?</h2>
-        <h2 data-lang="en">Have a tree care project?</h2>
+        <h2 data-lang="fr">Un projet de taille de haies ?</h2>
+        <h2 data-lang="en">Need hedge trimming?</h2>
         <p data-lang="fr">Devis gratuit et sans engagement. Je me déplace chez vous pour évaluer vos besoins.</p>
         <p data-lang="en">Free quote, no obligation. I'll come to your property to assess your needs.</p>
         <div class="cta-buttons">
@@ -284,8 +328,8 @@
             <p data-lang="en">Sole Trader — SIRET: 911 829 505 00021</p>
             <p data-lang="fr">Membre de la coopérative <a href="https://jardiniers-sap.fr" target="_blank" rel="noopener">Jardiniers SAP</a> — Agréé Service à la Personne</p>
             <p data-lang="en">Member of the <a href="https://jardiniers-sap.fr" target="_blank" rel="noopener">Jardiniers SAP</a> cooperative — Certified Personal Service Provider</p>
-            <p data-lang="fr">&copy; 2026 Max Ellis — Tous droits réservés — <a href="/mentions-legales.html">Mentions légales</a></p>
-            <p data-lang="en">&copy; 2026 Max Ellis — All rights reserved — <a href="/mentions-legales.html">Legal Notice</a></p>
+            <p data-lang="fr">&copy; 2026 Max Ellis — Tous droits réservés — <a href="/mentions-legales.html">Mentions légales</a> — <a href="/cgv.html">CGV</a></p>
+            <p data-lang="en">&copy; 2026 Max Ellis — All rights reserved — <a href="/mentions-legales.html">Legal Notice</a> — <a href="/cgv.html">T&Cs</a></p>
         </div>
     </footer>
 
