@@ -53,19 +53,23 @@ img {
 /* ============================
    3. LANGUE (FR/EN toggle)
    ============================ */
+
+/* Par défaut : cacher l'anglais */
 [data-lang="en"] {
     display: none !important;
 }
 
+/* En mode anglais : cacher le français */
 body.lang-en [data-lang="fr"] {
     display: none !important;
 }
 
+/* En mode anglais : afficher les éléments EN (bloc par défaut) */
 body.lang-en [data-lang="en"] {
     display: block !important;
 }
 
-/* Inline elements */
+/* Inline elements EN */
 body.lang-en a[data-lang="en"],
 body.lang-en button[data-lang="en"],
 body.lang-en span[data-lang="en"],
@@ -74,44 +78,53 @@ body.lang-en option[data-lang="en"] {
     display: inline-block !important;
 }
 
-/* Block elements */
-body.lang-en h1[data-lang="en"],
-body.lang-en h2[data-lang="en"],
-body.lang-en h3[data-lang="en"],
-body.lang-en h4[data-lang="en"],
-body.lang-en h5[data-lang="en"],
-body.lang-en h6[data-lang="en"],
-body.lang-en p[data-lang="en"],
-body.lang-en div[data-lang="en"],
+/* Li elements EN (nav) */
 body.lang-en li[data-lang="en"] {
-    display: block !important;
+    display: list-item !important;
 }
 
-/* Flex containers keep flex in EN */
-body.lang-en .hero-buttons,
-body.lang-en .about-badges,
-body.lang-en .about-stats,
-body.lang-en .zone-tags,
-body.lang-en .step-card-actions,
-body.lang-en .zip-field,
-body.lang-en .cta-buttons,
-body.lang-en .engagements,
-body.lang-en .pricing-cards,
-body.lang-en .two-columns {
-    display: flex !important;
+/* Grid layouts EN — même layout que FR */
+body.lang-en .engagements[data-lang="en"] {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr);
 }
 
-/* Grid containers keep grid in EN */
-body.lang-en .services-grid,
-body.lang-en .gallery-grid,
-body.lang-en .reviews-grid,
-body.lang-en .about-content,
-body.lang-en .contact-wrapper,
-body.lang-en .blog-grid {
+body.lang-en .pricing-cards[data-lang="en"] {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+body.lang-en .two-columns[data-lang="en"] {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+}
+
+body.lang-en .services-grid-entretien[data-lang="en"] {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+body.lang-en .services-grid[data-lang="en"],
+body.lang-en .gallery-grid[data-lang="en"],
+body.lang-en .reviews-grid[data-lang="en"],
+body.lang-en .about-content[data-lang="en"],
+body.lang-en .contact-wrapper[data-lang="en"],
+body.lang-en .blog-grid[data-lang="en"] {
     display: grid !important;
 }
 
-/* Table elements */
+/* Flex layouts EN */
+body.lang-en .hero-buttons[data-lang="en"],
+body.lang-en .about-badges[data-lang="en"],
+body.lang-en .about-stats[data-lang="en"],
+body.lang-en .zone-tags[data-lang="en"],
+body.lang-en .step-card-actions[data-lang="en"],
+body.lang-en .zip-field[data-lang="en"],
+body.lang-en .cta-buttons[data-lang="en"] {
+    display: flex !important;
+}
+
+/* Table EN */
 body.lang-en table[data-lang="en"] {
     display: table !important;
 }
@@ -184,6 +197,9 @@ nav.scrolled {
 .nav-logo {
     text-decoration: none;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .nav-logo-img {
@@ -191,7 +207,7 @@ nav.scrolled {
     width: auto;
 }
 
-/* Logo */
+/* Logo texte (legacy) */
 .logo {
     font-family: 'Comfortaa', cursive;
     font-size: 1.5rem;
@@ -204,14 +220,6 @@ nav.scrolled {
     color: var(--mousse-forestiere);
 }
 
-.nav-logo {
-    text-decoration: none;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
 .nav-logo-icon {
     height: 50px;
     width: auto;
@@ -221,7 +229,6 @@ nav.scrolled {
     height: 28px;
     width: auto;
 }
-
 
 /* Nav links */
 .nav-links {
@@ -476,7 +483,6 @@ section {
     text-align: center;
 }
 
-
 .page-hero h1 {
     font-family: 'Comfortaa', cursive;
     font-size: 2.8rem;
@@ -593,28 +599,52 @@ footer a:hover {
 /* ============================
    14. RESPONSIVE — GLOBAL
    ============================ */
+@media (max-width: 968px) {
+    /* Engagements EN responsive */
+    body.lang-en .engagements[data-lang="en"] {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+    body.lang-en .pricing-cards[data-lang="en"] {
+        grid-template-columns: 1fr !important;
+        max-width: 380px;
+    }
+    body.lang-en .two-columns[data-lang="en"] {
+        grid-template-columns: 1fr !important;
+    }
+    body.lang-en .services-grid-entretien[data-lang="en"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
 @media (max-width: 768px) {
 
     /* Nav container + logo */
     .nav-container {
-    height: 80px;
-}
-.nav-logo-img {
-    height: 60px;
-}
-.nav-links {
-    top: 80px;
-}
-.page-hero {
-    padding-top: 130px;
-}
+        height: 80px;
+    }
+    .nav-logo-img {
+        height: 60px;
+    }
+    .nav-links {
+        top: 80px;
+    }
+    .page-hero {
+        padding-top: 130px;
+    }
+    .nav-logo-icon {
+        height: 42px;
+    }
+    .nav-logo-text {
+        height: 22px;
+    }
 
-.nav-logo-icon {
-    height: 42px;
-}
-.nav-logo-text {
-    height: 22px;
-}
+    /* Engagements EN responsive */
+    body.lang-en .engagements[data-lang="en"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    body.lang-en .services-grid-entretien[data-lang="en"] {
+        grid-template-columns: 1fr !important;
+    }
 
     /* Dropdown mobile — toggle au tap */
     .dropdown-menu {
@@ -689,9 +719,8 @@ footer a:hover {
 
 @media (max-width: 480px) {
     .nav-logo-img {
-    height: 50px;
-}
-
+        height: 50px;
+    }
     .lang-btn img {
         width: 20px;
         height: 14px;
@@ -700,10 +729,14 @@ footer a:hover {
         font-size: 1.5rem;
     }
     .nav-logo-icon {
-    height: 36px;
-}
-.nav-logo-text {
-    height: 18px;
-}
+        height: 36px;
+    }
+    .nav-logo-text {
+        height: 18px;
+    }
 
+    /* Engagements EN responsive */
+    body.lang-en .engagements[data-lang="en"] {
+        grid-template-columns: 1fr !important;
+    }
 }
