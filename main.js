@@ -16,6 +16,15 @@ function setLang(lang) {
         document.body.classList.remove('lang-en');
     }
 
+    // ── Afficher / masquer les éléments selon la langue ──
+    document.querySelectorAll('[data-lang]').forEach(function(el) {
+        if (el.getAttribute('data-lang') === lang) {
+            el.style.display = '';
+        } else {
+            el.style.display = 'none';
+        }
+    });
+
     const btnFR = document.getElementById('btnFR');
     const btnEN = document.getElementById('btnEN');
     if (btnFR) btnFR.classList.toggle('active', lang === 'fr');
